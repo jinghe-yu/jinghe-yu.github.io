@@ -13,7 +13,7 @@ import { site } from "../data/site";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={site.description} />
-    <meta name="theme-color" content="#f9f9fa" />
+    <meta name="theme-color" content="#fffcfb" />
     <link
       rel="icon"
       type="image/svg+xml"
@@ -22,7 +22,7 @@ import { site } from "../data/site";
     <title>{site.title}</title>
   </head>
   <body
-    class="bg-surface text-on-surface font-body antialiased min-h-screen flex flex-col selection:bg-secondary-container selection:text-on-secondary-fixed"
+    class="text-on-surface font-body antialiased min-h-screen flex flex-col selection:bg-secondary-container selection:text-on-secondary-fixed"
   >
     <a
       href="#main"
@@ -40,6 +40,7 @@ import { site } from "../data/site";
     </div>
     <script>
       import "../scripts/publications";
+      import "../scripts/navigation";
     </script>
   </body>
 </html>

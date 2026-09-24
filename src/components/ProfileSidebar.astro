@@ -1,0 +1,61 @@
+---
+import { site } from "../data/site";
+import { mediaUrl } from "../lib/media";
+---
+
+<aside class="profile-sidebar" aria-label="Jinghe Yu profile">
+  <div class="sidebar-inner">
+    <div class="portrait-wrap">
+      <img
+        src={mediaUrl(site.portrait.src)}
+        alt={site.portrait.alt}
+        width={site.portrait.width}
+        height={site.portrait.height}
+        fetchpriority="high"
+        decoding="async"
+      />
+      <span class="portrait-note">At CHI 2026 · Barcelona</span>
+    </div>
+
+    <div class="sidebar-intro">
+      <p class="eyebrow">Human-centered AI researcher</p>
+      <h2>Jinghe Yu <span lang="zh-Hans">余静荷</span></h2>
+      <p class="sidebar-affiliation">
+        Undergraduate researcher · AI · SCUT<br />Guangzhou, China
+      </p>
+    </div>
+
+    <div class="sidebar-topics" aria-label="Research interests">
+      <span>✳ Human–Computer Interaction</span>
+      <span>✳ Affective Computing</span>
+      <span>✳ AI for Healthcare</span>
+    </div>
+
+    <div class="sidebar-actions">
+      <a
+        class="sidebar-button primary"
+        href="/files/Jinghe-Yu-CV.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View CV <span aria-hidden="true">↗</span>
+      </a>
+      <a class="sidebar-button" href={`mailto:${site.email}`}>
+        Get in touch <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+
+    <div class="sidebar-links" aria-label="Social links">
+      <a href={`mailto:${site.email}`} aria-label="Email"
+        >Email <span aria-hidden="true">↗</span></a
+      >
+      <a
+        href="https://github.com/jinghe-yu"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub profile">GitHub <span aria-hidden="true">↗</span></a
+      >
+    </div>
+    <p class="sidebar-footnote">Open to PhD opportunities · Fall 2027</p>
+  </div>
+</aside>

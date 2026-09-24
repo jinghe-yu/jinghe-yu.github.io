@@ -1,0 +1,42 @@
+---
+const updates = [
+  {
+    date: "Sep 2026",
+    text: "Our AS-OCT dataset paper was published in Scientific Data.",
+  },
+  {
+    date: "2026",
+    text: "AICA-Bench was published at ACL 2026; EmoType-Zero and Touch Through Sound appeared at CHI 2026 Posters.",
+  },
+  {
+    date: "2026",
+    text: "EmoMirror was accepted to a UbiComp/ISWC 2026 workshop.",
+  },
+  {
+    date: "Nov 2025",
+    text: "Our AS-OCT diagnosis paper received the Best Paper Award at ICIMH.",
+  },
+];
+---
+
+<section id="news" class="content-section" aria-labelledby="news-title">
+  <div class="section-heading">
+    <span class="section-number">02</span><div>
+      <p class="eyebrow">A few recent moments</p><h2 id="news-title">
+        News <span class="heading-spark" aria-hidden="true">✦</span>
+      </h2>
+    </div>
+  </div>
+  <ol class="news-list">
+    {
+      updates.map((update) => (
+        <li>
+          <>
+            <time>{update.date}</time>
+            <p>{update.text}</p>
+          </>
+        </li>
+      ))
+    }
+  </ol>
+</section>

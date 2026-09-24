@@ -2,21 +2,27 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
+import ProfileSidebar from "../components/ProfileSidebar.astro";
 import Hero from "../components/sections/Hero.astro";
-import Publications from "../components/sections/Publications.astro";
+import Updates from "../components/sections/Updates.astro";
 import Expertise from "../components/sections/Expertise.astro";
+import Publications from "../components/sections/Publications.astro";
 import Profile from "../components/sections/Profile.astro";
-import PhotoGallery from "../components/sections/PhotoGallery.astro";
 ---
 
 <BaseLayout>
   <SiteHeader />
-  <main id="main" class="w-full pt-20 flex-grow">
-    <Hero />
-    <Publications />
-    <Expertise />
-    <Profile />
-    <PhotoGallery />
-  </main>
-  <SiteFooter />
+  <div class="site-shell">
+    <ProfileSidebar />
+    <div class="reading-column">
+      <main id="main" class="site-main">
+        <Hero />
+        <Updates />
+        <Expertise />
+        <Publications />
+        <Profile />
+      </main>
+      <SiteFooter />
+    </div>
+  </div>
 </BaseLayout>

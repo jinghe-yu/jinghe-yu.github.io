@@ -1,65 +1,38 @@
 ---
 import { site } from "../data/site";
-import { publications } from "../data/publications";
+
+const tabs = [
+  ["about", "About"],
+  ["news", "News"],
+  ["research", "Research"],
+  ["publications", "Publications"],
+  ["experience", "Experience"],
+  ["education", "Education"],
+  ["awards", "Awards"],
+];
 ---
 
-<header
-  class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md border-b border-outline-border/60"
->
-  <div
-    class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-4"
-  >
-    <!-- Brand Logo SVG from DataStore https://lh3.googleusercontent.com/aida/AEtjO1V4OPW8HK4kubE9lVLg4cVfKBQVe-RJMZ4Nq7ODlo-b0z9Wg_TeEUc_GAANi4WAytNgfIZLaOH9I0SEtnIh7mBt5nOVMZYVzBbYirDFL0_gBEaZ_0L94rqG2xBRQTjyiX9M2pFAZjs_eGOrN4F2sayKBaGSZeIRElGTzqP33L1E3ety7mrejY6UjTsdW2hcYTNMKwy1luSzMPBTvNKqUlS8430lR9sS4uytoCg3SQu3O0aNZSDhdHmlw126 -->
-    <a
-      href="#about"
-      class="font-headline text-xl font-bold tracking-tight"
-      aria-label="Jinghe Yu — About">{site.name}</a
-    >
-
-    <!-- Navigation -->
-    <nav
-      class="hidden md:flex items-center gap-1 p-1 rounded bg-surface-container-low border border-outline-border/50 text-xs font-mono"
-    >
-      <a
-        href="#about"
-        class="px-3 py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition"
-        >About</a
-      >
-
-      <a
-        href="#publications"
-        class="px-3 py-1.5 rounded font-bold text-on-surface bg-surface-container-lowest shadow-sm"
-        >Publications ({publications.length})</a
-      >
-      <a
-        href="#profile"
-        class="px-3 py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition"
-        >Profile &amp; Honors</a
-      >
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#about" aria-label={`${site.name}, back to About`}>
+      <span class="brand-mark" aria-hidden="true">j<span>✦</span>y</span>
+      <span class="brand-name">Jinghe Yu</span>
+    </a>
+    <nav class="section-nav" aria-label="Page sections">
+      {
+        tabs.map(([id, label]) => (
+          <a class="section-tab" href={`#${id}`} data-nav-link={id}>
+            {label}
+          </a>
+        ))
+      }
     </nav>
-
-    <!-- Header Actions -->
-    <div class="flex items-center gap-3 shrink-0">
-      <div
-        class="hidden sm:flex items-center gap-2 px-3 py-1.5 bg-secondary-container text-on-secondary-fixed rounded-full font-mono text-[11px] font-bold"
-      >
-        <span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
-        <span class="">Seeking Fall 2027 PhD</span>
-      </div>
-      <a
-        href={`mailto:${site.email}`}
-        class="inline-flex items-center gap-1.5 bg-primary text-on-primary hover:bg-secondary-container hover:text-on-secondary-fixed font-mono text-xs px-4 py-2 rounded-full transition-all shadow-[2px_2px_0px_#141414] font-bold"
-      >
-        <span class="">Contact</span>
-        <svg
-          class="w-3.5 h-3.5"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2.5"
-          ><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg
-        >
-      </a>
-    </div>
+    <a
+      class="header-contact"
+      href={`mailto:${site.email}`}
+      aria-label="Email Jinghe Yu"
+    >
+      <span>Let's talk</span><span aria-hidden="true">↗</span>
+    </a>
   </div>
 </header>

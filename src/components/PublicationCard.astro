@@ -1,138 +1,101 @@
 ---
 import type { Publication } from "../data/types";
 import { site } from "../data/site";
-import PublicationVisual from "./PublicationVisual.astro";
+import { mediaUrl } from "../lib/media";
+
 interface Props {
   publication: Publication;
+  index: number;
 }
-const { publication: paper } = Astro.props;
-const hasVisual =
-  Boolean(paper.image?.src) ||
-  [
-    "liqo",
-    "posts-and-threads",
-    "mental-health",
-    "sentiment-boundaries",
-    "ac-bench",
-  ].includes(paper.id);
+const { publication: paper, index } = Astro.props;
+// Stitch preview images are design placeholders, not verified research figures.
+// A real image path automatically enables the project image here.
+const hasVerifiedImage = Boolean(
+  paper.image?.src && !paper.image.src.endsWith("/stitch-preview.jpg"),
+);
 ---
 
 <article
   id={paper.id}
-  class="pub-card bg-surface-container-lowest rounded-xl p-7 lg:p-9 border border-outline-border shadow-[4px_4px_0px_#141414]"
+  class="pub-card"
   data-categories={paper.categories.join(" ")}
 >
-  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-    <div
-      class:list={[
-        hasVisual ? "lg:col-span-8" : "lg:col-span-12",
-        "flex flex-col justify-between space-y-4 min-w-0",
-      ]}
-    >
-      <div>
-        <div class="flex flex-wrap items-center gap-2 mb-2.5">
-          <span
-            class:list={[
-              "px-2.5 py-1 rounded font-mono text-[11px] font-bold",
-              paper.group === "published"
-                ? "bg-primary text-on-primary"
-                : "bg-surface-container-high text-on-surface",
-            ]}>{paper.venue}</span
-          >
-          {
-            paper.award && (
-              <span class="px-2.5 py-1 bg-secondary-container text-on-secondary-fixed rounded font-mono text-[11px] font-bold">
-                ★ {paper.award}
-              </span>
-            )
-          }
-          {
-            paper.status && (
-              <span class="px-2 py-0.5 bg-surface-container-high text-on-surface rounded font-mono text-[11px]">
-                {paper.status}
-              </span>
-            )
-          }
-          {
-            paper.role && (
-              <span class="font-mono text-[11px] text-secondary font-bold">
-                {paper.role}
-              </span>
-            )
-          }
+  <div class="publication-art">
+    {
+      hasVerifiedImage && paper.image ? (
+        <img
+          src={mediaUrl(paper.image.src)}
+          alt={paper.image.alt}
+          style={{ objectPosition: paper.image.objectPosition ?? "center" }}
+          loading="lazy"
+          decoding="async"
+        />
+      ) : (
+        <div class="publication-art-placeholder" aria-hidden="true">
+          <>
+            <span>{String(index).padStart(2, "0")}</span>
+            <span>✳</span>
+          </>
         </div>
-        <h4
-          class="font-headline text-xl lg:text-2xl font-bold text-on-surface tracking-tight"
-        >
-          {paper.title}
-        </h4>
-        <p class="text-sm text-on-surface-variant mt-2 leading-normal">
-          <strong>Authors:</strong>{" "}
-          {
-            paper.authors.map((author, index) => (
-              <>
-                {index > 0 ? ", " : ""}
-                {author.replace(/\*+$/, "") === site.name ? (
-                  <strong class="text-on-surface underline decoration-secondary decoration-2 underline-offset-2">
-                    {author}
-                  </strong>
-                ) : (
-                  author
-                )}
-              </>
-            ))
-          }
-        </p>
-      </div>
+      )
+    }
+  </div>
+  <div class="publication-copy">
+    <div class="publication-meta">
+      <span>{paper.venue}</span><span class="meta-dot" aria-hidden="true"
+        >·</span
+      ><span>{paper.status}</span>
+    </div>
+    <h4>{paper.title}</h4>
+    <p class="publication-authors">
       {
-        paper.summary && (
-          <p class="text-sm text-on-surface-variant leading-relaxed">
-            {paper.summary}
-          </p>
+        paper.authors.map((author, authorIndex) => (
+          <>
+            {authorIndex > 0 ? ", " : ""}
+            {author.replace(/\*+$/, "") === site.name ? (
+              <strong>{author}</strong>
+            ) : (
+              author
+            )}
+          </>
+        ))
+      }
+    </p>
+    <div class="publication-bottom">
+      {paper.role && <span class="publication-role">{paper.role}</span>}
+      {paper.award && <span class="publication-award">✦ {paper.award}</span>}
+      {
+        paper.links.map((link) => (
+          <a
+            href={
+              link.href.startsWith("mailto:")
+                ? link.href.replace(/^mailto:[^?]+/, `mailto:${site.email}`)
+                : link.href
+            }
+            target={link.href.startsWith("https://") ? "_blank" : undefined}
+            rel={
+              link.href.startsWith("https://")
+                ? "noopener noreferrer"
+                : undefined
+            }
+            class="publication-link"
+          >
+            {link.label} <span aria-hidden="true">↗</span>
+          </a>
+        ))
+      }
+      {
+        paper.bibtex && (
+          <button
+            type="button"
+            class="publication-link"
+            data-copy-bibtex={paper.bibtex}
+            aria-label={`Copy BibTeX for ${paper.title}`}
+          >
+            Copy BibTeX <span aria-hidden="true">⧉</span>
+          </button>
         )
       }
-      <div class="flex flex-wrap items-center gap-3 pt-2">
-        {
-          paper.links.map((link) => (
-            <a
-              href={
-                link.href.startsWith("mailto:")
-                  ? link.href.replace(/^mailto:[^?]+/, `mailto:${site.email}`)
-                  : link.href
-              }
-              target={link.href.startsWith("https://") ? "_blank" : undefined}
-              rel={
-                link.href.startsWith("https://")
-                  ? "noopener noreferrer"
-                  : undefined
-              }
-              class="inline-flex items-center gap-1.5 bg-primary text-on-primary font-mono text-xs px-4 py-2 rounded shadow-[2px_2px_0px_#141414] hover:bg-secondary-container hover:text-on-secondary-fixed transition font-bold"
-            >
-              {link.label} <span aria-hidden="true">↗</span>
-            </a>
-          ))
-        }
-        {
-          paper.bibtex && (
-            <button
-              type="button"
-              data-copy-bibtex={paper.bibtex}
-              aria-label={`Copy BibTeX for ${paper.title}`}
-              class="inline-flex items-center gap-1.5 border border-outline-border bg-surface hover:bg-surface-container-low font-mono text-xs px-3.5 py-2 rounded transition text-on-surface font-semibold"
-            >
-              Copy BibTeX
-            </button>
-          )
-        }
-        {
-          paper.note && (
-            <span class="font-mono text-xs text-on-surface-variant italic">
-              {paper.note}
-            </span>
-          )
-        }
-      </div>
     </div>
-    <PublicationVisual publication={paper} />
   </div>
 </article>

@@ -1,83 +1,101 @@
 ---
 import { publications, publicationFilters } from "../../data/publications";
 import PublicationCard from "../PublicationCard.astro";
+
+const preferredOrder = [
+  "emomirror26",
+  "emotype26",
+  "touchsound26",
+  "icimh2025",
+  "aicabench26",
+  "scidata26",
+  "liqo",
+  "posts-and-threads",
+  "mental-health",
+  "sentiment-boundaries",
+  "ac-bench",
+];
+const rank = (id: string) => {
+  const index = preferredOrder.indexOf(id);
+  return index < 0 ? Number.MAX_SAFE_INTEGER : index;
+};
+const papers = [...publications].sort((a, b) => rank(a.id) - rank(b.id));
 const groups = [
   {
     id: "published",
-    title: "Accepted & Published",
-    note: "Peer-Reviewed Venues",
+    title: "Accepted & published",
+    note: "Peer-reviewed work",
   },
-  { id: "submitted", title: "Under Review & Submitted", note: "" },
-];
+  {
+    id: "submitted",
+    title: "Under review & submitted",
+    note: "Status as listed in CV",
+  },
+] as const;
 ---
 
-<section class="w-full py-14" id="publications">
-  <div class="max-w-7xl mx-auto px-6 lg:px-12">
-    <div
-      class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4"
-    >
-      <div>
-        <h2
-          class="font-headline text-3xl md:text-5xl font-bold text-on-surface tracking-tight"
-        >
-          Publications &amp; Research Experiences
-        </h2>
-        <p class="text-sm text-on-surface-variant mt-2 max-w-2xl">
-          * indicates equal contribution.
-        </p>
-      </div>
-      <div
-        class="flex flex-wrap items-center gap-1.5 p-1 bg-surface-container-low rounded-lg border border-outline-border"
-        role="group"
-        aria-label="Filter publications by research topic"
+<section
+  id="publications"
+  class="content-section"
+  aria-labelledby="publications-title"
+>
+  <div class="section-heading">
+    <span class="section-number">04</span><div>
+      <p class="eyebrow">Selected writing &amp; making</p><h2
+        id="publications-title"
       >
-        {
-          publicationFilters.map((filter) => (
-            <button
-              type="button"
-              data-publication-filter={filter.id}
-              aria-pressed={filter.id === "all"}
-              class="pub-filter-btn px-3 py-1.5 rounded text-xs font-mono text-on-surface-variant hover:text-on-surface"
-            >
-              {filter.label}
-              {filter.id === "all" ? ` (${publications.length})` : ""}
-            </button>
-          ))
-        }
-      </div>
+        Publications
+      </h2>
     </div>
-    <p id="publication-count" class="sr-only" role="status" aria-live="polite">
-      Showing {publications.length} publications
-    </p>
-    {
-      groups.map((group) => {
-        const papers = publications.filter((paper) => paper.group === group.id);
-        return (
-          papers.length > 0 && (
-            <div class="mb-14 last:mb-0" data-publication-group={group.id}>
-              <div class="flex flex-wrap items-center gap-3 mb-6 pb-2 border-b border-outline-border">
-                <span
-                  class="w-3 h-3 rounded-full bg-secondary"
-                  aria-hidden="true"
-                />
-                <h3 class="font-headline text-2xl font-bold text-on-surface">
-                  {group.title} (<span data-group-count>{papers.length}</span>)
-                </h3>
-                {group.note && (
-                  <span class="font-mono text-xs text-on-surface-variant ml-auto">
-                    {group.note}
-                  </span>
-                )}
-              </div>
-              <div class="space-y-8">
-                {papers.map((paper) => (
-                  <PublicationCard publication={paper} />
-                ))}
-              </div>
-            </div>
-          )
-        );
-      })
-    }
   </div>
+  <div class="publications-intro">
+    <p class="section-lede">
+      Research across human–AI interaction, affective computing, and healthcare.
+      An asterisk indicates equal contribution.
+    </p>
+    <div
+      class="publication-filters"
+      role="group"
+      aria-label="Filter publications by topic"
+    >
+      {
+        publicationFilters.map((filter) => (
+          <button
+            type="button"
+            class="pub-filter-btn"
+            data-publication-filter={filter.id}
+            aria-pressed={filter.id === "all"}
+          >
+            {filter.label}
+            {filter.id === "all" ? ` (${papers.length})` : ""}
+          </button>
+        ))
+      }
+    </div>
+  </div>
+  <p id="publication-count" class="sr-only" role="status" aria-live="polite">
+    Showing {papers.length} publications
+  </p>
+  {
+    groups.map((group) => {
+      const entries = papers.filter((paper) => paper.group === group.id);
+      return (
+        <div class="publication-group" data-publication-group={group.id}>
+          <div class="publication-group-heading">
+            <>
+              <h3>
+                {group.title} <span data-group-count>{entries.length}</span>
+              </h3>
+              <span>{group.note}</span>
+            </>
+          </div>
+          <div class="publication-list">
+            {entries.map((paper, index) => (
+              <PublicationCard publication={paper} index={index + 1} />
+            ))}
+          </div>
+        </div>
+      );
+    })
+  }
 </section>

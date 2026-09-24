@@ -10,12 +10,10 @@ export const site = {
   phoneHref: "+8613798160068",
   location: "Guangzhou, China",
   portrait: {
-    // Put the file in public/images/portrait/, then set e.g. '/images/portrait/jinghe-yu.webp'.
-    // Empty src keeps the portrait hidden; no broken placeholder appears on the page.
-    src: "",
-    alt: "Portrait of Jinghe Yu",
-    width: 800,
-    height: 1000,
-    objectPosition: "50% 35%",
+    src: "/images/portrait/my-photo.jpg",
+    alt: "Jinghe Yu at CHI 2026 in Barcelona",
+    width: 1320,
+    height: 1760,
+    objectPosition: "center",
   },
 };
