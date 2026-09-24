@@ -1,0 +1,359 @@
+[
+  {
+    "id": "icimh2025",
+    "group": "published",
+    "categories": ["healthcare"],
+    "title": "Glaucoma and Cataract Diagnosis from AS-OCT Images Using Ensemble Learning",
+    "authors": [
+      "Jiongning Zhao",
+      "Yuetong Yang",
+      "Jinghe Yu",
+      "Yueqin Diao",
+      "Yanwu Xu"
+    ],
+    "venue": "ICIMH",
+    "status": "Published, November 2025",
+    "role": "",
+    "award": "Best Paper Award",
+    "summary": "Addressed clinical ophthalmic imaging challenges by developing an ensemble learning architecture designed for anterior segment optical coherence tomography (AS-OCT) images. Designed a strict leakage-safe cross-validation and feature-fusion pipeline capable of identifying both glaucoma and cataract pathologies concurrently, establishing reliable diagnostic support for clinical practitioners.",
+    "links": [
+      {
+        "href": "https://dl.acm.org/doi/10.1145/3784929.3784932",
+        "label": "ACM Digital Library"
+      }
+    ],
+    "note": "",
+    "bibtex": "@inproceedings{zhao2025glaucoma,\n  title={Glaucoma and Cataract Diagnosis from AS-OCT Images Using Ensemble Learning},\n  author={Zhao, Jiongning and Yang, Yuetong and Yu, Jinghe and Diao, Yueqin and Xu, Yanwu},\n  booktitle={Proceedings of the 2025 International Conference on Intelligent Medicine and Health (ICIMH 2025)},\n  year={2025},\n  publisher={ACM},\n  note={Best Paper Award}\n}",
+    "image": {
+      "src": "/images/research/icimh2025/stitch-preview.jpg",
+      "alt": "Clinical AS-OCT ophthalmic imaging scans showing corneal structure and anterior chamber angle.",
+      "objectPosition": "center"
+    },
+    "imageLabel": "Best Paper Award · ICIMH 2025",
+    "imageCaption": "Dual anterior segment classification ensemble framework"
+  },
+  {
+    "id": "emomirror26",
+    "group": "published",
+    "categories": ["affective"],
+    "title": "EmoMirror: Negotiable Affective Mirroring for Students with Elevated Alexithymia",
+    "authors": [
+      "Jinghe Yu*",
+      "Dong She*",
+      "Xinyao Li",
+      "Fanbo Meng",
+      "Yang Gao",
+      "Zhanpeng Jin"
+    ],
+    "venue": "UbiComp/ISWC 2026 Workshop",
+    "status": "Accepted",
+    "role": "First Author",
+    "award": "",
+    "summary": "Individuals with elevated alexithymia experience fundamental hurdles in identifying and articulating their affective states. EmoMirror introduces a negotiable affective mirroring interactive system designed for college students, enabling voluntary, non-coercive visual feedback that fosters cognitive reflection and emotional literacy without imposing rigid diagnostic labels.",
+    "links": [],
+    "note": "",
+    "bibtex": "@inproceedings{yu2026emomirror,\n  title={EmoMirror: Negotiable Affective Mirroring for Students with Elevated Alexithymia},\n  author={Yu, Jinghe and She, Dong and Li, Xinyao and Meng, Fanbo and Gao, Yang and Jin, Zhanpeng},\n  booktitle={Adjunct Proceedings of the 2026 ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp/ISWC '26 Adjunct)},\n  year={2026},\n  publisher={ACM}\n}",
+    "image": {
+      "src": "/images/research/emomirror26/stitch-preview.jpg",
+      "alt": "Negotiable affective mirroring interface illustrating emotional reflection and student interaction.",
+      "objectPosition": "center"
+    },
+    "imageLabel": "First Author · UbiComp '26",
+    "imageCaption": "Affective mirror interface designed for elevated alexithymia"
+  },
+  {
+    "id": "emotype26",
+    "group": "published",
+    "categories": ["affective"],
+    "title": "EmoType-Zero: Adaptive Fonts to Render the Speech Emotion",
+    "authors": [
+      "Dong She*",
+      "Jinghe Yu*",
+      "Nuo Chen",
+      "Yuting Bai",
+      "Yang Gao",
+      "Zhanpeng Jin"
+    ],
+    "venue": "CHI 2026 Posters",
+    "status": "Published",
+    "role": "Co-First Author",
+    "award": "",
+    "summary": "Speech carries critical prosodic and emotional nuance that traditional static typography fails to reflect in written communication. EmoType-Zero synthesizes dynamic, adaptive fonts directly from acoustic speech inputs, modulating typography attributes in real-time according to vocal emotional valence and arousal.",
+    "links": [
+      {
+        "href": "https://dl.acm.org/doi/10.1145/3772363.3798656",
+        "label": "ACM Digital Library"
+      }
+    ],
+    "note": "",
+    "bibtex": "@inproceedings{she2026emotype,\n  title={EmoType-Zero: Adaptive Fonts to Render the Speech Emotion},\n  author={She, Dong and Yu, Jinghe and Chen, Nuo and Bai, Yuting and Gao, Yang and Jin, Zhanpeng},\n  booktitle={Extended Abstracts of the 2026 CHI Conference on Human Factors in Computing Systems (CHI EA '26)},\n  year={2026},\n  publisher={ACM}\n}",
+    "image": {
+      "src": "/images/research/emotype26/stitch-preview.jpg",
+      "alt": "Dynamic typographic forms synthesized from speech emotion acoustic signals.",
+      "objectPosition": "center"
+    },
+    "imageLabel": "Co-First Author · CHI '26",
+    "imageCaption": "Real-time dynamic typographic rendering of speech emotion"
+  },
+  {
+    "id": "touchsound26",
+    "group": "published",
+    "categories": ["hci"],
+    "title": "Touch Through Sound: Ring-Mounted Auditory Pseudo-Haptics for Material Perception",
+    "authors": [
+      "Zhengte Cai",
+      "Chiyue Wang",
+      "Yumiao Wang",
+      "Jinghe Yu",
+      "Chen Li",
+      "Zhanpeng Jin",
+      "Yang Gao"
+    ],
+    "venue": "CHI 2026 Posters",
+    "status": "Published",
+    "role": "",
+    "award": "",
+    "summary": "Explores ring-mounted auditory pseudo-haptics to render continuous tactile material perceptions without requiring bulky mechanical actuators. The wearable finger-ring device delivers velocity-modulated audio feedback calibrated to surface roughness and compliance, enriching tactile exploration across virtual and augmented reality environments.",
+    "links": [
+      {
+        "href": "https://dl.acm.org/doi/10.1145/3772363.3798554",
+        "label": "ACM Digital Library"
+      }
+    ],
+    "note": "",
+    "bibtex": "@inproceedings{cai2026touch,\n  title={Touch Through Sound: Ring-Mounted Auditory Pseudo-Haptics for Material Perception},\n  author={Cai, Zhengte and Wang, Chiyue and Wang, Yumiao and Yu, Jinghe and Li, Chen and Jin, Zhanpeng and Gao, Yang},\n  booktitle={Extended Abstracts of the 2026 CHI Conference on Human Factors in Computing Systems (CHI EA '26)},\n  year={2026},\n  publisher={ACM}\n}",
+    "image": {
+      "src": "/images/research/touchsound26/stitch-preview.jpg",
+      "alt": "Ring-mounted wearable device delivering auditory pseudo-haptics for continuous surface perception.",
+      "objectPosition": "center"
+    },
+    "imageLabel": "Wearable Pseudo-Haptics · CHI '26",
+    "imageCaption": "Continuous material perception via ring auditory feedback"
+  },
+  {
+    "id": "aicabench26",
+    "group": "published",
+    "categories": ["affective"],
+    "title": "AICA-Bench: Holistically Examining the Capabilities of VLMs in Affective Image Content Analysis",
+    "authors": [
+      "Dong She*",
+      "Xianrong Yao*",
+      "Liqun Chen",
+      "Jinghe Yu",
+      "Yang Gao",
+      "Zhanpeng Jin"
+    ],
+    "venue": "ACL 2026",
+    "status": "Published",
+    "role": "",
+    "award": "",
+    "summary": "Presents a holistic benchmark framework for scrutinizing vision-language models on affective image content analysis. Rigorously assesses multimodal foundation models across subtle visual affective scenarios, revealing current limitations in human-aligned affective understanding and visual sentiment perception.",
+    "links": [
+      {
+        "href": "https://aclanthology.org/2026.findings-acl.661/",
+        "label": "ACL Anthology"
+      }
+    ],
+    "note": "",
+    "bibtex": "@inproceedings{she2026aica,\n  title={AICA-Bench: Holistically Examining the Capabilities of VLMs in Affective Image Content Analysis},\n  author={She, Dong and Yao, Xianrong and Chen, Liqun and Yu, Jinghe and Gao, Yang and Jin, Zhanpeng},\n  booktitle={Findings of the Association for Computational Linguistics: ACL 2026},\n  year={2026},\n  publisher={ACL}\n}",
+    "image": {
+      "src": "/images/research/aicabench26/stitch-preview.jpg",
+      "alt": "Technical benchmark evaluation pipeline showing multimodal inputs, affective scoring metrics, and vision-language model diagnostic matrices.",
+      "objectPosition": "center"
+    },
+    "imageLabel": "Multimodal Benchmark · ACL '26",
+    "imageCaption": "Holistic benchmark for affective vision-language models"
+  },
+  {
+    "id": "scidata26",
+    "group": "published",
+    "categories": ["healthcare"],
+    "title": "AS-OCT Dataset with Anatomical Structure Segmentation and Scleral Spur Localization in Cataract and Glaucoma",
+    "authors": [
+      "Jiongning Zhao*",
+      "Huihui Fang*",
+      "Yuetong Yang",
+      "Xinyu Fu",
+      "Jingru Deng",
+      "Jinghe Yu",
+      "Xingying Yan",
+      "Xinya Hu",
+      "Xiaoqing Wang",
+      "Yuting Hu",
+      "Di Gong",
+      "Zhe Zhang",
+      "Wei Chi",
+      "Weihua Yang",
+      "Yanwu Xu"
+    ],
+    "venue": "Scientific Data (Nature Portfolio)",
+    "status": "Published, September 2026",
+    "role": "",
+    "award": "",
+    "summary": "A large-scale, high-quality anterior segment optical coherence tomography (AS-OCT) dataset released for open clinical AI research. Features precise pixel-level anatomical structure segmentations and expert scleral spur landmark localizations across comprehensive cohort scans for cataract and glaucoma screening.",
+    "links": [
+      {
+        "href": "https://www.nature.com/articles/s41597-026-08315-8",
+        "label": "Nature Portfolio Article"
+      }
+    ],
+    "note": "",
+    "bibtex": "@article{zhao2026asoct,\n  title={AS-OCT Dataset with Anatomical Structure Segmentation and Scleral Spur Localization in Cataract and Glaucoma},\n  author={Zhao, Jiongning and Fang, Huihui and Yang, Yuetong and Fu, Xinyu and Deng, Jingru and Yu, Jinghe and Yan, Xingying and Hu, Xinya and Wang, Xiaoqing and Hu, Yuting and Gong, Di and Zhang, Zhe and Chi, Wei and Yang, Weihua and Xu, Yanwu},\n  journal={Scientific Data},\n  volume={13},\n  year={2026},\n  publisher={Nature Publishing Group}\n}",
+    "image": {
+      "src": "/images/research/scidata26/stitch-preview.jpg",
+      "alt": "Nature Scientific Data anterior segment optical coherence tomography medical imaging scans.",
+      "objectPosition": "center"
+    },
+    "imageLabel": "Nature Portfolio · 2026",
+    "imageCaption": "Open-access benchmark AS-OCT segmentation dataset"
+  },
+  {
+    "id": "liqo",
+    "group": "submitted",
+    "categories": ["hci"],
+    "title": "Liqo: A Liquid-to-Solid Interaction Metaphor for Exploratory LLM Sensemaking",
+    "authors": [
+      "Zhengte Cai*",
+      "Jinghe Yu*",
+      "Yang Gao*",
+      "Guang Chen",
+      "Yuting Bai",
+      "Dong She",
+      "Zhanpeng Jin"
+    ],
+    "venue": "CHI 2027",
+    "status": "Submitted",
+    "role": "Co-First Author",
+    "award": "",
+    "summary": "Introduces a fluid-to-crystallized interactive interface paradigm for exploratory human-LLM sensemaking. Users navigate fluid, ambiguous thought streams before selectively freezing, refining, and reifying validated cognitive clusters into structured, persistent knowledge structures.",
+    "links": [
+      {
+        "href": "mailto:yujinghe2026@gmail.com?subject=Manuscript%20Inquiry:%20Liqo%20(CHI%202027)",
+        "label": "Request Manuscript Draft"
+      }
+    ],
+    "note": "[Under Double-Blind Review]",
+    "bibtex": "",
+    "image": null,
+    "imageLabel": "",
+    "imageCaption": ""
+  },
+  {
+    "id": "posts-and-threads",
+    "group": "submitted",
+    "categories": ["hci"],
+    "title": "Writing in Posts and Threads: Collaborative Interactions for Poetry Writing",
+    "authors": ["Zhihan Cao*", "Jinghe Yu*", "Lijia Li", "Ray LC"],
+    "venue": "CHI 2027",
+    "status": "Submitted",
+    "role": "Co-First Author",
+    "award": "",
+    "summary": "Investigates structured, non-linear collaborative creative writing workflows. Evaluates how breaking monolithic generative drafts into interactive posts and branching threads empowers co-authors to curate thematic rhythm and metaphoric depth collaboratively.",
+    "links": [
+      {
+        "href": "mailto:yujinghe2026@gmail.com?subject=Manuscript%20Inquiry:%20Poetry%20Writing%20(CHI%202027)",
+        "label": "Request Manuscript Draft"
+      }
+    ],
+    "note": "[Under Double-Blind Review]",
+    "bibtex": "",
+    "image": null,
+    "imageLabel": "",
+    "imageCaption": ""
+  },
+  {
+    "id": "mental-health",
+    "group": "submitted",
+    "categories": ["affective"],
+    "title": "Guessing or Understanding? Probing the Robustness of Large Language Models in Mental Health Sensing",
+    "authors": [
+      "Dong She*",
+      "Boyi Xiao*",
+      "Jinghe Yu*",
+      "Nuo Chen",
+      "Qianle Zhang",
+      "Cong Liu",
+      "Zhengte Cai",
+      "Yang Gao",
+      "Zhanpeng Jin"
+    ],
+    "venue": "Knowledge-Based Systems",
+    "status": "Under Review · Submitted 2026",
+    "role": "Co-First Author",
+    "award": "",
+    "summary": "Systematically stress-tests modern foundation models against psychiatric diagnostic benchmarks. Reveals vulnerability to lexical decoys, semantic drift, and superficial heuristic matching, formulating recommendations for clinical safety protocols.",
+    "links": [
+      {
+        "href": "mailto:yujinghe2026@gmail.com?subject=Manuscript%20Inquiry:%20LLM%20Mental%20Health%20Probing%20(KBS)",
+        "label": "Request Manuscript Draft"
+      }
+    ],
+    "note": "[Under Review: KBS 2026]",
+    "bibtex": "",
+    "image": null,
+    "imageLabel": "",
+    "imageCaption": ""
+  },
+  {
+    "id": "sentiment-boundaries",
+    "group": "submitted",
+    "categories": ["affective"],
+    "title": "Learning Latent Sentiment Boundaries for Fine-Grained Multimodal Sentiment Analysis",
+    "authors": [
+      "Dong She",
+      "Xianrong Yao",
+      "Yang Gao",
+      "Nuo Chen",
+      "Jinghe Yu",
+      "Noman Ahmed",
+      "Zhanpeng Jin"
+    ],
+    "venue": "NeurIPS 2026",
+    "status": "Under Review · Submitted May 2026",
+    "role": "",
+    "award": "",
+    "summary": "Proposes an adaptive geometric boundary formulation in multimodal embedding space, separating subtle valence gradations where acoustic, visual, and lexical cues exhibit contradicting affective polarity.",
+    "links": [
+      {
+        "href": "mailto:yujinghe2026@gmail.com?subject=Manuscript%20Inquiry:%20Latent%20Boundaries%20(NeurIPS%202026)",
+        "label": "Request Manuscript Draft"
+      }
+    ],
+    "note": "[Under Review: NeurIPS 2026]",
+    "bibtex": "",
+    "image": null,
+    "imageLabel": "",
+    "imageCaption": ""
+  },
+  {
+    "id": "ac-bench",
+    "group": "submitted",
+    "categories": ["affective"],
+    "title": "AC-Bench: Do Multimodal Models Truly See Emotion Amidst Textual Interference?",
+    "authors": [
+      "Nuo Chen*",
+      "Dong She*",
+      "Xianrong Yao",
+      "Chenxu Zhang",
+      "Jinghe Yu",
+      "Yang Gao",
+      "Zhanpeng Jin"
+    ],
+    "venue": "AAAI Conference on AI",
+    "status": "Submitted, July 2026",
+    "role": "",
+    "award": "",
+    "summary": "Introduces a diagnostic suite evaluating whether multimodal vision-language models genuinely extract emotional grounding from imagery, or succumb to superficial textual prompt steering and bias when modalities clash.",
+    "links": [
+      {
+        "href": "mailto:yujinghe2026@gmail.com?subject=Manuscript%20Inquiry:%20AC-Bench%20(AAAI)",
+        "label": "Request Manuscript Draft"
+      }
+    ],
+    "note": "[Submitted July 2026: AAAI]",
+    "bibtex": "",
+    "image": null,
+    "imageLabel": "",
+    "imageCaption": ""
+  }
+]

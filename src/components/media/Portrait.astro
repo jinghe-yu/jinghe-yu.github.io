@@ -1,0 +1,22 @@
+---
+import { site } from "../../data/site";
+import { mediaUrl } from "../../lib/media";
+const { portrait } = site;
+---
+
+{
+  portrait.src && (
+    <figure class="mb-6 overflow-hidden rounded-lg border border-outline-border bg-surface-container-low">
+      <img
+        src={mediaUrl(portrait.src)}
+        alt={portrait.alt}
+        width={portrait.width}
+        height={portrait.height}
+        style={{ objectPosition: portrait.objectPosition }}
+        class="w-full aspect-[4/5] object-cover"
+        fetchpriority="high"
+        decoding="async"
+      />
+    </figure>
+  )
+}

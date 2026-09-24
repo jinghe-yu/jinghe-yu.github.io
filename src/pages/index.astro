@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import Hero from "../components/sections/Hero.astro";
+import Publications from "../components/sections/Publications.astro";
+import Expertise from "../components/sections/Expertise.astro";
+import Profile from "../components/sections/Profile.astro";
+import PhotoGallery from "../components/sections/PhotoGallery.astro";
+---
+
+<BaseLayout>
+  <SiteHeader />
+  <main id="main" class="w-full pt-20 flex-grow">
+    <Hero />
+    <Publications />
+    <Expertise />
+    <Profile />
+    <PhotoGallery />
+  </main>
+  <SiteFooter />
+</BaseLayout>

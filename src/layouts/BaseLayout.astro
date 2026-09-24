@@ -1,0 +1,45 @@
+---
+import "@fontsource-variable/hanken-grotesk";
+import "@fontsource-variable/inter";
+import "@fontsource/space-mono/latin-400.css";
+import "@fontsource/space-mono/latin-700.css";
+import "../styles/global.css";
+import { site } from "../data/site";
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={site.description} />
+    <meta name="theme-color" content="#f9f9fa" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href={`${import.meta.env.BASE_URL}favicon.svg`}
+    />
+    <title>{site.title}</title>
+  </head>
+  <body
+    class="bg-surface text-on-surface font-body antialiased min-h-screen flex flex-col selection:bg-secondary-container selection:text-on-secondary-fixed"
+  >
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-primary focus:text-white focus:p-3"
+      >Skip to content</a
+    >
+    <slot />
+    <div
+      id="copy-toast"
+      class="fixed bottom-6 right-6 left-6 sm:left-auto z-50 copy-toast bg-primary text-on-primary font-mono text-xs px-4 py-2.5 rounded shadow-xl pointer-events-none"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+    >
+    </div>
+    <script>
+      import "../scripts/publications";
+    </script>
+  </body>
+</html>

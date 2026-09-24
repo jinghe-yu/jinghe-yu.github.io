@@ -1,0 +1,39 @@
+---
+import { photos } from "../../data/photos";
+import { mediaUrl } from "../../lib/media";
+---
+
+{
+  photos.length > 0 && (
+    <section
+      id="life"
+      class="max-w-7xl mx-auto px-6 lg:px-12 py-12 border-t border-outline-border"
+      aria-labelledby="life-heading"
+    >
+      <h2 id="life-heading" class="font-headline text-3xl font-bold mb-8">
+        Beyond Research
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {photos.map((photo) => (
+          <figure>
+            <img
+              src={mediaUrl(photo.src)}
+              alt={photo.alt}
+              width={photo.width}
+              height={photo.height}
+              style={{ objectPosition: photo.objectPosition ?? "center" }}
+              class="w-full aspect-[4/3] object-cover rounded-lg border border-outline-border"
+              loading="lazy"
+              decoding="async"
+            />
+            {photo.caption && (
+              <figcaption class="text-sm text-on-surface-variant mt-3">
+                {photo.caption}
+              </figcaption>
+            )}
+          </figure>
+        ))}
+      </div>
+    </section>
+  )
+}

@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.astro/
+design/
+CV/
+public/
+private/
+package-lock.json
+output/

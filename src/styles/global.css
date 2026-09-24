@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+}
+.pub-card {
+  transition:
+    transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.2s ease;
+}
+.pub-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 0px #141414;
+}
+.badge-pink {
+  background-color: #f8d4dc;
+  color: #2a161c;
+}
+.copy-toast {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.copy-toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+[hidden] {
+  display: none !important;
+}
+section[id] {
+  scroll-margin-top: 7rem;
+}
+:focus-visible {
+  outline: 2px solid #72575e;
+  outline-offset: 4px;
+}
+.pub-filter-btn[aria-pressed="true"] {
+  background: #141414;
+  color: white;
+  font-weight: 700;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

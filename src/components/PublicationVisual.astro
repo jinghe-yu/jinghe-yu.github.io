@@ -1,0 +1,66 @@
+---
+import type { Publication } from "../data/types";
+import { mediaUrl } from "../lib/media";
+import Liqo from "./research-visuals/liqo.astro";
+import PostsAndThreads from "./research-visuals/posts-and-threads.astro";
+import MentalHealth from "./research-visuals/mental-health.astro";
+import SentimentBoundaries from "./research-visuals/sentiment-boundaries.astro";
+import ACBench from "./research-visuals/ac-bench.astro";
+
+interface Props {
+  publication: Publication;
+}
+const { publication } = Astro.props;
+const visuals = {
+  liqo: Liqo,
+  "posts-and-threads": PostsAndThreads,
+  "mental-health": MentalHealth,
+  "sentiment-boundaries": SentimentBoundaries,
+  "ac-bench": ACBench,
+};
+const Schematic = visuals[publication.id as keyof typeof visuals];
+---
+
+{
+  publication.image?.src ? (
+    <div class="lg:col-span-4 flex flex-col gap-2">
+      <figure class="relative w-full h-56 rounded-lg overflow-hidden bg-surface-container-low border border-outline-border">
+        <img
+          data-research-image
+          src={mediaUrl(publication.image.src)}
+          alt={publication.image.alt}
+          style={{
+            objectPosition: publication.image.objectPosition ?? "center",
+          }}
+          class="absolute inset-0 w-full h-full object-cover"
+          width="800"
+          height="560"
+          loading="lazy"
+          decoding="async"
+        />
+        {(publication.imageLabel || publication.imageCaption) && (
+          <>
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent"
+              aria-hidden="true"
+            />
+            <figcaption class="absolute bottom-3 left-3 right-3 text-on-primary">
+              {publication.imageLabel && (
+                <span class="px-2 py-0.5 bg-secondary-container text-on-secondary-fixed font-mono text-[10px] rounded font-bold">
+                  {publication.imageLabel}
+                </span>
+              )}
+              {publication.imageCaption && (
+                <p class="text-xs text-white/90 mt-1 font-medium">
+                  {publication.imageCaption}
+                </p>
+              )}
+            </figcaption>
+          </>
+        )}
+      </figure>
+    </div>
+  ) : Schematic ? (
+    <Schematic />
+  ) : null
+}

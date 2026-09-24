@@ -1,0 +1,1308 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Jinghe Yu (于景和) · Human-Centered AI, HCI &amp; Affective Computing | SCUT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+  <style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+    }
+    .pub-card {
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+    }
+    .pub-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 6px 6px 0px #141414;
+    }
+    .badge-pink {
+      background-color: #F8D4DC;
+      color: #2a161c;
+    }
+    .copy-toast {
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .copy-toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#f9f9fa",
+            "surface-dim": "#dadadb",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f3f3f4",
+            "surface-container": "#eeeeef",
+            "surface-container-high": "#e8e8e9",
+            "primary": "#141414",
+            "on-primary": "#ffffff",
+            "secondary": "#72575e",
+            "secondary-container": "#F8D4DC",
+            "on-secondary-fixed": "#2a161c",
+            "outline-border": "#d2d2d6",
+            "on-surface": "#141414",
+            "on-surface-variant": "#525254"
+          },
+          fontFamily: {
+            "headline": ["Hanken Grotesk", "sans-serif"],
+            "body": ["Inter", "sans-serif"],
+            "mono": ["Space Mono", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased min-h-screen flex flex-col selection:bg-secondary-container selection:text-on-secondary-fixed">
+
+<!-- TOP HEADER -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md border-b border-outline-border/60">
+  <div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-4">
+    <!-- Brand Logo SVG from DataStore https://lh3.googleusercontent.com/aida/AEtjO1V4OPW8HK4kubE9lVLg4cVfKBQVe-RJMZ4Nq7ODlo-b0z9Wg_TeEUc_GAANi4WAytNgfIZLaOH9I0SEtnIh7mBt5nOVMZYVzBbYirDFL0_gBEaZ_0L94rqG2xBRQTjyiX9M2pFAZjs_eGOrN4F2sayKBaGSZeIRElGTzqP33L1E3ety7mrejY6UjTsdW2hcYTNMKwy1luSzMPBTvNKqUlS8430lR9sS4uytoCg3SQu3O0aNZSDhdHmlw126 -->
+    <a href="#" class="flex items-center gap-3 group focus:outline-none">
+      
+    </a>
+
+    <!-- Navigation -->
+    <nav class="hidden md:flex items-center gap-1 p-1 rounded bg-surface-container-low border border-outline-border/50 text-xs font-mono">
+      <a href="#about" class="px-3 py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition">About</a>
+      
+      <a href="#publications" class="px-3 py-1.5 rounded font-bold text-on-surface bg-surface-container-lowest shadow-sm">Publications (11)</a>
+      <a href="#profile" class="px-3 py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition">Profile &amp; Honors</a>
+    </nav>
+
+    <!-- Header Actions -->
+    <div class="flex items-center gap-3 shrink-0">
+      <div class="hidden sm:flex items-center gap-2 px-3 py-1.5 bg-secondary-container text-on-secondary-fixed rounded-full font-mono text-[11px] font-bold">
+        <span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+        <span class="">Seeking Fall 2027 PhD</span>
+      </div>
+      <a href="mailto:yujinghe2026@gmail.com" class="inline-flex items-center gap-1.5 bg-primary text-on-primary hover:bg-secondary-container hover:text-on-secondary-fixed font-mono text-xs px-4 py-2 rounded-full transition-all shadow-[2px_2px_0px_#141414] font-bold">
+        <span class="">Contact</span>
+        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="w-full pt-20 flex-grow">
+  <!-- HERO SECTION -->
+  <section class="w-full max-w-7xl mx-auto px-6 lg:px-12 pt-10 pb-12" id="about">
+    <div class="flex flex-wrap items-center justify-between gap-4 pb-6 mb-8 border-b border-outline-border">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-secondary-container text-on-secondary-fixed rounded-full shadow-[2px_2px_0px_#141414] text-[11px] font-mono font-bold">
+        <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+        <span class="">Expected Grad June 2027</span>
+      </div>
+      <div class="text-xs font-mono text-on-surface-variant">
+        South China University of Technology (SCUT) · Guangzhou, China
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <!-- Left: Bio Statement -->
+      <div class="lg:col-span-8 flex flex-col gap-6">
+        <div>
+          
+          <h1 class="font-headline text-5xl lg:text-7xl font-extrabold text-on-surface tracking-tight leading-none mb-3">
+            Jinghe Yu <span class="text-3xl lg:text-4xl font-normal text-on-surface-variant">(余静荷)</span>
+          </h1>
+          <p class="font-mono text-sm text-on-surface font-semibold">
+            Human-Centered AI | Human-Computer Interaction · Affective Computing
+          </p>
+        </div>
+
+        <p class="text-base lg:text-lg text-on-surface-variant max-w-3xl leading-relaxed">
+          I am an undergraduate AI researcher at South China University of Technology (SCUT, CGPA 3.55/4.00, Score 87.27/100), working at the intersection of Human-Computer Interaction, Affective Computing, and Multimodal Healthcare Analytics. Advised by Prof. Zhanpeng Jin, Prof. Yang Gao, and Prof. Yanwu Xu.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-wrap items-center gap-3 pt-1">
+          <a href="#publications" class="inline-flex items-center gap-2 bg-primary text-on-primary font-mono text-xs uppercase px-5 py-2.5 rounded shadow-[2px_2px_0px_#141414] hover:bg-secondary-container hover:text-on-secondary-fixed transition font-bold">
+            <span class="">Publications (11 Papers)</span>
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 13l5 5 5-5M12 4v14"></path></svg>
+          </a>
+          
+          <a href="mailto:yujinghe2026@gmail.com" class="font-mono text-xs text-on-surface-variant hover:text-on-surface underline decoration-secondary decoration-2 underline-offset-4 ml-1">
+            yujinghe2026@gmail.com →
+          </a>
+        </div>
+
+        <!-- Academic Dossier Strip (Verbatim from CV) -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 max-w-3xl border-t border-outline-border">
+          <div>
+            <span class="block font-mono text-base font-bold text-on-surface">11 Papers</span>
+            <span class="font-mono text-[10px] text-on-surface-variant uppercase">6 Published · 5 In Review</span>
+          </div>
+          <div>
+            <span class="block font-mono text-base font-bold text-on-surface">CGPA 3.55 / 4.00</span>
+            <span class="font-mono text-[10px] text-on-surface-variant uppercase">Avg Score: 87.27 / 100</span>
+          </div>
+          <div>
+            <span class="block font-mono text-base font-bold text-on-surface">IELTS 6.5</span>
+            <span class="font-mono text-[10px] text-on-surface-variant uppercase">CET-6 577 · CET-4 608</span>
+          </div>
+          <div>
+            <span class="block font-mono text-base font-bold text-on-surface">HAI &amp; HDMI Labs</span>
+            <span class="font-mono text-[10px] text-on-surface-variant uppercase">SCUT Dual Research</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Research Interests Statement (Verbatim from main.md) -->
+      <div class="lg:col-span-4 p-6 bg-surface-container-lowest border border-outline-border rounded-xl shadow-[4px_4px_0px_#141414] space-y-4">
+        <div>
+          <span class="font-mono text-[10px] text-secondary uppercase font-bold tracking-widest block mb-1">Verbatim Statement</span>
+          <h2 class="font-headline text-lg font-bold text-on-surface">Research Interests</h2>
+        </div>
+        <p class="text-sm text-on-surface">
+          My primary research interest is <strong class="font-bold">Human-Centered AI</strong>, with a focus on:
+        </p>
+        <ul class="space-y-2.5 text-sm">
+          <li class="flex items-center gap-3 p-3 bg-surface-container-low rounded border-l-4 border-secondary">
+            <svg class="w-5 h-5 text-secondary shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"></path><path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"></path><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"></path><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path></svg>
+            <span class="font-semibold text-on-surface">Human-Computer Interaction</span>
+          </li>
+          <li class="flex items-center gap-3 p-3 bg-surface-container-low rounded border-l-4 border-secondary">
+            <svg class="w-5 h-5 text-secondary shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+            <span class="font-semibold text-on-surface">Multimodal Healthcare Analytics</span>
+          </li>
+          <li class="flex items-center gap-3 p-3 bg-surface-container-low rounded border-l-4 border-secondary">
+            <svg class="w-5 h-5 text-secondary shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a9 9 0 0 0-9 9c0 3.6 2.1 6.7 5.2 8.1.3.1.5.4.5.8v1.1c0 .6.4 1 1 1h4.6c.6 0 1-.4 1-1v-1.1c0-.4.2-.7.5-.8A9 9 0 0 0 12 2z"></path><path d="M9 13h6"></path><path d="M10 17h4"></path></svg>
+            <span class="font-semibold text-on-surface">Affective Computing</span>
+          </li>
+        </ul>
+        <div class="pt-3 border-t border-outline-border font-mono text-[11px] text-on-surface-variant space-y-1">
+          <div class="flex justify-between"><span class="">Location:</span><span class="text-on-surface font-bold">Guangzhou, China</span></div>
+          <div class="flex justify-between"><span class="">Degree Track:</span><span class="text-on-surface font-bold">B.Eng. AI (2023–2027)</span></div>
+          <div class="flex justify-between"><span class="">Advising Target:</span><span class="text-on-surface font-bold">Fall 2027 PhD</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE RESEARCH SIMULATOR (Russell Circumplex / Dynamic Affective Waveform) -->
+  <section class="w-full py-12 bg-surface-container-lowest border-y border-outline-border" id="affective-simulator">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      
+    </div>
+  </section>
+
+  <!-- UNIFIED PUBLICATIONS SHOWCASE (11 PAPERS FULLY PRESENTED IN EDITORIAL HIGHLIGHT CARDS) -->
+  <section class="w-full py-14" id="publications">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 text-secondary font-mono text-[11px] uppercase font-bold tracking-widest block mb-2">
+            
+            
+            
+          </div>
+          <h2 class="font-headline text-3xl md:text-5xl font-bold text-on-surface tracking-tight">
+            Publications &amp; Research Experiences</h2>
+          <p class="text-sm text-on-surface-variant mt-2 max-w-2xl">
+            * indicates equal contribution.</p>
+        </div>
+
+        <!-- Filter Pill Controls -->
+        <div class="flex flex-wrap items-center gap-1.5 p-1 bg-surface-container-low rounded-lg border border-outline-border">
+          <button onclick="filterPubs('all')" id="filter-all" class="pub-filter-btn px-3 py-1.5 rounded text-xs font-mono text-on-surface-variant hover:text-on-surface">All (11)</button>
+          <button onclick="filterPubs('affective')" id="filter-affective" class="pub-filter-btn px-3 py-1.5 rounded text-xs font-mono text-on-surface-variant hover:text-on-surface">Affective Computing</button>
+          <button onclick="filterPubs('hci')" id="filter-hci" class="pub-filter-btn px-3 py-1.5 rounded text-xs font-mono font-bold bg-primary text-on-primary">Human-Computer Interaction</button>
+          <button onclick="filterPubs('healthcare')" id="filter-healthcare" class="pub-filter-btn px-3 py-1.5 rounded text-xs font-mono text-on-surface-variant hover:text-on-surface">AI for Healthcare</button>
+        </div>
+      </div>
+
+      <!-- PART 1: ACCEPTED & PUBLISHED (6) -->
+      <div class="mb-14">
+        <div class="flex items-center gap-3 mb-6 pb-2 border-b border-outline-border">
+          <span class="w-3 h-3 rounded-full bg-secondary"></span>
+          <h3 class="font-headline text-2xl font-bold text-on-surface">Accepted &amp; Published (6)</h3>
+          <span class="font-mono text-xs text-on-surface-variant ml-auto">Peer-Reviewed Venues</span>
+        </div>
+
+        <div class="space-y-8">
+          <!-- PUB 1: ICIMH 2025 BEST PAPER -->
+          <article class="pub-card bg-surface-container-lowest rounded-xl p-7 lg:p-9 border border-outline-border shadow-[4px_4px_0px_#141414]" data-category="healthcare" style="display: none;">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <div class="lg:col-span-8 flex flex-col justify-between space-y-4">
+                <div>
+                  <div class="flex flex-wrap items-center gap-2 mb-2.5">
+                    <span class="px-2.5 py-1 bg-primary text-on-primary rounded font-mono text-[11px] font-bold">ICIMH</span>
+                    <span class="px-2.5 py-1 bg-secondary-container text-on-secondary-fixed rounded font-mono text-[11px] font-bold flex items-center gap-1.5">
+                      <svg class="w-3.5 h-3.5 text-secondary" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                      Best Paper Award
+                    </span>
+                    <span class="font-mono text-[11px] text-on-surface-variant">Published, November 2025</span>
+                  </div>
+                  <h4 class="font-headline text-xl lg:text-2xl font-bold text-on-surface tracking-tight">
+                    Glaucoma and Cataract Diagnosis from AS-OCT Images Using Ensemble Learning
+                  </h4>
+                  <p class="text-sm text-on-surface-variant mt-2 leading-normal">
+                    <strong>Authors:</strong> Jiongning Zhao, Yuetong Yang, <strong class="text-on-surface underline decoration-secondary decoration-2 underline-offset-2">Jinghe Yu</strong>, Yueqin Diao, Yanwu Xu
+                  </p>
+                </div>
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                  Addressed clinical ophthalmic imaging challenges by developing an ensemble learning architecture designed for anterior segment optical coherence tomography (AS-OCT) images. Designed a strict leakage-safe cross-validation and feature-fusion pipeline capable of identifying both glaucoma and cataract pathologies concurrently, establishing reliable diagnostic support for clinical practitioners.
+                </p>
+                <div class="flex flex-wrap items-center gap-3 pt-2">
+                  <a href="https://dl.acm.org/doi/10.1145/3784929.3784932" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-primary text-on-primary font-mono text-xs px-4 py-2 rounded shadow-[2px_2px_0px_#141414] hover:bg-secondary-container hover:text-on-secondary-fixed transition font-bold">
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                    <span class="">ACM Digital Library</span>
+                  </a>
+                  <button onclick="copyBibtex('icimh2025')" class="inline-flex items-center gap-1.5 border border-outline-border bg-surface hover:bg-surface-container-low font-mono text-xs px-3.5 py-2 rounded transition text-on-surface font-semibold">
+                    <svg class="w-3.5 h-3.5 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    <span class="">Copy BibTeX</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Visual Preview Right -->
+              <div class="lg:col-span-4 flex flex-col gap-2">
+                <div class="relative w-full h-56 rounded-lg overflow-hidden bg-surface-container-low border border-outline-border flex flex-col items-center justify-center p-3">
+                  <img class="absolute inset-0 w-full h-full object-cover" data-alt="Clinical AS-OCT ophthalmic imaging scans showing corneal structure and anterior chamber angle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMmXlfxRGstW-iXaKxgmaoRSkgvNMLfgw_oOKkZSZbqKiqqnhahKngb7-m_esyCOrqEgUK7Z-x1LkTYnBwTUXqy4Eu2g4nR2Lc30XkuTB2bo9Bx3aeUXKFL8KuSLXRWTDmknRLti3tyPePbhSCfGfLJTJtRREN3vFXScS1TOyHgmF7YYGVj2ultx_tHQba4GFp0oMuj_SZsYqhQFTZ9vLaZE4MRFsQOmp01_CvlKqq-OxljXjHqxIKgA">
+                  <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent"></div>
+                  <div class="absolute bottom-3 left-3 right-3 text-on-primary">
+                    <span class="px-2 py-0.5 bg-secondary-container text-on-secondary-fixed font-mono text-[10px] rounded font-bold">Best Paper Award · ICIMH 2025</span>
+                    <p class="text-xs text-white/90 mt-1 font-medium">Dual anterior segment classification ensemble framework</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PUB 2: EMOMIRROR (UBICOMP/ISWC 2026 WORKSHOP) -->
+          <article class="pub-card bg-surface-container-lowest rounded-xl p-7 lg:p-9 border border-outline-border shadow-[4px_4px_0px_#141414]" data-category="affective" style="display: none;">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <div class="lg:col-span-8 flex flex-col justify-between space-y-4">
+                <div>
+                  <div class="flex flex-wrap items-center gap-2 mb-2.5">
+                    <span class="px-2.5 py-1 bg-secondary-container text-on-secondary-fixed rounded font-mono text-[11px] font-bold">UbiComp/ISWC 2026 Workshop</span>
+                    <span class="px-2 py-0.5 bg-surface-container-high text-on-surface rounded font-mono text-[11px] font-semibold">Accepted</span>
+                    <span class="font-mono text-[11px] text-secondary font-bold">First Author</span>
+                  </div>
+                  <h4 class="font-headline text-xl lg:text-2xl font-bold text-on-surface tracking-tight">
+                    EmoMirror: Negotiable Affective Mirroring for Students with Elevated Alexithymia
+                  </h4>
+                  <p class="text-sm text-on-surface-variant mt-2 leading-normal">
+                    <strong>Authors:</strong> <strong class="text-on-surface underline decoration-secondary decoration-2 underline-offset-2">Jinghe Yu*</strong>, Dong She*, Xinyao Li, Fanbo Meng, Yang Gao, Zhanpeng Jin
+                  </p>
+                </div>
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                  Individuals with elevated alexithymia experience fundamental hurdles in identifying and articulating their affective states. EmoMirror introduces a negotiable affective mirroring interactive system designed for college students, enabling voluntary, non-coercive visual feedback that fosters cognitive reflection and emotional literacy without imposing rigid diagnostic labels.
+                </p>
+                <div class="flex flex-wrap items-center gap-3 pt-2">
+                  <span class="px-3.5 py-1.5 bg-surface-container font-mono text-xs rounded text-on-surface font-medium">UbiComp/ISWC 2026 Proceedings</span>
+                  <button onclick="copyBibtex('emomirror26')" class="inline-flex items-center gap-1.5 border border-outline-border bg-surface hover:bg-surface-container-low font-mono text-xs px-3.5 py-2 rounded transition text-on-surface font-semibold">
+                    <svg class="w-3.5 h-3.5 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    <span class="">Copy BibTeX</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Visual Preview Right -->
+              <div class="lg:col-span-4 flex flex-col gap-2">
+                <div class="relative w-full h-56 rounded-lg overflow-hidden bg-surface-container-low border border-outline-border flex flex-col items-center justify-center p-3">
+                  <img class="absolute inset-0 w-full h-full object-cover" data-alt="Negotiable affective mirroring interface illustrating emotional reflection and student interaction." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuCn8ugxUfxDwVW37gCETA9A54lumj7kAJBzc1tOX49RxT7Isf4o_kM4T4n74KXE3aO_JLHDAHck52YbjPhQ3vxGXsPn_lpj18utx7BT3GFayAglBDCJXN4D0-mpTP3tL6Ju18XZ0KqDlQ9U2NM6yZ_kfKtgcnG27ox4R8C87hzJKGrM5O1Bm7vvgS5xbgpXlBvQWemcmExQbZAlcwb_4LNVFnSQi1b288IwwAnAygUYVvBtopheOnEQ">
+                  <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent"></div>
+                  <div class="absolute bottom-3 left-3 right-3 text-on-primary">
+                    <span class="px-2 py-0.5 bg-secondary-container text-on-secondary-fixed font-mono text-[10px] rounded font-bold">First Author · UbiComp '26</span>
+                    <p class="text-xs text-white/90 mt-1 font-medium">Affective mirror interface designed for elevated alexithymia</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PUB 3: EMOTYPE-ZERO (CHI 2026 POSTERS) -->
+          <article class="pub-card bg-surface-container-lowest rounded-xl p-7 lg:p-9 border border-outline-border shadow-[4px_4px_0px_#141414]" data-category="affective" style="display: none;">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <div class="lg:col-span-8 flex flex-col justify-between space-y-4">
+                <div>
+                  <div class="flex flex-wrap items-center gap-2 mb-2.5">
+                    <span class="px-2.5 py-1 bg-primary text-on-primary rounded font-mono text-[11px] font-bold">CHI 2026 Posters</span>
+                    <span class="px-2 py-0.5 bg-surface-container-high text-on-surface rounded font-mono text-[11px] font-semibold">Published</span>
+                    <span class="font-mono text-[11px] text-secondary font-bold">Co-First Author</span>
+                  </div>
+                  <h4 class="font-headline text-xl lg:text-2xl font-bold text-on-surface tracking-tight">
+                    EmoType-Zero: Adaptive Fonts to Render the Speech Emotion
+                  </h4>
+                  <p class="text-sm text-on-surface-variant mt-2 leading-normal">
+                    <strong>Authors:</strong> Dong She*, <strong class="text-on-surface underline decoration-secondary decoration-2 underline-offset-2">Jinghe Yu*</strong>, Nuo Chen, Yuting Bai, Yang Gao, Zhanpeng Jin
+                  </p>
+                </div>
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                  Speech carries critical prosodic and emotional nuance that traditional static typography fails to reflect in written communication. EmoType-Zero synthesizes dynamic, adaptive fonts directly from acoustic speech inputs, modulating typography attributes in real-time according to vocal emotional valence and arousal.
+                </p>
+                <div class="flex flex-wrap items-center gap-3 pt-2">
+                  <a href="https://dl.acm.org/doi/10.1145/3772363.3798656" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-primary text-on-primary font-mono text-xs px-4 py-2 rounded shadow-[2px_2px_0px_#141414] hover:bg-secondary-container hover:text-on-secondary-fixed transition font-bold">
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                    <span class="">ACM Digital Library</span>
+                  </a>
+                  <button onclick="copyBibtex('emotype26')" class="inline-flex items-center gap-1.5 border border-outline-border bg-surface hover:bg-surface-container-low font-mono text-xs px-3.5 py-2 rounded transition text-on-surface font-semibold">
+                    <svg class="w-3.5 h-3.5 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    <span class="">Copy BibTeX</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Visual Preview Right -->
+              <div class="lg:col-span-4 flex flex-col gap-2">
+                <div class="relative w-full h-56 rounded-lg overflow-hidden bg-surface-container-low border border-outline-border flex flex-col items-center justify-center p-3">
+                  <img class="absolute inset-0 w-full h-full object-cover" data-alt="Dynamic typographic forms synthesized from speech emotion acoustic signals." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuCn8ugxUfxDwVW37gCETA9A54lumj7kAJBzc1tOX49RxT7Isf4o_kM4T4n74KXE3aO_JLHDAHck52YbjPhQ3vxGXsPn_lpj18utx7BT3GFayAglBDCJXN4D0-mpTP3tL6Ju18XZ0KqDlQ9U2NM6yZ_kfKtgcnG27ox4R8C87hzJKGrM5O1Bm7vvgS5xbgpXlBvQWemcmExQbZAlcwb_4LNVFnSQi1b288IwwAnAygUYVvBtopheOnEQ">
+                  <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent"></div>
+                  <div class="absolute bottom-3 left-3 right-3 text-on-primary">
+                    <span class="px-2 py-0.5 bg-secondary-container text-on-secondary-fixed font-mono text-[10px] rounded font-bold">Co-First Author · CHI '26</span>
+                    <p class="text-xs text-white/90 mt-1 font-medium">Real-time dynamic typographic rendering of speech emotion</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PUB 4: TOUCH THROUGH SOUND (CHI 2026 POSTERS) -->
+          <article class="pub-card bg-surface-container-lowest rounded-xl p-7 lg:p-9 border border-outline-border shadow-[4px_4px_0px_#141414]" data-category="hci" style="display: block;">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <div class="lg:col-span-8 flex flex-col justify-between space-y-4">
+                <div>
+                  <div class="flex flex-wrap items-center gap-2 mb-2.5">
+                    <span class="px-2.5 py-1 bg-primary text-on-primary rounded font-mono text-[11px] font-bold">CHI 2026 Posters</span>
+                    <span class="px-2 py-0.5 bg-surface-container-high text-on-surface rounded font-mono text-[11px] font-semibold">Published</span>
+                  </div>
+                  <h4 class="font-headline text-xl lg:text-2xl font-bold text-on-surface tracking-tight">
+                    Touch Through Sound: Ring-Mounted Auditory Pseudo-Haptics for Material Perception
+                  </h4>
+                  <p class="text-sm text-on-surface-variant mt-2 leading-normal">
+                    <strong>Authors:</strong> Zhengte Cai, Chiyue Wang, Yumiao Wang, <strong class="text-on-surface underline decoration-secondary decoration-2 underline-offset-2">Jinghe Yu</strong>, Chen Li, Zhanpeng Jin, Yang Gao
+                  </p>
+                </div>
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                  Explores ring-mounted auditory pseudo-haptics to render continuous tactile material perceptions without requiring bulky mechanical actuators. The wearable finger-ring device delivers velocity-modulated audio feedback calibrated to surface roughness and compliance, enriching tactile exploration across virtual and augmented reality environments.
+                </p>
+                <div class="flex flex-wrap items-center gap-3 pt-2">
+                  <a href="https://dl.acm.org/doi/10.1145/3772363.3798554" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-primary text-on-primary font-mono text-xs px-4 py-2 rounded shadow-[2px_2px_0px_#141414] hover:bg-secondary-container hover:text-on-secondary-fixed transition font-bold">
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                    <span class="">ACM Digital Library</span>
+                  </a>
+                  <button onclick="copyBibtex('touchsound26')" class="inline-flex items-center gap-1.5 border border-outline-border bg-surface hover:bg-surface-container-low font-mono text-xs px-3.5 py-2 rounded transition text-on-surface font-semibold">
+                    <svg class="w-3.5 h-3.5 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    <span class="">Copy BibTeX</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Visual Preview Right -->
+              <div class="lg:col-span-4 flex flex-col gap-2">
+                <div class="relative w-full h-56 rounded-lg overflow-hidden bg-surface-container-low border border-outline-border flex flex-col items-center justify-center p-3">
+                  <img class="absolute inset-0 w-full h-full object-cover" data-alt="Ring-mounted wearable device delivering auditory pseudo-haptics for continuous surface perception." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMmXlfxRGstW-iXaKxgmaoRSkgvNMLfgw_oOKkZSZbqKiqqnhahKngb7-m_esyCOrqEgUK7Z-x1LkTYnBwTUXqy4Eu2g4nR2Lc30XkuTB2bo9Bx3aeUXKFL8KuSLXRWTDmknRLti3tyPePbhSCfGfLJTJtRREN3vFXScS1TOyHgmF7YYGVj2ultx_tHQba4GFp0oMuj_SZsYqhQFTZ9vLaZE4MRFsQOmp01_CvlKqq-OxljXjHqxIKgA">
+                  <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent"></div>
+                  <div class="absolute bottom-3 left-3 right-3 text-on-primary">
+                    <span class="px-2 py-0.5 bg-secondary-container text-on-secondary-fixed font-mono text-[10px] rounded font-bold">Wearable Pseudo-Haptics · CHI '26</span>
+                    <p class="text-xs text-white/90 mt-1 font-medium">Continuous material perception via ring auditory feedback</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PUB 5: AICA-BENCH (ACL 2026) -->
+          <article class="pub-card bg-surface-container-lowest rounded-xl p-7 lg:p-9 border border-outline-border shadow-[4px_4px_0px_#141414]" data-category="affective" style="display: none;">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <div class="lg:col-span-8 flex flex-col justify-between space-y-4">
+                <div>
+                  <div class="flex flex-wrap items-center gap-2 mb-2.5">
+                    <span class="px-2.5 py-1 bg-primary text-on-primary rounded font-mono text-[11px] font-bold">ACL 2026</span>
+                    <span class="px-2 py-0.5 bg-surface-container-high text-on-surface rounded font-mono text-[11px] font-semibold">Published</span>
+                  </div>
+                  <h4 class="font-headline text-xl lg:text-2xl font-bold text-on-surface tracking-tight">
+                    AICA-Bench: Holistically Examining the Capabilities of VLMs in Affective Image Content Analysis
+                  </h4>
+                  <p class="text-sm text-on-surface-variant mt-2 leading-normal">
+                    <strong>Authors:</strong> Dong She*, Xianrong Yao*, Liqun Chen, <strong class="text-on-surface underline decoration-secondary decoration-2 underline-offset-2">Jinghe Yu</strong>, Yang Gao, Zhanpeng Jin
+                  </p>
+                </div>
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                  Presents a holistic benchmark framework for scrutinizing vision-language models on affective image content analysis. Rigorously assesses multimodal foundation models across subtle visual affective scenarios, revealing current limitations in human-aligned affective understanding and visual sentiment perception.
+                </p>
+                <div class="flex flex-wrap items-center gap-3 pt-2">
+                  <a href="https://aclanthology.org/2026.findings-acl.661/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-primary text-on-primary font-mono text-xs px-4 py-2 rounded shadow-[2px_2px_0px_#141414] hover:bg-secondary-container hover:text-on-secondary-fixed transition font-bold">
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                    <span class="">ACL Anthology</span>
+                  </a>
+                  <button onclick="copyBibtex('aicabench26')" class="inline-flex items-center gap-1.5 border border-outline-border bg-surface hover:bg-surface-container-low font-mono text-xs px-3.5 py-2 rounded transition text-on-surface font-semibold">
+                    <svg class="w-3.5 h-3.5 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    <span class="">Copy BibTeX</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Visual Preview Right -->
+              <div class="lg:col-span-4 flex flex-col gap-2">
+                <div class="relative w-full h-56 rounded-lg overflow-hidden bg-surface-container-low border border-outline-border flex flex-col items-center justify-center p-3">
+                  <img class="absolute inset-0 w-full h-full object-cover" data-alt="Technical benchmark evaluation pipeline showing multimodal inputs, affective scoring metrics, and vision-language model diagnostic matrices." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv5IKIHCZzYpDOpsywfkNpxlStlsRvyuJdu-Y-4gQ-D9FCEvkgNDs_PfVjuVSxc4gN71UbnioQcNEM0xT2XymAvObjG-bGQSYBPHrDO4WBlL6pwWDu6EzMxgkVoUYa68UQ0fqZWr4_ts_zl7Y4Cr4T0GU4BrYgaRmnLILKijlCUctE_D7DgqIkWeOcEyiI0aweRli8MS-WV5GqaaArymClTn5V3tidkdC5wdVIIIp2DU4uWkFHDCNcoQ">
+                  <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent"></div>
+                  <div class="absolute bottom-3 left-3 right-3 text-on-primary">
+                    <span class="px-2 py-0.5 bg-secondary-container text-on-secondary-fixed font-mono text-[10px] rounded font-bold">Multimodal Benchmark · ACL '26</span>
+                    <p class="text-xs text-white/90 mt-1 font-medium">Holistic benchmark for affective vision-language models</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PUB 6: NATURE SCIENTIFIC DATA (SEPTEMBER 2026) -->
+          <article class="pub-card bg-surface-container-lowest rounded-xl p-7 lg:p-9 border border-outline-border shadow-[4px_4px_0px_#141414]" data-category="healthcare" style="display: none;">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <div class="lg:col-span-8 flex flex-col justify-between space-y-4">
+                <div>
+                  <div class="flex flex-wrap items-center gap-2 mb-2.5">
+                    <span class="px-2.5 py-1 bg-primary text-on-primary rounded font-mono text-[11px] font-bold">Scientific Data (Nature Portfolio)</span>
+                    <span class="px-2 py-0.5 bg-surface-container-high text-on-surface rounded font-mono text-[11px] font-semibold">Published, September 2026</span>
+                  </div>
+                  <h4 class="font-headline text-xl lg:text-2xl font-bold text-on-surface tracking-tight">
+                    AS-OCT Dataset with Anatomical Structure Segmentation and Scleral Spur Localization in Cataract and Glaucoma
+                  </h4>
+                  <p class="text-sm text-on-surface-variant mt-2 leading-normal">
+                    <strong>Authors:</strong> Jiongning Zhao*, Huihui Fang*, Yuetong Yang, Xinyu Fu, Jingru Deng, <strong class="text-on-surface underline decoration-secondary decoration-2 underline-offset-2">Jinghe Yu</strong>, Xingying Yan, Xinya Hu, Xiaoqing Wang, Yuting Hu, Di Gong, Zhe Zhang, Wei Chi, Weihua Yang, Yanwu Xu
+                  </p>
+                </div>
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                  A large-scale, high-quality anterior segment optical coherence tomography (AS-OCT) dataset released for open clinical AI research. Features precise pixel-level anatomical structure segmentations and expert scleral spur landmark localizations across comprehensive cohort scans for cataract and glaucoma screening.
+                </p>
+                <div class="flex flex-wrap items-center gap-3 pt-2">
+                  <a href="https://www.nature.com/articles/s41597-026-08315-8" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-primary text-on-primary font-mono text-xs px-4 py-2 rounded shadow-[2px_2px_0px_#141414] hover:bg-secondary-container hover:text-on-secondary-fixed transition font-bold">
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                    <span class="">Nature Portfolio Article</span>
+                  </a>
+                  <button onclick="copyBibtex('scidata26')" class="inline-flex items-center gap-1.5 border border-outline-border bg-surface hover:bg-surface-container-low font-mono text-xs px-3.5 py-2 rounded transition text-on-surface font-semibold">
+                    <svg class="w-3.5 h-3.5 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    <span class="">Copy BibTeX</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Visual Preview Right -->
+              <div class="lg:col-span-4 flex flex-col gap-2">
+                <div class="relative w-full h-56 rounded-lg overflow-hidden bg-surface-container-low border border-outline-border flex flex-col items-center justify-center p-3">
+                  <img class="absolute inset-0 w-full h-full object-cover" data-alt="Nature Scientific Data anterior segment optical coherence tomography medical imaging scans." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMmXlfxRGstW-iXaKxgmaoRSkgvNMLfgw_oOKkZSZbqKiqqnhahKngb7-m_esyCOrqEgUK7Z-x1LkTYnBwTUXqy4Eu2g4nR2Lc30XkuTB2bo9Bx3aeUXKFL8KuSLXRWTDmknRLti3tyPePbhSCfGfLJTJtRREN3vFXScS1TOyHgmF7YYGVj2ultx_tHQba4GFp0oMuj_SZsYqhQFTZ9vLaZE4MRFsQOmp01_CvlKqq-OxljXjHqxIKgA">
+                  <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent"></div>
+                  <div class="absolute bottom-3 left-3 right-3 text-on-primary">
+                    <span class="px-2 py-0.5 bg-secondary-container text-on-secondary-fixed font-mono text-[10px] rounded font-bold">Nature Portfolio · 2026</span>
+                    <p class="text-xs text-white/90 mt-1 font-medium">Open-access benchmark AS-OCT segmentation dataset</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- PART 2: UNDER REVIEW & SUBMITTED (5) -->
+      <div>
+        <div class="flex items-center gap-3 mb-6 pb-2 border-b border-outline-border">
+          <span class="w-3 h-3 rounded-full bg-outline-border"></span>
+          <h3 class="font-headline text-2xl font-bold text-on-surface">Under Review &amp; Submitted (5)</h3>
+          
+        </div>
+
+        <div class="space-y-8">
+          <!-- PUB 7: LIQO (CHI 2027) -->
+          <article class="pub-card bg-surface-container-lowest rounded-xl p-7 lg:p-9 border border-outline-border shadow-[4px_4px_0px_#141414]" data-category="hci" style="display: block;">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <div class="lg:col-span-8 flex flex-col justify-between space-y-4">
+                <div>
+                  <div class="flex flex-wrap items-center gap-2 mb-2.5">
+                    <span class="px-2.5 py-1 bg-surface-container-high text-on-surface rounded font-mono text-[11px] font-bold">CHI 2027</span>
+                    <span class="px-2 py-0.5 bg-surface-container text-on-surface-variant rounded font-mono text-[11px]">Submitted</span>
+                    <span class="font-mono text-[11px] text-secondary font-bold">Co-First Author</span>
+                  </div>
+                  <h4 class="font-headline text-xl lg:text-2xl font-bold text-on-surface tracking-tight">
+                    Liqo: A Liquid-to-Solid Interaction Metaphor for Exploratory LLM Sensemaking
+                  </h4>
+                  <p class="text-sm text-on-surface-variant mt-2 leading-normal">
+                    <strong>Authors:</strong> Zhengte Cai*, <strong class="text-on-surface underline decoration-secondary decoration-2 underline-offset-2">Jinghe Yu*</strong>, Yang Gao*, Guang Chen, Yuting Bai, Dong She, Zhanpeng Jin
+                  </p>
+                </div>
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                  Introduces a fluid-to-crystallized interactive interface paradigm for exploratory human-LLM sensemaking. Users navigate fluid, ambiguous thought streams before selectively freezing, refining, and reifying validated cognitive clusters into structured, persistent knowledge structures.
+                </p>
+                <div class="flex flex-wrap items-center gap-3 pt-2">
+                  <a href="mailto:yujinghe2026@gmail.com?subject=Manuscript%20Inquiry:%20Liqo%20(CHI%202027)" class="inline-flex items-center gap-1.5 bg-surface-container hover:bg-primary hover:text-on-primary font-mono text-xs px-3.5 py-2 rounded transition text-on-surface font-semibold">
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <span class="">Request Manuscript Draft</span>
+                  </a>
+                  <span class="font-mono text-xs text-on-surface-variant italic">[Under Double-Blind Review]</span>
+                </div>
+              </div>
+
+              <!-- Schematic Visual Preview -->
+              <div class="lg:col-span-4 flex flex-col gap-2">
+                <div class="relative w-full h-56 rounded-lg overflow-hidden bg-surface-container-low border border-outline-border p-4 flex flex-col justify-between">
+                  <div class="flex justify-between items-center text-[10px] font-mono text-on-surface-variant">
+                    <span class="">STATE TRANSITION METAPHOR</span>
+                    <span class="text-secondary font-bold">CHI '27</span>
+                  </div>
+                  <div class="w-full flex items-center justify-around py-3">
+                    <div class="flex flex-col items-center">
+                      <div class="w-12 h-12 rounded-full border-2 border-dashed border-secondary flex items-center justify-center bg-secondary-container/40 animate-pulse">
+                        <span class="text-[10px] font-mono font-bold">Fluid</span>
+                      </div>
+                      <span class="text-[9px] font-mono mt-1 text-on-surface-variant">Exploration</span>
+                    </div>
+                    <svg class="w-6 h-6 text-on-surface-variant" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+                    <div class="flex flex-col items-center">
+                      <div class="w-12 h-12 rounded bg-primary text-on-primary flex items-center justify-center shadow-md">
+                        <span class="text-[10px] font-mono font-bold">Solid</span>
+                      </div>
+                      <span class="text-[9px] font-mono mt-1 text-on-surface-variant">Reification</span>
+                    </div>
+                  </div>
+                  <div class="bg-surface-container-lowest p-2 rounded text-[11px] font-mono text-on-surface text-center border border-outline-border/50">
+                    Liquid stream → Crystallized concept DAG
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PUB 8: WRITING IN POSTS AND THREADS (CHI 2027) -->
+          <article class="pub-card bg-surface-container-lowest rounded-xl p-7 lg:p-9 border border-outline-border shadow-[4px_4px_0px_#141414]" data-category="hci" style="display: block;">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <div class="lg:col-span-8 flex flex-col justify-between space-y-4">
+                <div>
+                  <div class="flex flex-wrap items-center gap-2 mb-2.5">
+                    <span class="px-2.5 py-1 bg-surface-container-high text-on-surface rounded font-mono text-[11px] font-bold">CHI 2027</span>
+                    <span class="px-2 py-0.5 bg-surface-container text-on-surface-variant rounded font-mono text-[11px]">Submitted</span>
+                    <span class="font-mono text-[11px] text-secondary font-bold">Co-First Author</span>
+                  </div>
+                  <h4 class="font-headline text-xl lg:text-2xl font-bold text-on-surface tracking-tight">
+                    Writing in Posts and Threads: Collaborative Interactions for Poetry Writing
+                  </h4>
+                  <p class="text-sm text-on-surface-variant mt-2 leading-normal">
+                    <strong>Authors:</strong> Zhihan Cao*, <strong class="text-on-surface underline decoration-secondary decoration-2 underline-offset-2">Jinghe Yu*</strong>, Lijia Li, Ray LC
+                  </p>
+                </div>
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                  Investigates structured, non-linear collaborative creative writing workflows. Evaluates how breaking monolithic generative drafts into interactive posts and branching threads empowers co-authors to curate thematic rhythm and metaphoric depth collaboratively.
+                </p>
+                <div class="flex flex-wrap items-center gap-3 pt-2">
+                  <a href="mailto:yujinghe2026@gmail.com?subject=Manuscript%20Inquiry:%20Poetry%20Writing%20(CHI%202027)" class="inline-flex items-center gap-1.5 bg-surface-container hover:bg-primary hover:text-on-primary font-mono text-xs px-3.5 py-2 rounded transition text-on-surface font-semibold">
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <span class="">Request Manuscript Draft</span>
+                  </a>
+                  <span class="font-mono text-xs text-on-surface-variant italic">[Under Double-Blind Review]</span>
+                </div>
+              </div>
+
+              <!-- Schematic Visual Preview -->
+              <div class="lg:col-span-4 flex flex-col gap-2">
+                <div class="relative w-full h-56 rounded-lg overflow-hidden bg-surface-container-low border border-outline-border p-4 flex flex-col justify-between">
+                  <div class="flex justify-between items-center text-[10px] font-mono text-on-surface-variant">
+                    <span class="">BRANCHING THREAD TOPOLOGY</span>
+                    <span class="text-secondary font-bold">CHI '27</span>
+                  </div>
+                  <div class="space-y-1.5 py-1">
+                    <div class="p-1.5 bg-surface-container-lowest rounded text-[11px] font-mono font-bold border-l-2 border-secondary flex justify-between">
+                      <span class="">Root Post: Metaphor Core</span>
+                      <span class="text-[9px] text-secondary">Author A</span>
+                    </div>
+                    <div class="ml-4 p-1.5 bg-surface-container-lowest rounded text-[10px] font-mono border-l-2 border-primary flex justify-between">
+                      <span class="">↳ Sub-thread: Rhythm Stanza</span>
+                      <span class="text-[9px] text-on-surface-variant">Co-Author B</span>
+                    </div>
+                    <div class="ml-8 p-1.5 bg-surface-container-lowest rounded text-[10px] font-mono border-l-2 border-secondary-container flex justify-between">
+                      <span class="">↳ Branch: Syllable Rhyme</span>
+                      <span class="text-[9px] text-secondary">AI Agent</span>
+                    </div>
+                  </div>
+                  <div class="bg-surface-container-lowest p-2 rounded text-[11px] font-mono text-on-surface text-center border border-outline-border/50">
+                    Non-linear generative dialogue lattice
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PUB 9: PROBING LLMS IN MENTAL HEALTH SENSING (KBS) -->
+          <article class="pub-card bg-surface-container-lowest rounded-xl p-7 lg:p-9 border border-outline-border shadow-[4px_4px_0px_#141414]" data-category="affective" style="display: none;">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <div class="lg:col-span-8 flex flex-col justify-between space-y-4">
+                <div>
+                  <div class="flex flex-wrap items-center gap-2 mb-2.5">
+                    <span class="px-2.5 py-1 bg-surface-container-high text-on-surface rounded font-mono text-[11px] font-bold">Knowledge-Based Systems</span>
+                    <span class="px-2 py-0.5 bg-surface-container text-on-surface-variant rounded font-mono text-[11px]">Under Review · Submitted 2026</span>
+                    <span class="font-mono text-[11px] text-secondary font-bold">Co-First Author</span>
+                  </div>
+                  <h4 class="font-headline text-xl lg:text-2xl font-bold text-on-surface tracking-tight">
+                    Guessing or Understanding? Probing the Robustness of Large Language Models in Mental Health Sensing
+                  </h4>
+                  <p class="text-sm text-on-surface-variant mt-2 leading-normal">
+                    <strong>Authors:</strong> Dong She*, Boyi Xiao*, <strong class="text-on-surface underline decoration-secondary decoration-2 underline-offset-2">Jinghe Yu*</strong>, Nuo Chen, Qianle Zhang, Cong Liu, Zhengte Cai, Yang Gao, Zhanpeng Jin
+                  </p>
+                </div>
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                  Systematically stress-tests modern foundation models against psychiatric diagnostic benchmarks. Reveals vulnerability to lexical decoys, semantic drift, and superficial heuristic matching, formulating recommendations for clinical safety protocols.
+                </p>
+                <div class="flex flex-wrap items-center gap-3 pt-2">
+                  <a href="mailto:yujinghe2026@gmail.com?subject=Manuscript%20Inquiry:%20LLM%20Mental%20Health%20Probing%20(KBS)" class="inline-flex items-center gap-1.5 bg-surface-container hover:bg-primary hover:text-on-primary font-mono text-xs px-3.5 py-2 rounded transition text-on-surface font-semibold">
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <span class="">Request Manuscript Draft</span>
+                  </a>
+                  <span class="font-mono text-xs text-on-surface-variant italic">[Under Review: KBS 2026]</span>
+                </div>
+              </div>
+
+              <!-- Schematic Visual Preview -->
+              <div class="lg:col-span-4 flex flex-col gap-2">
+                <div class="relative w-full h-56 rounded-lg overflow-hidden bg-surface-container-low border border-outline-border p-4 flex flex-col justify-between">
+                  <div class="flex justify-between items-center text-[10px] font-mono text-on-surface-variant">
+                    <span class="">ROBUSTNESS STRESS TEST</span>
+                    <span class="text-secondary font-bold">KBS 2026</span>
+                  </div>
+                  <div class="space-y-2 py-2">
+                    <div>
+                      <div class="flex justify-between text-[10px] font-mono mb-1">
+                        <span class="">Standard Canonical Test</span>
+                        <span class="font-bold">92.4%</span>
+                      </div>
+                      <div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+                        <div class="h-full bg-primary rounded-full" style="width: 92%;"></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="flex justify-between text-[10px] font-mono mb-1">
+                        <span class="">Counterfactual Semantic Perturbation</span>
+                        <span class="font-bold text-secondary">58.1%</span>
+                      </div>
+                      <div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+                        <div class="h-full bg-secondary rounded-full" style="width: 58%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-surface-container-lowest p-2 rounded text-[11px] font-mono text-on-surface text-center border border-outline-border/50">
+                    Probing genuine comprehension vs heuristic cues
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PUB 10: LEARNING LATENT SENTIMENT BOUNDARIES (NEURIPS 2026) -->
+          <article class="pub-card bg-surface-container-lowest rounded-xl p-7 lg:p-9 border border-outline-border shadow-[4px_4px_0px_#141414]" data-category="affective" style="display: none;">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <div class="lg:col-span-8 flex flex-col justify-between space-y-4">
+                <div>
+                  <div class="flex flex-wrap items-center gap-2 mb-2.5">
+                    <span class="px-2.5 py-1 bg-surface-container-high text-on-surface rounded font-mono text-[11px] font-bold">NeurIPS 2026</span>
+                    <span class="px-2 py-0.5 bg-surface-container text-on-surface-variant rounded font-mono text-[11px]">Under Review · Submitted May 2026</span>
+                  </div>
+                  <h4 class="font-headline text-xl lg:text-2xl font-bold text-on-surface tracking-tight">
+                    Learning Latent Sentiment Boundaries for Fine-Grained Multimodal Sentiment Analysis
+                  </h4>
+                  <p class="text-sm text-on-surface-variant mt-2 leading-normal">
+                    <strong>Authors:</strong> Dong She, Xianrong Yao, Yang Gao, Nuo Chen, <strong class="text-on-surface underline decoration-secondary decoration-2 underline-offset-2">Jinghe Yu</strong>, Noman Ahmed, Zhanpeng Jin
+                  </p>
+                </div>
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                  Proposes an adaptive geometric boundary formulation in multimodal embedding space, separating subtle valence gradations where acoustic, visual, and lexical cues exhibit contradicting affective polarity.
+                </p>
+                <div class="flex flex-wrap items-center gap-3 pt-2">
+                  <a href="mailto:yujinghe2026@gmail.com?subject=Manuscript%20Inquiry:%20Latent%20Boundaries%20(NeurIPS%202026)" class="inline-flex items-center gap-1.5 bg-surface-container hover:bg-primary hover:text-on-primary font-mono text-xs px-3.5 py-2 rounded transition text-on-surface font-semibold">
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <span class="">Request Manuscript Draft</span>
+                  </a>
+                  <span class="font-mono text-xs text-on-surface-variant italic">[Under Review: NeurIPS 2026]</span>
+                </div>
+              </div>
+
+              <!-- Schematic Visual Preview -->
+              <div class="lg:col-span-4 flex flex-col gap-2">
+                <div class="relative w-full h-56 rounded-lg overflow-hidden bg-surface-container-low border border-outline-border p-4 flex flex-col justify-between">
+                  <div class="flex justify-between items-center text-[10px] font-mono text-on-surface-variant">
+                    <span class="">MANIFOLD BOUNDARY LEARNING</span>
+                    <span class="text-secondary font-bold">NeurIPS '26</span>
+                  </div>
+                  <div class="w-full flex items-center justify-center py-2">
+                    <svg class="w-48 h-20" viewBox="0 0 200 80">
+                      <path d="M10,70 Q60,10 110,60 T190,20" fill="none" stroke="#72575e" stroke-width="2.5"></path>
+                      <circle cx="50" cy="35" r="4" fill="#141414"></circle>
+                      <circle cx="70" cy="25" r="4" fill="#141414"></circle>
+                      <circle cx="130" cy="55" r="4" fill="#F8D4DC" stroke="#72575e" stroke-width="1.5"></circle>
+                      <circle cx="150" cy="40" r="4" fill="#F8D4DC" stroke="#72575e" stroke-width="1.5"></circle>
+                    </svg>
+                  </div>
+                  <div class="bg-surface-container-lowest p-2 rounded text-[11px] font-mono text-on-surface text-center border border-outline-border/50">
+                    Fine-grained multimodal decision hyperspace
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PUB 11: AC-BENCH (AAAI CONFERENCE ON AI) -->
+          <article class="pub-card bg-surface-container-lowest rounded-xl p-7 lg:p-9 border border-outline-border shadow-[4px_4px_0px_#141414]" data-category="affective" style="display: none;">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <div class="lg:col-span-8 flex flex-col justify-between space-y-4">
+                <div>
+                  <div class="flex flex-wrap items-center gap-2 mb-2.5">
+                    <span class="px-2.5 py-1 bg-surface-container-high text-on-surface rounded font-mono text-[11px] font-bold">AAAI Conference on AI</span>
+                    <span class="px-2 py-0.5 bg-surface-container text-on-surface-variant rounded font-mono text-[11px]">Submitted, July 2026</span>
+                  </div>
+                  <h4 class="font-headline text-xl lg:text-2xl font-bold text-on-surface tracking-tight">
+                    AC-Bench: Do Multimodal Models Truly See Emotion Amidst Textual Interference?
+                  </h4>
+                  <p class="text-sm text-on-surface-variant mt-2 leading-normal">
+                    <strong>Authors:</strong> Nuo Chen*, Dong She*, Xianrong Yao, Chenxu Zhang, <strong class="text-on-surface underline decoration-secondary decoration-2 underline-offset-2">Jinghe Yu</strong>, Yang Gao, Zhanpeng Jin
+                  </p>
+                </div>
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                  Introduces a diagnostic suite evaluating whether multimodal vision-language models genuinely extract emotional grounding from imagery, or succumb to superficial textual prompt steering and bias when modalities clash.
+                </p>
+                <div class="flex flex-wrap items-center gap-3 pt-2">
+                  <a href="mailto:yujinghe2026@gmail.com?subject=Manuscript%20Inquiry:%20AC-Bench%20(AAAI)" class="inline-flex items-center gap-1.5 bg-surface-container hover:bg-primary hover:text-on-primary font-mono text-xs px-3.5 py-2 rounded transition text-on-surface font-semibold">
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <span class="">Request Manuscript Draft</span>
+                  </a>
+                  <span class="font-mono text-xs text-on-surface-variant italic">[Submitted July 2026: AAAI]</span>
+                </div>
+              </div>
+
+              <!-- Schematic Visual Preview -->
+              <div class="lg:col-span-4 flex flex-col gap-2">
+                <div class="relative w-full h-56 rounded-lg overflow-hidden bg-surface-container-low border border-outline-border p-4 flex flex-col justify-between">
+                  <div class="flex justify-between items-center text-[10px] font-mono text-on-surface-variant">
+                    <span class="">CROSS-MODAL INTERFERENCE BENCH</span>
+                    <span class="text-secondary font-bold">AAAI</span>
+                  </div>
+                  <div class="flex items-center justify-between gap-2 py-2">
+                    <div class="flex-1 bg-surface-container-lowest p-2 rounded text-center border border-outline-border">
+                      <span class="block text-[9px] font-mono text-on-surface-variant uppercase">Visual Input</span>
+                      <span class="text-xs font-bold text-on-surface">Joyful Face</span>
+                    </div>
+                    <span class="text-secondary font-bold text-xs">VS</span>
+                    <div class="flex-1 bg-surface-container-lowest p-2 rounded text-center border border-outline-border">
+                      <span class="block text-[9px] font-mono text-on-surface-variant uppercase">Text Decoy</span>
+                      <span class="text-xs font-bold text-secondary">"Gloomy Day"</span>
+                    </div>
+                  </div>
+                  <div class="bg-surface-container-lowest p-2 rounded text-[11px] font-mono text-on-surface text-center border border-outline-border/50">
+                    Probing visual grounding resilience
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH & TECHNICAL EXPERTISE (VERBATIM FROM main.md) -->
+  <section class="w-full bg-surface-container-lowest py-14 border-y border-outline-border" id="expertise">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="mb-10">
+        <span class="font-mono text-[10px] text-secondary uppercase font-bold tracking-widest block mb-1">Methodological Toolkit</span>
+        <h2 class="font-headline text-3xl md:text-4xl font-bold text-on-surface tracking-tight">Research and Technical Expertise</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Area 1 -->
+        <div class="p-6 bg-surface rounded-xl border border-outline-border space-y-3 shadow-sm">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded bg-secondary-container flex items-center justify-center text-secondary shrink-0">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"></rect><circle cx="12" cy="5" r="2"></circle><path d="M12 7v4"></path><line x1="8" y1="16" x2="8" y2="16"></line><line x1="16" y1="16" x2="16" y2="16"></line></svg>
+            </div>
+            <h3 class="font-headline text-lg font-bold text-on-surface">Foundation Models &amp; Multimodal Evaluation</h3>
+          </div>
+          <p class="text-sm text-on-surface-variant leading-relaxed">
+            LLM/VLM adaptation with SFT/LoRA and in-context learning; benchmark construction; counterfactual and cross-modal stress testing; layer-wise and attention analysis; human-aligned evaluation; reproducible open- and closed-source model experiments.
+          </p>
+        </div>
+
+        <!-- Area 2 -->
+        <div class="p-6 bg-surface rounded-xl border border-outline-border space-y-3 shadow-sm">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded bg-secondary-container flex items-center justify-center text-secondary shrink-0">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+            </div>
+            <h3 class="font-headline text-lg font-bold text-on-surface">XR &amp; Embodied Human-AI Systems</h3>
+          </div>
+          <p class="text-sm text-on-surface-variant leading-relaxed">
+            Unity/C# and XR Interaction Toolkit for PICO VR; LLM-integrated spatial interfaces; persistent state and provenance; real-time sensor-audio-visual feedback; auditory pseudo-haptics; interaction logging.
+          </p>
+        </div>
+
+        <!-- Area 3 -->
+        <div class="p-6 bg-surface rounded-xl border border-outline-border space-y-3 shadow-sm">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded bg-secondary-container flex items-center justify-center text-secondary shrink-0">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a9 9 0 0 0-9 9c0 3.6 2.1 6.7 5.2 8.1.3.1.5.4.5.8v1.1c0 .6.4 1 1 1h4.6c.6 0 1-.4 1-1v-1.1c0-.4.2-.7.5-.8A9 9 0 0 0 12 2z"></path></svg>
+            </div>
+            <h3 class="font-headline text-lg font-bold text-on-surface">Empirical HCI</h3>
+          </div>
+          <p class="text-sm text-on-surface-variant leading-relaxed">
+            Formative and within-participant studies; usability, workload, and perceptual measures; mixed-methods analysis; study instrumentation; ethics-aware evaluation of affective AI systems.
+          </p>
+        </div>
+
+        <!-- Area 4 -->
+        <div class="p-6 bg-surface rounded-xl border border-outline-border space-y-3 shadow-sm">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded bg-secondary-container flex items-center justify-center text-secondary shrink-0">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+            </div>
+            <h3 class="font-headline text-lg font-bold text-on-surface">Healthcare &amp; Vision ML</h3>
+          </div>
+          <p class="text-sm text-on-surface-variant leading-relaxed">
+            Leakage-safe patient-level pipelines; heterogeneous CNN transfer learning; class-imbalance handling; ensemble and stacking methods; Grad-CAM; ablation studies; Accuracy, F1, and AUC evaluation.
+          </p>
+        </div>
+
+        <!-- Tools Row (Verbatim from main.md) -->
+        <div class="md:col-span-2 p-6 bg-surface rounded-xl border border-outline-border space-y-4 shadow-sm">
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+            <h3 class="font-headline text-lg font-bold text-on-surface">Tools</h3>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5 font-mono text-xs">
+            <div class="p-3 bg-surface-container-low rounded border border-outline-border/50">
+              <span class="block text-secondary font-bold text-[10px] mb-1 uppercase tracking-wider">Machine Learning</span>
+              <p class="text-on-surface font-semibold">Python, PyTorch, Hugging Face, LLaMA-Factory, scikit-learn</p>
+            </div>
+            <div class="p-3 bg-surface-container-low rounded border border-outline-border/50">
+              <span class="block text-secondary font-bold text-[10px] mb-1 uppercase tracking-wider">XR</span>
+              <p class="text-on-surface font-semibold">Unity, C#</p>
+            </div>
+            <div class="p-3 bg-surface-container-low rounded border border-outline-border/50">
+              <span class="block text-secondary font-bold text-[10px] mb-1 uppercase tracking-wider">Web</span>
+              <p class="text-on-surface font-semibold">TypeScript, React, Node.js</p>
+            </div>
+            <div class="p-3 bg-surface-container-low rounded border border-outline-border/50">
+              <span class="block text-secondary font-bold text-[10px] mb-1 uppercase tracking-wider">Data</span>
+              <p class="text-on-surface font-semibold">PostgreSQL, Supabase</p>
+            </div>
+            <div class="p-3 bg-surface-container-low rounded border border-outline-border/50">
+              <span class="block text-secondary font-bold text-[10px] mb-1 uppercase tracking-wider">Engineering</span>
+              <p class="text-on-surface font-semibold">Git, CI/CD</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACADEMIC PROFILE, LABS, HONORS & COURSEWORK (VERBATIM FROM main.md) -->
+  <section class="w-full py-14 bg-surface" id="profile">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Left: Education & Experience -->
+        <div class="lg:col-span-5 space-y-6">
+          <!-- Education Dossier -->
+          <div class="p-6 bg-surface-container-lowest rounded-xl border border-outline-border shadow-sm space-y-4">
+            <span class="font-mono text-[10px] text-secondary uppercase font-bold tracking-wider block">Education</span>
+            <div>
+              <p class="font-headline text-lg font-bold text-on-surface">South China University of Technology</p>
+              <p class="text-sm text-on-surface-variant">Undergraduate Student · Guangzhou, China</p>
+              <p class="font-mono text-[11px] text-on-surface-variant mt-0.5">September 2023 – June 2027 (expected)</p>
+              <div class="grid grid-cols-2 gap-2 mt-3 font-mono text-xs">
+                <div class="p-2.5 bg-surface-container-low rounded border border-outline-border/50">
+                  <span class="block text-on-surface-variant text-[10px]">AVERAGE SCORE</span>
+                  <span class="font-bold text-on-surface">87.27 / 100</span>
+                </div>
+                <div class="p-2.5 bg-surface-container-low rounded border border-outline-border/50">
+                  <span class="block text-on-surface-variant text-[10px]">CGPA</span>
+                  <span class="font-bold text-on-surface">3.55 / 4.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="pt-3 border-t border-outline-border flex items-center justify-between font-mono text-[11px] text-on-surface-variant">
+              <span class="">ENGLISH:</span>
+              <span class="text-on-surface font-bold">IELTS 6.5 · CET-6 577 · CET-4 608</span>
+            </div>
+          </div>
+
+          <!-- Research Experience -->
+          <div class="p-6 bg-surface-container-lowest rounded-xl border border-outline-border shadow-sm space-y-5">
+            <span class="font-mono text-[10px] text-secondary uppercase font-bold tracking-wider block">Research Experience</span>
+            
+            <!-- HAI Lab -->
+            <div class="border-b border-outline-border/70 pb-4 space-y-2">
+              <div class="flex items-start justify-between">
+                <div>
+                  <h4 class="font-headline text-base font-bold text-on-surface">Human-Centered AI Lab (HAI Lab), SCUT</h4>
+                  <p class="text-xs text-secondary font-medium">Research Intern, Affective Computing &amp; Human-Computer Interaction</p>
+                </div>
+                <span class="font-mono text-[11px] text-on-surface-variant whitespace-nowrap">May 2025 – Present</span>
+              </div>
+              <p class="font-mono text-[11px] text-on-surface-variant">
+                Guangzhou, China · Advisors: Zhanpeng Jin and Yang Gao · <a href="https://scuthcc.top/" target="_blank" class="text-on-surface underline hover:text-secondary">scuthcc.top</a>
+              </p>
+              <ul class="list-disc list-outside pl-4 space-y-1 text-xs text-on-surface-variant pt-1">
+                <li class="">Conduct end-to-end research across data curation, model development, and experimental evaluation for affective computing and HCI projects.</li>
+                <li class="">Build and maintain research pipelines for data preprocessing, annotation quality control, and reproducible experiments, supporting traceable results and consistent reporting.</li>
+                <li class="">Design and run user-centered studies, including study protocols, task design, and analysis, translating findings into iterations for models and interactive prototypes.</li>
+              </ul>
+            </div>
+
+            <!-- HDMI Lab -->
+            <div class="space-y-2">
+              <div class="flex items-start justify-between">
+                <div>
+                  <h4 class="font-headline text-base font-bold text-on-surface">Healthcare Data and Medical Intelligence Lab, SCUT</h4>
+                  <p class="text-xs text-secondary font-medium">Research Intern, Multimodal Healthcare Analytics</p>
+                </div>
+                <span class="font-mono text-[11px] text-on-surface-variant whitespace-nowrap">May 2024 – Present</span>
+              </div>
+              <p class="font-mono text-[11px] text-on-surface-variant">
+                Guangzhou, China · Advisor: Yanwu Xu · <a href="http://hdmilab.cn/" target="_blank" class="text-on-surface underline hover:text-secondary">hdmilab.cn</a>
+              </p>
+              <ul class="list-disc list-outside pl-4 space-y-1 text-xs text-on-surface-variant pt-1">
+                <li class="">Conduct research on multimodal health data, including clinical records and imaging, to support data-driven healthcare analytics and decision support.</li>
+                <li class="">Develop and evaluate AS-OCT image analysis workflows, including preprocessing, feature and representation learning, and model-based prediction, segmentation, or classification.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Industry Experience -->
+          <div class="p-6 bg-surface-container-lowest rounded-xl border border-outline-border shadow-sm space-y-3 font-mono text-xs">
+            <span class="text-secondary font-bold uppercase tracking-wider block text-[10px]">Industry Experience</span>
+            <div class="flex items-start justify-between">
+              <div>
+                <span class="font-bold text-on-surface block">Neusoft Corporation (Guangzhou) Co., Ltd.</span>
+                <span class="text-on-surface-variant text-[11px]">Trainee Software Engineer · South China Region</span>
+              </div>
+              <span class="text-on-surface-variant font-bold text-[11px] whitespace-nowrap">August 2024</span>
+            </div>
+            <ul class="list-disc list-outside pl-4 space-y-1 font-body text-xs text-on-surface-variant pt-1">
+              <li class="">Collaborated with engineers to implement and refine software modules, translating requirements into maintainable code and clear technical notes.</li>
+              <li class="">Assisted in debugging and resolving defects by reproducing issues, analyzing logs, and validating fixes through targeted test cases.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right: Honors, Coursework & Advising Contact -->
+        <div class="lg:col-span-7 space-y-6">
+          <!-- Honors & Awards (Verbatim from main.md) -->
+          <div class="p-6 bg-surface-container-lowest rounded-xl border border-outline-border shadow-sm space-y-5">
+            <h3 class="font-headline text-xl font-bold text-on-surface">Honors and Awards</h3>
+            
+            <!-- Academic Honors -->
+            <div>
+              <h4 class="font-mono text-[10px] text-secondary uppercase font-bold tracking-wider mb-2">Academic Honors</h4>
+              <ul class="space-y-2 text-xs text-on-surface-variant">
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-secondary shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                  <span class=""><strong>Third-Class Scholarship</strong>, South China University of Technology — November 2025</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-secondary shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                  <span class=""><strong>Excellence Scholarship</strong> — November 2025</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-secondary shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                  <span class=""><strong>University Merit Student</strong>, South China University of Technology — November 2025</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Research and Innovation Competitions -->
+            <div class="pt-3 border-t border-outline-border">
+              <h4 class="font-mono text-[10px] text-secondary uppercase font-bold tracking-wider mb-2">Research and Innovation Competitions</h4>
+              <ul class="space-y-2.5 text-xs text-on-surface-variant">
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-secondary shrink-0 mt-0.5" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <span class=""><strong>Best Paper Award:</strong> ICIMH 2025 (Glaucoma and Cataract Diagnosis from AS-OCT Images).</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-secondary shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                  <span class=""><strong>National Undergraduate Innovation and Entrepreneurship Training Program</strong>, project approved/funded — May 2025</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-secondary shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                  <span class=""><strong>First Prize</strong>, Brain-Inspired Intelligence Innovation Competition, South China Main Competition Area — November 2025</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-secondary shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                  <span class=""><strong>Third Prize</strong>, National Biomedical Engineering Competition — July 2025</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-secondary shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                  <span class=""><strong>Global Bronze Award</strong>, International Genetically Engineered Machine (iGEM) Competition — September 2024</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-secondary shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                  <span class=""><strong>Third Prize</strong>, Asia-Pacific Mathematical Modeling Competition (APMCM) — January 2025</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-secondary shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                  <span class=""><strong>Third Prize</strong>, Baidu “Brain Cup” Competition — January 2025</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Selected Coursework (Verbatim Scores from main.md) -->
+          <div class="p-6 bg-surface-container-lowest rounded-xl border border-outline-border shadow-sm space-y-4">
+            <h3 class="font-headline text-lg font-bold text-on-surface">Selected Undergraduate Coursework</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 font-mono text-xs">
+              <div class="p-2.5 bg-surface-container-low rounded border border-outline-border/40 flex justify-between items-center">
+                <span class="">Machine Learning Course Design</span>
+                <span class="font-bold text-on-surface">95</span>
+              </div>
+              <div class="p-2.5 bg-surface-container-low rounded border border-outline-border/40 flex justify-between items-center">
+                <span class="">Introduction to Artificial Intelligence</span>
+                <span class="font-bold text-on-surface">98</span>
+              </div>
+              <div class="p-2.5 bg-surface-container-low rounded border border-outline-border/40 flex justify-between items-center">
+                <span class="">Algorithm Optimization in ML Models</span>
+                <span class="font-bold text-on-surface">96</span>
+              </div>
+              <div class="p-2.5 bg-surface-container-low rounded border border-outline-border/40 flex justify-between items-center">
+                <span class="">Data Structure Course Training</span>
+                <span class="font-bold text-on-surface">99</span>
+              </div>
+              <div class="p-2.5 bg-surface-container-low rounded border border-outline-border/40 flex justify-between items-center">
+                <span class="">Advanced Language Programming Training</span>
+                <span class="font-bold text-on-surface">96</span>
+              </div>
+              <div class="p-2.5 bg-surface-container-low rounded border border-outline-border/40 flex justify-between items-center">
+                <span class="">Digital Image Processing</span>
+                <span class="font-bold text-on-surface">96</span>
+              </div>
+              <div class="p-2.5 bg-surface-container-low rounded border border-outline-border/40 flex justify-between items-center">
+                <span class="">Design Thinking Innovation and Practice</span>
+                <span class="font-bold text-on-surface">87</span>
+              </div>
+              <div class="p-2.5 bg-surface-container-low rounded border border-outline-border/40 flex justify-between items-center">
+                <span class="">Robot Perception, Localization &amp; Nav</span>
+                <span class="font-bold text-on-surface">95</span>
+              </div>
+              <div class="p-2.5 bg-surface-container-low rounded border border-outline-border/40 flex justify-between items-center">
+                <span class="">Cognitive Neuroscience</span>
+                <span class="font-bold text-on-surface">95</span>
+              </div>
+              <div class="p-2.5 bg-surface-container-low rounded border border-outline-border/40 flex justify-between items-center">
+                <span class="">Synthetic Design of AI System</span>
+                <span class="font-bold text-on-surface">98</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Prospective Advisor CTA Box -->
+          <div class="p-7 bg-surface-container-low rounded-xl border border-outline-border flex flex-col sm:flex-row items-center justify-between gap-6 shadow-[2px_2px_0px_#141414]">
+            <div>
+              <h4 class="font-headline text-lg font-bold text-on-surface">Fall 2027 PhD Advising &amp; Collaboration</h4>
+              <p class="text-xs text-on-surface-variant mt-1">
+                Seeking Fall 2027 PhD opportunities in Human-Centered AI, HCI, and Multimodal Healthcare Analytics.
+              </p>
+            </div>
+            <a href="mailto:yujinghe2026@gmail.com?subject=PhD%20Advising%20Inquiry%20-%20Jinghe%20Yu" class="inline-flex items-center gap-2 bg-primary text-on-primary hover:bg-secondary-container hover:text-on-secondary-fixed font-mono text-xs px-5 py-2.5 rounded font-bold transition-all shadow-[2px_2px_0px_#141414] whitespace-nowrap">
+              <span class="">Email Jinghe Yu</span>
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="w-full bg-surface-container-lowest border-t border-outline-border py-12 text-xs font-mono text-on-surface-variant">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6"><div class="flex flex-col gap-2 max-w-lg">
+  <div class="flex items-center gap-3">
+    <span class="font-headline text-lg font-bold text-on-surface tracking-tight">Jinghe Yu (余静荷)</span>
+    <span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-mono text-[10px] font-bold">SCUT · AI</span>
+  </div>
+  <p class="font-body text-xs md:text-sm text-on-surface-variant leading-relaxed">
+    Undergraduate AI Researcher at <span class="text-on-surface font-medium">South China University of Technology</span>. Active member of <a href="https://scuthcc.top/" target="_blank" class="underline decoration-secondary decoration-1 underline-offset-2 hover:text-on-surface">HAI Lab</a> &amp; <a href="http://hdmilab.cn/" target="_blank" class="underline decoration-secondary decoration-1 underline-offset-2 hover:text-on-surface">HDMI Lab</a>.
+  </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-6 lg:gap-10 text-xs font-mono">
+  <div class="space-y-1.5">
+    <div class="flex items-center gap-2">
+      <span class="text-on-surface-variant/80 uppercase text-[10px] tracking-wider">Email</span>
+      <a href="mailto:yujinghe2026@gmail.com" class="text-on-surface hover:text-secondary font-medium underline underline-offset-2">yujinghe2026@gmail.com</a>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="text-on-surface-variant/80 uppercase text-[10px] tracking-wider">Phone</span>
+      <a href="tel:+8613798160068" class="text-on-surface hover:text-secondary font-medium">+86 13798160068</a>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="text-on-surface-variant/80 uppercase text-[10px] tracking-wider">Base</span>
+      <span class="text-on-surface font-medium">Guangzhou, China</span>
+    </div>
+  </div>
+  <div class="flex flex-col sm:items-end justify-center gap-1.5 border-t sm:border-t-0 sm:border-l border-outline-border/50 pt-3 sm:pt-0 sm:pl-6">
+    <div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container text-on-secondary-fixed rounded-full text-xs font-bold shadow-[2px_2px_0px_#141414]">
+      <span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+      <span class="">Fall 2027 PhD Applicant</span>
+    </div>
+    <span class="text-[11px] text-on-surface-variant font-mono">Expected Grad: June 2027</span>
+  </div>
+</div></div>
+</footer>
+
+<!-- FLOATING COPY FEEDBACK TOAST -->
+<div id="copy-toast" class="fixed bottom-6 right-6 z-50 copy-toast bg-primary text-on-primary font-mono text-xs px-4 py-2.5 rounded shadow-xl flex items-center gap-2">
+  <svg class="w-4 h-4 text-secondary-container" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+  <span class="">BibTeX copied to clipboard!</span>
+</div>
+
+<!-- SCRIPTS FOR AFFECTIVE SIMULATOR & FILTERING -->
+<script>
+  // Filter Publications
+  function filterPubs(cat) {
+    document.querySelectorAll('.pub-filter-btn').forEach(btn => {
+      btn.className = "pub-filter-btn px-3 py-1.5 rounded text-xs font-mono text-on-surface-variant hover:text-on-surface";
+    });
+    const activeBtn = document.getElementById('filter-' + cat);
+    if (activeBtn) {
+      activeBtn.className = "pub-filter-btn px-3 py-1.5 rounded text-xs font-mono font-bold bg-primary text-on-primary";
+    }
+
+    const cards = document.querySelectorAll('.pub-card');
+    cards.forEach(card => {
+      if (cat === 'all' || card.getAttribute('data-category') === cat) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // BibTeX Snippets verbatim
+  const bibtexDB = {
+    icimh2025: `@inproceedings{zhao2025glaucoma,
+  title={Glaucoma and Cataract Diagnosis from AS-OCT Images Using Ensemble Learning},
+  author={Zhao, Jiongning and Yang, Yuetong and Yu, Jinghe and Diao, Yueqin and Xu, Yanwu},
+  booktitle={Proceedings of the 2025 International Conference on Intelligent Medicine and Health (ICIMH 2025)},
+  year={2025},
+  publisher={ACM},
+  note={Best Paper Award}
+}`,
+    emomirror26: `@inproceedings{yu2026emomirror,
+  title={EmoMirror: Negotiable Affective Mirroring for Students with Elevated Alexithymia},
+  author={Yu, Jinghe and She, Dong and Li, Xinyao and Meng, Fanbo and Gao, Yang and Jin, Zhanpeng},
+  booktitle={Adjunct Proceedings of the 2026 ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp/ISWC '26 Adjunct)},
+  year={2026},
+  publisher={ACM}
+}`,
+    emotype26: `@inproceedings{she2026emotype,
+  title={EmoType-Zero: Adaptive Fonts to Render the Speech Emotion},
+  author={She, Dong and Yu, Jinghe and Chen, Nuo and Bai, Yuting and Gao, Yang and Jin, Zhanpeng},
+  booktitle={Extended Abstracts of the 2026 CHI Conference on Human Factors in Computing Systems (CHI EA '26)},
+  year={2026},
+  publisher={ACM}
+}`,
+    touchsound26: `@inproceedings{cai2026touch,
+  title={Touch Through Sound: Ring-Mounted Auditory Pseudo-Haptics for Material Perception},
+  author={Cai, Zhengte and Wang, Chiyue and Wang, Yumiao and Yu, Jinghe and Li, Chen and Jin, Zhanpeng and Gao, Yang},
+  booktitle={Extended Abstracts of the 2026 CHI Conference on Human Factors in Computing Systems (CHI EA '26)},
+  year={2026},
+  publisher={ACM}
+}`,
+    aicabench26: `@inproceedings{she2026aica,
+  title={AICA-Bench: Holistically Examining the Capabilities of VLMs in Affective Image Content Analysis},
+  author={She, Dong and Yao, Xianrong and Chen, Liqun and Yu, Jinghe and Gao, Yang and Jin, Zhanpeng},
+  booktitle={Findings of the Association for Computational Linguistics: ACL 2026},
+  year={2026},
+  publisher={ACL}
+}`,
+    scidata26: `@article{zhao2026asoct,
+  title={AS-OCT Dataset with Anatomical Structure Segmentation and Scleral Spur Localization in Cataract and Glaucoma},
+  author={Zhao, Jiongning and Fang, Huihui and Yang, Yuetong and Fu, Xinyu and Deng, Jingru and Yu, Jinghe and Yan, Xingying and Hu, Xinya and Wang, Xiaoqing and Hu, Yuting and Gong, Di and Zhang, Zhe and Chi, Wei and Yang, Weihua and Xu, Yanwu},
+  journal={Scientific Data},
+  volume={13},
+  year={2026},
+  publisher={Nature Publishing Group}
+}`
+  };
+
+  function copyBibtex(key) {
+    const text = bibtexDB[key] || "BibTeX entry pending final archival release.";
+    navigator.clipboard.writeText(text).then(() => {
+      const toast = document.getElementById('copy-toast');
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2400);
+    });
+  }
+
+  // Affective Simulator Controls
+  const valSlider = document.getElementById('slider-valence');
+  const aroSlider = document.getElementById('slider-arousal');
+  const domSlider = document.getElementById('slider-dominance');
+  const valDisp = document.getElementById('val-display');
+  const aroDisp = document.getElementById('aro-display');
+  const domDisp = document.getElementById('dom-display');
+  const badge = document.getElementById('affect-quadrant-badge');
+  const narrative = document.getElementById('simulator-narrative');
+  const fontSample = document.getElementById('dynamic-font-sample');
+  const fontBadge = document.getElementById('font-spec-badge');
+  const edaPath = document.getElementById('eda-path');
+
+  function updateAffect() {
+    const v = parseFloat(valSlider.value);
+    const a = parseFloat(aroSlider.value);
+    const d = parseFloat(domSlider.value);
+
+    valDisp.textContent = (v >= 0 ? "+" : "") + v.toFixed(2);
+    aroDisp.textContent = (a >= 0 ? "+" : "") + a.toFixed(2);
+    domDisp.textContent = (d >= 0 ? "+" : "") + d.toFixed(2);
+
+    // State classification
+    if (v >= 0 && a >= 0) {
+      badge.textContent = "High Valence · Active Alert";
+      narrative.textContent = '"Participant demonstrates high engagement and positive cognitive affect; rendering dynamic, buoyant typographic cadence."';
+    } else if (v >= 0 && a < 0) {
+      badge.textContent = "Serene · Cognitive Reflection";
+      narrative.textContent = '"Participant displays settled affective state with low somatic agitation; ideal for deep reflective sensemaking."';
+    } else if (v < 0 && a >= 0) {
+      badge.textContent = "Elevated Arousal · Distress / Strain";
+      narrative.textContent = '"Acoustic & somatic stress markers elevated; EmoMirror initiates calming, negotiable mirror reflection."';
+    } else {
+      badge.textContent = "Low Valence · Flat Affect / Lethargy";
+      narrative.textContent = '"Subdued biometric prosody; adaptive scaffolding provides subtle encouragement without forced diagnostic labels."';
+    }
+
+    // Dynamic Typographic morphing
+    const weight = Math.round(300 + (a + 1) * 300); // 300 to 900
+    const tracking = (0.02 + (v + 1) * 0.05).toFixed(2); // em
+    fontSample.style.fontWeight = weight;
+    fontSample.style.letterSpacing = tracking + "em";
+    fontBadge.textContent = "Weight: " + weight + " · Tracking: " + tracking + "em · Dominance: " + (d > 0 ? "Autonomous" : "Guided");
+
+    // Dynamic wave curvature
+    const amplitude = 15 + (a + 1) * 15;
+    const waveD = "M0,40 Q50," + (40 - amplitude) + " 100,40 T200,40 T300,40 T400,40 T500,40";
+    edaPath.setAttribute('d', waveD);
+  }
+
+  [valSlider, aroSlider, domSlider].forEach(slider => {
+    slider.addEventListener('input', updateAffect);
+  });
+  updateAffect();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

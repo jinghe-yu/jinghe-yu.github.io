@@ -1,0 +1,485 @@
+---
+import { site } from "../../data/site";
+---
+
+<section class="w-full py-14 bg-surface" id="profile">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <!-- Left: Education & Experience -->
+      <div class="lg:col-span-5 space-y-6">
+        <!-- Education Dossier -->
+        <div
+          class="p-6 bg-surface-container-lowest rounded-xl border border-outline-border shadow-sm space-y-4"
+        >
+          <span
+            class="font-mono text-[10px] text-secondary uppercase font-bold tracking-wider block"
+            >Education</span
+          >
+          <div>
+            <p class="font-headline text-lg font-bold text-on-surface">
+              South China University of Technology
+            </p>
+            <p class="text-sm text-on-surface-variant">
+              Undergraduate Student · {site.location}
+            </p>
+            <p class="font-mono text-[11px] text-on-surface-variant mt-0.5">
+              September 2023 – June 2027 (expected)
+            </p>
+            <div class="grid grid-cols-2 gap-2 mt-3 font-mono text-xs">
+              <div
+                class="p-2.5 bg-surface-container-low rounded border border-outline-border/50"
+              >
+                <span class="block text-on-surface-variant text-[10px]"
+                  >AVERAGE SCORE</span
+                >
+                <span class="font-bold text-on-surface">87.27 / 100</span>
+              </div>
+              <div
+                class="p-2.5 bg-surface-container-low rounded border border-outline-border/50"
+              >
+                <span class="block text-on-surface-variant text-[10px]"
+                  >CGPA</span
+                >
+                <span class="font-bold text-on-surface">3.55 / 4.00</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="pt-3 border-t border-outline-border flex items-center justify-between font-mono text-[11px] text-on-surface-variant"
+          >
+            <span class="">ENGLISH:</span>
+            <span class="text-on-surface font-bold"
+              >IELTS 6.5 · CET-6 577 · CET-4 608</span
+            >
+          </div>
+        </div>
+
+        <!-- Research Experience -->
+        <div
+          class="p-6 bg-surface-container-lowest rounded-xl border border-outline-border shadow-sm space-y-5"
+        >
+          <span
+            class="font-mono text-[10px] text-secondary uppercase font-bold tracking-wider block"
+            >Research Experience</span
+          >
+
+          <!-- HAI Lab -->
+          <div class="border-b border-outline-border/70 pb-4 space-y-2">
+            <div class="flex items-start justify-between">
+              <div>
+                <h4 class="font-headline text-base font-bold text-on-surface">
+                  Human-Centered AI Lab (HAI Lab), SCUT
+                </h4>
+                <p class="text-xs text-secondary font-medium">
+                  Research Intern, Affective Computing &amp; Human-Computer
+                  Interaction
+                </p>
+              </div>
+              <span
+                class="font-mono text-[11px] text-on-surface-variant whitespace-nowrap"
+                >May 2025 – Present</span
+              >
+            </div>
+            <p class="font-mono text-[11px] text-on-surface-variant">
+              {site.location} · Advisors: Zhanpeng Jin and Yang Gao · <a
+                href="https://scuthcc.top/"
+                target="_blank"
+                class="text-on-surface underline hover:text-secondary"
+                >scuthcc.top</a
+              >
+            </p>
+            <ul
+              class="list-disc list-outside pl-4 space-y-1 text-xs text-on-surface-variant pt-1"
+            >
+              <li class="">
+                Conduct end-to-end research across data curation, model
+                development, and experimental evaluation for affective computing
+                and HCI projects.
+              </li>
+              <li class="">
+                Build and maintain research pipelines for data preprocessing,
+                annotation quality control, and reproducible experiments,
+                supporting traceable results and consistent reporting.
+              </li>
+              <li class="">
+                Design and run user-centered studies, including study protocols,
+                task design, and analysis, translating findings into iterations
+                for models and interactive prototypes.
+              </li>
+            </ul>
+          </div>
+
+          <!-- HDMI Lab -->
+          <div class="space-y-2">
+            <div class="flex items-start justify-between">
+              <div>
+                <h4 class="font-headline text-base font-bold text-on-surface">
+                  Healthcare Data and Medical Intelligence Lab, SCUT
+                </h4>
+                <p class="text-xs text-secondary font-medium">
+                  Research Intern, Multimodal Healthcare Analytics
+                </p>
+              </div>
+              <span
+                class="font-mono text-[11px] text-on-surface-variant whitespace-nowrap"
+                >May 2024 – Present</span
+              >
+            </div>
+            <p class="font-mono text-[11px] text-on-surface-variant">
+              {site.location} · Advisor: Yanwu Xu · <a
+                href="http://hdmilab.cn/"
+                target="_blank"
+                class="text-on-surface underline hover:text-secondary"
+                >hdmilab.cn</a
+              >
+            </p>
+            <ul
+              class="list-disc list-outside pl-4 space-y-1 text-xs text-on-surface-variant pt-1"
+            >
+              <li class="">
+                Conduct research on multimodal health data, including clinical
+                records and imaging, to support data-driven healthcare analytics
+                and decision support.
+              </li>
+              <li class="">
+                Develop and evaluate AS-OCT image analysis workflows, including
+                preprocessing, feature and representation learning, and
+                model-based prediction, segmentation, or classification.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Industry Experience -->
+        <div
+          class="p-6 bg-surface-container-lowest rounded-xl border border-outline-border shadow-sm space-y-3 font-mono text-xs"
+        >
+          <span
+            class="text-secondary font-bold uppercase tracking-wider block text-[10px]"
+            >Industry Experience</span
+          >
+          <div class="flex items-start justify-between">
+            <div>
+              <span class="font-bold text-on-surface block"
+                >Neusoft Corporation (Guangzhou) Co., Ltd.</span
+              >
+              <span class="text-on-surface-variant text-[11px]"
+                >Trainee Software Engineer · South China Region</span
+              >
+            </div>
+            <span
+              class="text-on-surface-variant font-bold text-[11px] whitespace-nowrap"
+              >August 2024</span
+            >
+          </div>
+          <ul
+            class="list-disc list-outside pl-4 space-y-1 font-body text-xs text-on-surface-variant pt-1"
+          >
+            <li class="">
+              Collaborated with engineers to implement and refine software
+              modules, translating requirements into maintainable code and clear
+              technical notes.
+            </li>
+            <li class="">
+              Assisted in debugging and resolving defects by reproducing issues,
+              analyzing logs, and validating fixes through targeted test cases.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right: Honors, Coursework & Advising Contact -->
+      <div class="lg:col-span-7 space-y-6">
+        <!-- Honors & Awards (Verbatim from main.md) -->
+        <div
+          class="p-6 bg-surface-container-lowest rounded-xl border border-outline-border shadow-sm space-y-5"
+        >
+          <h3 class="font-headline text-xl font-bold text-on-surface">
+            Honors and Awards
+          </h3>
+
+          <!-- Academic Honors -->
+          <div>
+            <h4
+              class="font-mono text-[10px] text-secondary uppercase font-bold tracking-wider mb-2"
+            >
+              Academic Honors
+            </h4>
+            <ul class="space-y-2 text-xs text-on-surface-variant">
+              <li class="flex items-start gap-2.5">
+                <svg
+                  class="w-4 h-4 text-secondary shrink-0 mt-0.5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  ><circle cx="12" cy="8" r="7"></circle><polyline
+                    points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"
+                  ></polyline></svg
+                >
+                <span class=""
+                  ><strong>Third-Class Scholarship</strong>, South China
+                  University of Technology — November 2025</span
+                >
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg
+                  class="w-4 h-4 text-secondary shrink-0 mt-0.5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  ><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline
+                    points="22 4 12 14.01 9 11.01"></polyline></svg
+                >
+                <span class=""
+                  ><strong>Excellence Scholarship</strong> — November 2025</span
+                >
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg
+                  class="w-4 h-4 text-secondary shrink-0 mt-0.5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  ><circle cx="12" cy="8" r="7"></circle><polyline
+                    points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"
+                  ></polyline></svg
+                >
+                <span class=""
+                  ><strong>University Merit Student</strong>, South China
+                  University of Technology — November 2025</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Research and Innovation Competitions -->
+          <div class="pt-3 border-t border-outline-border">
+            <h4
+              class="font-mono text-[10px] text-secondary uppercase font-bold tracking-wider mb-2"
+            >
+              Research and Innovation Competitions
+            </h4>
+            <ul class="space-y-2.5 text-xs text-on-surface-variant">
+              <li class="flex items-start gap-2.5">
+                <svg
+                  class="w-4 h-4 text-secondary shrink-0 mt-0.5"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  ><polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  ></polygon></svg
+                >
+                <span class=""
+                  ><strong>Best Paper Award:</strong> ICIMH 2025 (Glaucoma and Cataract
+                  Diagnosis from AS-OCT Images).</span
+                >
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg
+                  class="w-4 h-4 text-secondary shrink-0 mt-0.5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  ><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline
+                    points="22 4 12 14.01 9 11.01"></polyline></svg
+                >
+                <span class=""
+                  ><strong
+                    >National Undergraduate Innovation and Entrepreneurship
+                    Training Program</strong
+                  >, project approved/funded — May 2025</span
+                >
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg
+                  class="w-4 h-4 text-secondary shrink-0 mt-0.5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  ><circle cx="12" cy="8" r="7"></circle><polyline
+                    points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"
+                  ></polyline></svg
+                >
+                <span class=""
+                  ><strong>First Prize</strong>, Brain-Inspired Intelligence
+                  Innovation Competition, South China Main Competition Area —
+                  November 2025</span
+                >
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg
+                  class="w-4 h-4 text-secondary shrink-0 mt-0.5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  ><circle cx="12" cy="8" r="7"></circle><polyline
+                    points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"
+                  ></polyline></svg
+                >
+                <span class=""
+                  ><strong>Third Prize</strong>, National Biomedical Engineering
+                  Competition — July 2025</span
+                >
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg
+                  class="w-4 h-4 text-secondary shrink-0 mt-0.5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  ><circle cx="12" cy="8" r="7"></circle><polyline
+                    points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"
+                  ></polyline></svg
+                >
+                <span class=""
+                  ><strong>Global Bronze Award</strong>, International
+                  Genetically Engineered Machine (iGEM) Competition — September
+                  2024</span
+                >
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg
+                  class="w-4 h-4 text-secondary shrink-0 mt-0.5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  ><circle cx="12" cy="8" r="7"></circle><polyline
+                    points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"
+                  ></polyline></svg
+                >
+                <span class=""
+                  ><strong>Third Prize</strong>, Asia-Pacific Mathematical
+                  Modeling Competition (APMCM) — January 2025</span
+                >
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg
+                  class="w-4 h-4 text-secondary shrink-0 mt-0.5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  ><circle cx="12" cy="8" r="7"></circle><polyline
+                    points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"
+                  ></polyline></svg
+                >
+                <span class=""
+                  ><strong>Third Prize</strong>, Baidu “Brain Cup” Competition —
+                  January 2025</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Selected Coursework (Verbatim Scores from main.md) -->
+        <div
+          class="p-6 bg-surface-container-lowest rounded-xl border border-outline-border shadow-sm space-y-4"
+        >
+          <h3 class="font-headline text-lg font-bold text-on-surface">
+            Selected Undergraduate Coursework
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 font-mono text-xs">
+            <div
+              class="p-2.5 bg-surface-container-low rounded border border-outline-border/40 flex justify-between items-center"
+            >
+              <span class="">Machine Learning Course Design</span>
+              <span class="font-bold text-on-surface">95</span>
+            </div>
+            <div
+              class="p-2.5 bg-surface-container-low rounded border border-outline-border/40 flex justify-between items-center"
+            >
+              <span class="">Introduction to Artificial Intelligence</span>
+              <span class="font-bold text-on-surface">98</span>
+            </div>
+            <div
+              class="p-2.5 bg-surface-container-low rounded border border-outline-border/40 flex justify-between items-center"
+            >
+              <span class="">Algorithm Optimization in ML Models</span>
+              <span class="font-bold text-on-surface">96</span>
+            </div>
+            <div
+              class="p-2.5 bg-surface-container-low rounded border border-outline-border/40 flex justify-between items-center"
+            >
+              <span class="">Data Structure Course Training</span>
+              <span class="font-bold text-on-surface">99</span>
+            </div>
+            <div
+              class="p-2.5 bg-surface-container-low rounded border border-outline-border/40 flex justify-between items-center"
+            >
+              <span class="">Advanced Language Programming Training</span>
+              <span class="font-bold text-on-surface">96</span>
+            </div>
+            <div
+              class="p-2.5 bg-surface-container-low rounded border border-outline-border/40 flex justify-between items-center"
+            >
+              <span class="">Digital Image Processing</span>
+              <span class="font-bold text-on-surface">96</span>
+            </div>
+            <div
+              class="p-2.5 bg-surface-container-low rounded border border-outline-border/40 flex justify-between items-center"
+            >
+              <span class="">Design Thinking Innovation and Practice</span>
+              <span class="font-bold text-on-surface">87</span>
+            </div>
+            <div
+              class="p-2.5 bg-surface-container-low rounded border border-outline-border/40 flex justify-between items-center"
+            >
+              <span class="">Robot Perception, Localization &amp; Nav</span>
+              <span class="font-bold text-on-surface">95</span>
+            </div>
+            <div
+              class="p-2.5 bg-surface-container-low rounded border border-outline-border/40 flex justify-between items-center"
+            >
+              <span class="">Cognitive Neuroscience</span>
+              <span class="font-bold text-on-surface">95</span>
+            </div>
+            <div
+              class="p-2.5 bg-surface-container-low rounded border border-outline-border/40 flex justify-between items-center"
+            >
+              <span class="">Synthetic Design of AI System</span>
+              <span class="font-bold text-on-surface">98</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Prospective Advisor CTA Box -->
+        <div
+          class="p-7 bg-surface-container-low rounded-xl border border-outline-border flex flex-col sm:flex-row items-center justify-between gap-6 shadow-[2px_2px_0px_#141414]"
+        >
+          <div>
+            <h4 class="font-headline text-lg font-bold text-on-surface">
+              Fall 2027 PhD Advising &amp; Collaboration
+            </h4>
+            <p class="text-xs text-on-surface-variant mt-1">
+              Seeking Fall 2027 PhD opportunities in Human-Centered AI, HCI, and
+              Multimodal Healthcare Analytics.
+            </p>
+          </div>
+          <a
+            href={`mailto:${site.email}?subject=${encodeURIComponent(`PhD Advising Inquiry - ${site.name}`)}`}
+            class="inline-flex items-center gap-2 bg-primary text-on-primary hover:bg-secondary-container hover:text-on-secondary-fixed font-mono text-xs px-5 py-2.5 rounded font-bold transition-all shadow-[2px_2px_0px_#141414] whitespace-nowrap"
+          >
+            <span class="">Email {site.name}</span>
+            <svg
+              class="w-3.5 h-3.5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              ><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg
+            >
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
