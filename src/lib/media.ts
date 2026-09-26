@@ -13,8 +13,13 @@ export function mediaUrl(src: string): string {
   const file = resolve(publicRoot, src.slice(1));
   if (!file.startsWith(publicRoot + sep) || !existsSync(file)) {
     throw new Error(
-      `Missing image: public${src}. Add the file or update its configuration.`,
+      `Missing public asset: public${src}. Add the file or update its configuration.`,
     );
   }
-  return `${import.meta.env.BASE_URL.replace(/\/$/, "")}${src}`;
+  // Encode each path segment for filenames that contain spaces or non-ASCII characters.
+  const encodedSrc = src
+    .split("/")
+    .map((segment) => encodeURIComponent(segment))
+    .join("/");
+  return `${import.meta.env.BASE_URL.replace(/\/$/, "")}${encodedSrc}`;
 }

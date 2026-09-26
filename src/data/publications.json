@@ -16,17 +16,24 @@
     "role": "",
     "award": "Best Paper Award",
     "summary": "Addressed clinical ophthalmic imaging challenges by developing an ensemble learning architecture designed for anterior segment optical coherence tomography (AS-OCT) images. Designed a strict leakage-safe cross-validation and feature-fusion pipeline capable of identifying both glaucoma and cataract pathologies concurrently, establishing reliable diagnostic support for clinical practitioners.",
+    "abstract": "Glaucoma and cataract are among the leading causes of preventable blindness worldwide, and their co-occurrence in elderly populations complicates clinical decision-making. Traditional diagnostic standards, such as gonioscopy, remain examiner-dependent and limited in reproducibility, whereas anterior-segment optical coherence tomography (AS-OCT) provides high-resolution, quantitative imaging suitable for automated analysis. In this study, we propose a deep learning framework for the four-class classification of AS-OCT images into Normal, Cataract, Glaucoma, and Glaucoma&Cataract. To ensure credible evaluation, we enforce strict patient-level data partitioning across training, validation, ensemble training, and testing sets, thereby avoiding data leakage. Our approach leverages a heterogeneous backbone library of convolutional neural networks, systematically benchmarked under multiple ensemble learning strategies, including statistical aggregation, selection-based methods, and meta-learning. Experimental results on a dataset of 20,144 AS-OCT images from 657 patients demonstrate that ensemble integration consistently improves performance over single models. Logistic regression stacking achieved the highest accuracy (89.16%) and AUC (0.974), surpassing the best individual backbone. Interpretability analysis with Grad-CAM further confirmed that the model’s attention aligns with clinically relevant anatomical structures. These findings establish a robust baseline for automated, one-stop triage of glaucoma and cataract and highlight the translational potential of ensemble deep learning in ophthalmic diagnostics.",
     "links": [
       {
         "href": "https://dl.acm.org/doi/10.1145/3784929.3784932",
         "label": "ACM Digital Library"
+      },
+      {
+        "href": "/research/icimh2025/paper.pdf",
+        "label": "PDF"
       }
     ],
     "note": "",
     "bibtex": "@inproceedings{zhao2025glaucoma,\n  title={Glaucoma and Cataract Diagnosis from AS-OCT Images Using Ensemble Learning},\n  author={Zhao, Jiongning and Yang, Yuetong and Yu, Jinghe and Diao, Yueqin and Xu, Yanwu},\n  booktitle={Proceedings of the 2025 International Conference on Intelligent Medicine and Health (ICIMH 2025)},\n  year={2025},\n  publisher={ACM},\n  note={Best Paper Award}\n}",
     "image": {
-      "src": "/images/research/icimh2025/stitch-preview.jpg",
-      "alt": "Clinical AS-OCT ophthalmic imaging scans showing corneal structure and anterior chamber angle.",
+      "src": "/research/icimh2025/figure.png",
+      "alt": "Overview of the AS-OCT diagnosis pipeline, ensemble learning methods, and evaluation.",
+      "width": 538,
+      "height": 335,
       "objectPosition": "center"
     },
     "imageLabel": "Best Paper Award · ICIMH 2025",
@@ -50,12 +57,20 @@
     "role": "First Author",
     "award": "",
     "summary": "Individuals with elevated alexithymia experience fundamental hurdles in identifying and articulating their affective states. EmoMirror introduces a negotiable affective mirroring interactive system designed for college students, enabling voluntary, non-coercive visual feedback that fosters cognitive reflection and emotional literacy without imposing rigid diagnostic labels.",
-    "links": [],
+    "abstract": "Expressive writing can support mental health reflection, but it assumes that writers can recognize and name what they feel. Students with elevated alexithymia tendencies often face emotion vocabulary poverty: they experience distress yet struggle to distinguish, express, and revisit affective states. We examine how affective journaling systems can support such writers without turning uncertain model inference into an emotional verdict. We conducted a formative study with nine university students with elevated alexithymia tendencies, identifying three requirements: low-friction movement from capture to reflection, AI feedback as negotiable hypotheses, and user control over feedback timing and intensity. We introduce EmoMirror, a journaling prototype that renders model-inferred affect through kinetic typography, candidate emotion labels, valence-arousal fine-tuning, saved records, body-sensation logging, and user-triggered reflection. A within-session evaluation with eight students provides preliminary design insights. Participants used editable labels to move from vague affect toward more specific emotion language, engaged more readily in cause-focused reflection than hidden self-disclosure, and treated affective mismatch as useful only when they could revise, delay, or reject cues. EmoMirror shows how real-time affective typography can operate as negotiable scaffolding for emotional sense-making while preserving user interpretive authority.",
+    "links": [
+      {
+        "href": "/research/emomirror26/paper.pdf",
+        "label": "PDF"
+      }
+    ],
     "note": "",
     "bibtex": "@inproceedings{yu2026emomirror,\n  title={EmoMirror: Negotiable Affective Mirroring for Students with Elevated Alexithymia},\n  author={Yu, Jinghe and She, Dong and Li, Xinyao and Meng, Fanbo and Gao, Yang and Jin, Zhanpeng},\n  booktitle={Adjunct Proceedings of the 2026 ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp/ISWC '26 Adjunct)},\n  year={2026},\n  publisher={ACM}\n}",
     "image": {
-      "src": "/images/research/emomirror26/stitch-preview.jpg",
-      "alt": "Negotiable affective mirroring interface illustrating emotional reflection and student interaction.",
+      "src": "/research/emomirror26/preview.gif",
+      "alt": "Animated overview of EmoMirror's journal, body sensation, AI chatbox, and review interfaces.",
+      "width": 1512,
+      "height": 1080,
       "objectPosition": "center"
     },
     "imageLabel": "First Author · UbiComp '26",
@@ -79,17 +94,28 @@
     "role": "Co-First Author",
     "award": "",
     "summary": "Speech carries critical prosodic and emotional nuance that traditional static typography fails to reflect in written communication. EmoType-Zero synthesizes dynamic, adaptive fonts directly from acoustic speech inputs, modulating typography attributes in real-time according to vocal emotional valence and arousal.",
+    "abstract": "Text messaging often lacks paralinguistic cues essential for interpreting emotional tone. To explore visual alternatives, we first conducted a co-design study with 9 participants to distill a design space mapping vocal intonations to visual parameters (Geometry, Texture, and Motion). We developed EmoType-Zero, a research probe to operationalize these concepts. We then deployed this probe in a user study with 25 participants to empirically evaluate user perceptions. Results reveal a critical design trade-off: while the Combo mode (combining geometry, texture, and motion) achieved the highest emotional fidelity (mean ranking: M = 1.60, rank 1=best), its visual complexity compromised text legibility (M = 4.56). Consequently, participants preferred the subtle Geometry mode (M = 2.24) for daily usage, prioritizing clarity over high-intensity effects. Subjective feedback validated the probe’s utility, with 80% of participants agreeing that it improved emotional understanding and 72% expressing willingness to adopt the system for situational impairments and social modulation.",
     "links": [
       {
         "href": "https://dl.acm.org/doi/10.1145/3772363.3798656",
         "label": "ACM Digital Library"
+      },
+      {
+        "href": "/research/emotype26/paper.pdf",
+        "label": "PDF"
+      },
+      {
+        "href": "https://youtu.be/kTnTfZM8J2E?si=AMRr3XqQHLPQUgcc",
+        "label": "Demo"
       }
     ],
     "note": "",
     "bibtex": "@inproceedings{she2026emotype,\n  title={EmoType-Zero: Adaptive Fonts to Render the Speech Emotion},\n  author={She, Dong and Yu, Jinghe and Chen, Nuo and Bai, Yuting and Gao, Yang and Jin, Zhanpeng},\n  booktitle={Extended Abstracts of the 2026 CHI Conference on Human Factors in Computing Systems (CHI EA '26)},\n  year={2026},\n  publisher={ACM}\n}",
     "image": {
-      "src": "/images/research/emotype26/stitch-preview.jpg",
-      "alt": "Dynamic typographic forms synthesized from speech emotion acoustic signals.",
+      "src": "/research/emotype26/figure.png",
+      "alt": "EmoType-Zero overview showing co-design, an adaptive typography design space, user study, and prototype.",
+      "width": 1966,
+      "height": 1105,
       "objectPosition": "center"
     },
     "imageLabel": "Co-First Author · CHI '26",
@@ -114,17 +140,24 @@
     "role": "",
     "award": "",
     "summary": "Explores ring-mounted auditory pseudo-haptics to render continuous tactile material perceptions without requiring bulky mechanical actuators. The wearable finger-ring device delivers velocity-modulated audio feedback calibrated to surface roughness and compliance, enriching tactile exploration across virtual and augmented reality environments.",
+    "abstract": "We present Touch Through Sound, a ring-mounted auditory pseudo-haptics technique for material perception during real touch. Our method parameterizes texture cues (e.g., roughness and granularity) and continuously modulates contact sound from interaction dynamics (speed and a pressure proxy), while a ring-mounted speaker keeps audio co-located with the fingertip. In a within-subject study (N=6), our action-contingent synthesis outperformed a static playback baseline in perceived action–sound congruency, and ring-mounted output improved spatial congruency over headphones. Overall, combining action contingency and near-finger audio yielded the most realistic material impressions.",
     "links": [
       {
         "href": "https://dl.acm.org/doi/10.1145/3772363.3798554",
         "label": "ACM Digital Library"
+      },
+      {
+        "href": "/research/touchsound26/paper.pdf",
+        "label": "PDF"
       }
     ],
     "note": "",
     "bibtex": "@inproceedings{cai2026touch,\n  title={Touch Through Sound: Ring-Mounted Auditory Pseudo-Haptics for Material Perception},\n  author={Cai, Zhengte and Wang, Chiyue and Wang, Yumiao and Yu, Jinghe and Li, Chen and Jin, Zhanpeng and Gao, Yang},\n  booktitle={Extended Abstracts of the 2026 CHI Conference on Human Factors in Computing Systems (CHI EA '26)},\n  year={2026},\n  publisher={ACM}\n}",
     "image": {
-      "src": "/images/research/touchsound26/stitch-preview.jpg",
-      "alt": "Ring-mounted wearable device delivering auditory pseudo-haptics for continuous surface perception.",
+      "src": "/research/touchsound26/figure.png",
+      "alt": "Touch Through Sound diagram showing audio and visual pipelines with the wearable ring prototype.",
+      "width": 857,
+      "height": 525,
       "objectPosition": "center"
     },
     "imageLabel": "Wearable Pseudo-Haptics · CHI '26",
@@ -148,17 +181,24 @@
     "role": "",
     "award": "",
     "summary": "Presents a holistic benchmark framework for scrutinizing vision-language models on affective image content analysis. Rigorously assesses multimodal foundation models across subtle visual affective scenarios, revealing current limitations in human-aligned affective understanding and visual sentiment perception.",
+    "abstract": "Vision-Language Models (VLMs) have demonstrated strong capabilities in perception, yet holistic Affective Image Content Analysis (AICA)—which integrates perception, reasoning, and generation into a unified framework—remains underexplored. To address this, we introduce AICA-Bench, a comprehensive benchmark comprising three core tasks: Emotion Understanding (EU), Reasoning (ER), and Generation (EGCG). We evaluate 23 VLMs, revealing critical gaps: models struggle with intensity calibration and suffer from descriptive shallowness in open-ended tasks. To bridge these gaps, we propose Grounded Affective Tree (GAT) Prompting, a training-free framework that integrates visual scaffolding with hierarchical reasoning. Experiments show that GAT effectively corrects intensity errors and significantly enhances descriptive depth, establishing a robust baseline for future affective multimodal research.",
     "links": [
       {
         "href": "https://aclanthology.org/2026.findings-acl.661/",
         "label": "ACL Anthology"
+      },
+      {
+        "href": "/research/aicabench26/paper.pdf",
+        "label": "PDF"
       }
     ],
     "note": "",
     "bibtex": "@inproceedings{she2026aica,\n  title={AICA-Bench: Holistically Examining the Capabilities of VLMs in Affective Image Content Analysis},\n  author={She, Dong and Yao, Xianrong and Chen, Liqun and Yu, Jinghe and Gao, Yang and Jin, Zhanpeng},\n  booktitle={Findings of the Association for Computational Linguistics: ACL 2026},\n  year={2026},\n  publisher={ACL}\n}",
     "image": {
-      "src": "/images/research/aicabench26/stitch-preview.jpg",
-      "alt": "Technical benchmark evaluation pipeline showing multimodal inputs, affective scoring metrics, and vision-language model diagnostic matrices.",
+      "src": "/research/aicabench26/figure.png",
+      "alt": "AICA-Bench research poster showing its tasks, dataset construction, and model evaluation.",
+      "width": 1210,
+      "height": 1411,
       "objectPosition": "center"
     },
     "imageLabel": "Multimodal Benchmark · ACL '26",
@@ -191,17 +231,24 @@
     "role": "",
     "award": "",
     "summary": "A large-scale, high-quality anterior segment optical coherence tomography (AS-OCT) dataset released for open clinical AI research. Features precise pixel-level anatomical structure segmentations and expert scleral spur landmark localizations across comprehensive cohort scans for cataract and glaucoma screening.",
+    "abstract": "Anterior Segment Optical Coherence Tomography (AS-OCT) provides high-resolution, non-invasive visualization of the anterior eye and is widely used for clinical diagnosis and surgical planning. However, automated analysis of AS-OCT images remains limited by the lack of publicly available datasets with comprehensive anatomical annotations and disease labels. Here we present the AS-OCT Multi-Structure and Disease Classification Dataset (ASOCT-MSDC), a curated dataset designed for anatomical structure segmentation and disease classification. The dataset contains 1106 AS-OCT images from 1106 eyes of 627 individuals across four clinical categories: normal, glaucoma, cataract, and glaucoma-cataract comorbidity. Each image underwent stringent quality assessment, and three standardized image quality scores—eyelid obscuration, black-line anomaly, and central light artifact—are provided as metadata. Expert-validated annotations include segmentation masks for the anterior chamber, iris, lens, and nucleus, together with scleral spur localization points. By combining anatomical annotations, disease labels, and image quality metadata, ASOCT-MSDC supports research on anatomical segmentation, disease classification, and image quality assessment in anterior segment OCT images.",
     "links": [
       {
         "href": "https://www.nature.com/articles/s41597-026-08315-8",
         "label": "Nature Portfolio Article"
+      },
+      {
+        "href": "/research/scidata26/paper.pdf",
+        "label": "PDF"
       }
     ],
     "note": "",
     "bibtex": "@article{zhao2026asoct,\n  title={AS-OCT Dataset with Anatomical Structure Segmentation and Scleral Spur Localization in Cataract and Glaucoma},\n  author={Zhao, Jiongning and Fang, Huihui and Yang, Yuetong and Fu, Xinyu and Deng, Jingru and Yu, Jinghe and Yan, Xingying and Hu, Xinya and Wang, Xiaoqing and Hu, Yuting and Gong, Di and Zhang, Zhe and Chi, Wei and Yang, Weihua and Xu, Yanwu},\n  journal={Scientific Data},\n  volume={13},\n  year={2026},\n  publisher={Nature Publishing Group}\n}",
     "image": {
-      "src": "/images/research/scidata26/stitch-preview.jpg",
-      "alt": "Nature Scientific Data anterior segment optical coherence tomography medical imaging scans.",
+      "src": "/research/scidata26/figure.png",
+      "alt": "AS-OCT dataset workflow from patient selection and image acquisition to annotation and model validation.",
+      "width": 1468,
+      "height": 844,
       "objectPosition": "center"
     },
     "imageLabel": "Nature Portfolio · 2026",
@@ -211,7 +258,7 @@
     "id": "liqo",
     "group": "submitted",
     "categories": ["hci"],
-    "title": "Liqo: A Liquid-to-Solid Interaction Metaphor for Exploratory LLM Sensemaking",
+    "title": "Liqo: Reversible Commitment in LLM Exploration through Liquid–Solid Interaction in VR",
     "authors": [
       "Zhengte Cai*",
       "Jinghe Yu*",
@@ -226,15 +273,26 @@
     "role": "Co-First Author",
     "award": "",
     "summary": "Introduces a fluid-to-crystallized interactive interface paradigm for exploratory human-LLM sensemaking. Users navigate fluid, ambiguous thought streams before selectively freezing, refining, and reifying validated cognitive clusters into structured, persistent knowledge structures.",
+    "abstract": "Exploratory work with large language models requires stabilizing tentative material while keeping it available for revision. We present Liqo, a virtual reality interface in which users compose liquid information bubbles, freeze selected material into solid orbs, and melt them to resume exploration. A within-participant study with 13 participants compared four interfaces across three planning tasks with changing requirements. Liqo met all critical task criteria in 97.4% of trials versus 61.5% for the VR baseline, with shorter restricted time to the first recorded passing state. The larger endpoint difference concerned maintaining or completing an executable proposal, alongside higher same-key content-and-lineage continuity. Cases show that reopening an object can precede content correction and that critical task success can coexist with discontinuity. These findings inform workspace designs that make working status, content updates, and task checks separately inspectable.",
     "links": [
       {
-        "href": "mailto:yujinghe2026@gmail.com?subject=Manuscript%20Inquiry:%20Liqo%20(CHI%202027)",
-        "label": "Request Manuscript Draft"
+        "href": "/research/liqo/paper.pdf",
+        "label": "PDF"
+      },
+      {
+        "href": "https://youtu.be/CPyw5gQjtag?si=fPhVrQufGdVPllP2",
+        "label": "Demo"
       }
     ],
     "note": "[Under Double-Blind Review]",
     "bibtex": "",
-    "image": null,
+    "image": {
+      "src": "/research/liqo/figure.png",
+      "alt": "Liqo VR interface showing liquid and solid ideas and interactions for exploratory sensemaking.",
+      "width": 934,
+      "height": 375,
+      "objectPosition": "center"
+    },
     "imageLabel": "",
     "imageCaption": ""
   },
@@ -249,15 +307,26 @@
     "role": "Co-First Author",
     "award": "",
     "summary": "Investigates structured, non-linear collaborative creative writing workflows. Evaluates how breaking monolithic generative drafts into interactive posts and branching threads empowers co-authors to curate thematic rhythm and metaphoric depth collaboratively.",
+    "abstract": "Poetry is deeply tied to individual expression, yet other writers can introduce interpretations that inspire creative response. Existing poetry-writing tools support individual creativity without engaging collaborative processes available in writing communities. In a formative study (N=9), we found that poets have difficulty obtaining relevant feedback, and lack support for working with other poets. To address this, we take inspiration from features on social media that facilitate collaborative commenting and support to design LineSpace, a collaborative poetry-writing platform. LineSpace supports Posts, where one author can get editorial feedback that can be automatically incorporated. It also supports Threads, a branching interface for attributable turn-taking in collaborative writing. A within-subjects study (N=32) found that poets perceived working more creatively with LineSpace compared to baseline, while inducing lower cognitive demand and frustration without added effort. This work shows how creative professionals can enhance their own writing by contributing to one another’s.",
     "links": [
       {
-        "href": "mailto:yujinghe2026@gmail.com?subject=Manuscript%20Inquiry:%20Poetry%20Writing%20(CHI%202027)",
-        "label": "Request Manuscript Draft"
+        "href": "/research/posts-and-threads/paper.pdf",
+        "label": "PDF"
+      },
+      {
+        "href": "https://youtu.be/62o57pjnJGg?si=8iBr3FbQr76ElYLA",
+        "label": "Demo"
       }
     ],
     "note": "[Under Double-Blind Review]",
     "bibtex": "",
-    "image": null,
+    "image": {
+      "src": "/research/posts-and-threads/figure.png",
+      "alt": "LineSpace Post and Thread flows for collaborative poetry writing and branching continuations.",
+      "width": 1310,
+      "height": 599,
+      "objectPosition": "center"
+    },
     "imageLabel": "",
     "imageCaption": ""
   },
@@ -282,15 +351,22 @@
     "role": "Co-First Author",
     "award": "",
     "summary": "Systematically stress-tests modern foundation models against psychiatric diagnostic benchmarks. Reveals vulnerability to lexical decoys, semantic drift, and superficial heuristic matching, formulating recommendations for clinical safety protocols.",
+    "abstract": "We study the robustness of large language models (LLMs) for mental health sensing and expose a critical knowing-but-not-saying mismatch between what models encode and what they ultimately express. We introduce MHP-Eval, an evaluation framework covering four common sensing needs—screening, disorder classification, severity assessment, and reasoning—and systematically stress-test robustness with meaning-preserving counterfactual perturbations that change surface form. Our results show that apparent competence can mask fragile behavior: performance varies substantially across tasks, and small counterfactual edits can shift clinically relevant judgments. To move beyond end-task accuracy, we separate external knowledge (final outputs) from internal knowledge (model-internal evidence from hidden representations), finding that internal evidence is often more stable and can anticipate failures. Building on this insight, we propose MaKE, a training-free inference-time reliability strategy that leverages internal evidence to retrieve task-relevant support and correct brittle decisions. Under counterfactual perturbations, MaKE improves robustness by +0.3121 on screening, +0.1619 on disorder classification, and +0.257 on severity, enhancing reliability without additional model training.",
     "links": [
       {
-        "href": "mailto:yujinghe2026@gmail.com?subject=Manuscript%20Inquiry:%20LLM%20Mental%20Health%20Probing%20(KBS)",
-        "label": "Request Manuscript Draft"
+        "href": "/research/mental-health/paper.pdf",
+        "label": "PDF"
       }
     ],
     "note": "[Under Review: KBS 2026]",
     "bibtex": "",
-    "image": null,
+    "image": {
+      "src": "/research/mental-health/figure.png",
+      "alt": "Overview of the LLM mental health sensing benchmark, robustness test, and knowledge probe.",
+      "width": 608,
+      "height": 240,
+      "objectPosition": "center"
+    },
     "imageLabel": "",
     "imageCaption": ""
   },
@@ -313,15 +389,22 @@
     "role": "",
     "award": "",
     "summary": "Proposes an adaptive geometric boundary formulation in multimodal embedding space, separating subtle valence gradations where acoustic, visual, and lexical cues exhibit contradicting affective polarity.",
+    "abstract": "Multimodal Sentiment Analysis (MSA) aims to infer human sentiment from language, audio, and visual signals. Recent multimodal large language models (MLLMs) have shown strong general-purpose multimodal understanding, creating new opportunities for MSA. However, our preliminary study reveals that current MLLMs still struggle with fine-grained affective recognition: they can often capture coarse sentiment direction, but fail to reliably distinguish adjacent affective states in an ordered label space. We further find that such errors are closely related to the failure of forming stable gold-over-adjacent boundary advantages in middle-to-late latent layers. To address this issue, we propose LSB-Distill, a Latent Sentiment Boundary Distillation framework. LSB-Distill uses a reference-conditioned teacher mode during training to provide layer-wise latent boundary targets, and distills them into the standard student mode without adding inference-time cost. Experiments on CH-SIMS, CMU-MOSI, and CMU-MOSEI show that LSB-Distill improves fine-grained affective recognition and reduces adjacent-boundary errors across representative MLLM backbones.",
     "links": [
       {
-        "href": "mailto:yujinghe2026@gmail.com?subject=Manuscript%20Inquiry:%20Latent%20Boundaries%20(NeurIPS%202026)",
-        "label": "Request Manuscript Draft"
+        "href": "/research/sentiment-boundaries/paper.pdf",
+        "label": "PDF"
       }
     ],
     "note": "[Under Review: NeurIPS 2026]",
     "bibtex": "",
-    "image": null,
+    "image": {
+      "src": "/research/sentiment-boundaries/figure.png",
+      "alt": "Overview of latent sentiment boundary distillation across visual, audio, and text inputs with student and teacher modes.",
+      "width": 1921,
+      "height": 1132,
+      "objectPosition": "center"
+    },
     "imageLabel": "",
     "imageCaption": ""
   },
@@ -329,7 +412,7 @@
     "id": "ac-bench",
     "group": "submitted",
     "categories": ["affective"],
-    "title": "AC-Bench: Do Multimodal Models Truly See Emotion Amidst Textual Interference?",
+    "title": "AC-Bench: Diagnosing Text-Induced Shifts in Visual Emotion Judgments",
     "authors": [
       "Nuo Chen*",
       "Dong She*",
@@ -344,15 +427,22 @@
     "role": "",
     "award": "",
     "summary": "Introduces a diagnostic suite evaluating whether multimodal vision-language models genuinely extract emotional grounding from imagery, or succumb to superficial textual prompt steering and bias when modalities clash.",
+    "abstract": "Visual emotion analysis (VEA) aims to infer the affect elicited by visual content. However, in real-world image–text inputs, the two modalities do not always convey compatible affective information and may even provide competing affective cues. Existing multimodal affect evaluations typically assume emotional congruence between images and text, making it difficult to characterize how competing text alters models’ judgments of visual affect. To address this gap, we introduce AC-Bench, a benchmark comprising 13,366 instances across nine controlled settings. AC-Bench uses controlled textual frames and provides human reference judgments for every instance under image-only, text-only, and joint image–text conditions. Evaluations across 12 vision–language models (VLMs) show that strong performance under image-only and modality-aligned conditions does not imply human-like cross-modal integration. We find that decision shifts induced by competing text differ significantly from those observed in humans in both direction and magnitude. Further representation analyses show that Visual and Text decisions correspond to separable internal states in middle-to-late layers, while lexical and attention evidence accounts for only part of this separation. Finally, a unified evaluation of activation-based intervention methods shows that they can reverse text-induced decision shifts only for specific models and under particular conditions, with effectiveness varying substantially across models.",
     "links": [
       {
-        "href": "mailto:yujinghe2026@gmail.com?subject=Manuscript%20Inquiry:%20AC-Bench%20(AAAI)",
-        "label": "Request Manuscript Draft"
+        "href": "/research/ac-bench/paper.pdf",
+        "label": "PDF"
       }
     ],
     "note": "[Submitted July 2026: AAAI]",
     "bibtex": "",
-    "image": null,
+    "image": {
+      "src": "/research/ac-bench/figure.png",
+      "alt": "AC-Bench overview of affective visual grounding, text interference, and benchmark construction.",
+      "width": 2014,
+      "height": 751,
+      "objectPosition": "center"
+    },
     "imageLabel": "",
     "imageCaption": ""
   }

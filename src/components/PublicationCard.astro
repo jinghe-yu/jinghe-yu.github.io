@@ -13,23 +13,46 @@ const { publication: paper, index } = Astro.props;
 const hasVerifiedImage = Boolean(
   paper.image?.src && !paper.image.src.endsWith("/stitch-preview.jpg"),
 );
+const imageUrl =
+  hasVerifiedImage && paper.image ? mediaUrl(paper.image.src) : null;
+const imageShape = !paper.image
+  ? "placeholder"
+  : paper.image.height > paper.image.width
+    ? "portrait"
+    : paper.image.width / paper.image.height > 2.1
+      ? "wide"
+      : "landscape";
+const isAnimated = paper.image?.src.toLowerCase().endsWith(".gif") ?? false;
 ---
 
 <article
   id={paper.id}
   class="pub-card"
   data-categories={paper.categories.join(" ")}
+  data-abstract-open="false"
 >
-  <div class="publication-art">
+  <div class="publication-art" data-image-shape={imageShape}>
     {
-      hasVerifiedImage && paper.image ? (
-        <img
-          src={mediaUrl(paper.image.src)}
-          alt={paper.image.alt}
-          style={{ objectPosition: paper.image.objectPosition ?? "center" }}
-          loading="lazy"
-          decoding="async"
-        />
+      imageUrl && paper.image ? (
+        <a
+          href={imageUrl}
+          class="publication-art-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`View full-size ${isAnimated ? "GIF" : "image"} for ${paper.title}`}
+        >
+          <img
+            src={imageUrl}
+            alt={paper.image.alt}
+            width={paper.image.width}
+            height={paper.image.height}
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="publication-open-icon" aria-hidden="true">
+            ↗
+          </span>
+        </a>
       ) : (
         <div class="publication-art-placeholder" aria-hidden="true">
           <>
@@ -65,22 +88,77 @@ const hasVerifiedImage = Boolean(
       {paper.role && <span class="publication-role">{paper.role}</span>}
       {paper.award && <span class="publication-award">✦ {paper.award}</span>}
       {
+        paper.abstract && (
+          <button
+            id={`abstract-toggle-${paper.id}`}
+            type="button"
+            class="publication-link publication-abstract-toggle"
+            data-abstract-toggle
+            aria-expanded="false"
+            aria-controls={`abstract-panel-${paper.id}`}
+          >
+            Abstract{" "}
+            <span class="abstract-toggle-glyph" aria-hidden="true">
+              +
+            </span>
+          </button>
+        )
+      }
+      {
         paper.links.map((link) => (
           <a
             href={
               link.href.startsWith("mailto:")
                 ? link.href.replace(/^mailto:[^?]+/, `mailto:${site.email}`)
-                : link.href
+                : link.href.startsWith("/")
+                  ? mediaUrl(link.href)
+                  : link.href
             }
-            target={link.href.startsWith("https://") ? "_blank" : undefined}
+            target={
+              link.href.startsWith("https://") || link.href.startsWith("/")
+                ? "_blank"
+                : undefined
+            }
             rel={
-              link.href.startsWith("https://")
+              link.href.startsWith("https://") || link.href.startsWith("/")
                 ? "noopener noreferrer"
                 : undefined
             }
-            class="publication-link"
+            class:list={[
+              "publication-link",
+              link.label === "Demo" && "publication-demo-link",
+              link.label === "PDF" && "publication-pdf-link",
+            ]}
+            aria-label={
+              link.label === "Demo"
+                ? `Watch demo for ${paper.title}`
+                : link.label === "PDF"
+                  ? `Read PDF for ${paper.title}`
+                  : undefined
+            }
           >
-            {link.label} <span aria-hidden="true">↗</span>
+            {link.label === "Demo" && <span aria-hidden="true">▶</span>}
+            {link.label === "PDF" && (
+              <svg aria-hidden="true" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M4 1.5h5.5L13 5v9.5H4z"
+                  stroke="currentColor"
+                  stroke-width="1.3"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M9.5 1.5V5H13M6 8h5M6 10.5h5"
+                  stroke="currentColor"
+                  stroke-width="1.3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            )}
+            {link.label}
+            {link.label !== "Demo" && link.label !== "PDF" && (
+              <span aria-hidden="true">↗</span>
+            )}
           </a>
         ))
       }
@@ -97,5 +175,27 @@ const hasVerifiedImage = Boolean(
         )
       }
     </div>
+    {
+      paper.abstract && (
+        <div
+          id={`abstract-panel-${paper.id}`}
+          class="publication-abstract"
+          role="region"
+          aria-labelledby={`abstract-toggle-${paper.id}`}
+          aria-hidden="true"
+          inert
+        >
+          <div class="publication-abstract-clip">
+            <div class="publication-abstract-card">
+              <div class="publication-abstract-heading">
+                <span>Abstract</span>
+                <span aria-hidden="true">✳</span>
+              </div>
+              <p>{paper.abstract}</p>
+            </div>
+          </div>
+        </div>
+      )
+    }
   </div>
 </article>

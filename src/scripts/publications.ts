@@ -6,6 +6,45 @@ const groups = [
   ...document.querySelectorAll<HTMLElement>("[data-publication-group]"),
 ];
 const count = document.getElementById("publication-count");
+const abstractButtons = [
+  ...document.querySelectorAll<HTMLButtonElement>("[data-abstract-toggle]"),
+];
+let activeAbstractButton: HTMLButtonElement | null = null;
+
+function setAbstractOpen(button: HTMLButtonElement, open: boolean) {
+  const panelId = button.getAttribute("aria-controls");
+  const panel = panelId ? document.getElementById(panelId) : null;
+  if (!panel) return;
+
+  button.setAttribute("aria-expanded", String(open));
+  panel.setAttribute("aria-hidden", String(!open));
+  panel.inert = !open;
+  button
+    .closest<HTMLElement>(".pub-card")
+    ?.setAttribute("data-abstract-open", String(open));
+  activeAbstractButton = open
+    ? button
+    : activeAbstractButton === button
+      ? null
+      : activeAbstractButton;
+}
+
+for (const button of abstractButtons) {
+  button.addEventListener("click", () => {
+    const shouldOpen = button.getAttribute("aria-expanded") !== "true";
+    if (activeAbstractButton && activeAbstractButton !== button) {
+      setAbstractOpen(activeAbstractButton, false);
+    }
+    setAbstractOpen(button, shouldOpen);
+  });
+}
+
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape" || !activeAbstractButton) return;
+  const button = activeAbstractButton;
+  setAbstractOpen(button, false);
+  button.focus();
+});
 
 // Keep the caption and neutral background usable if an imported remote image fails.
 for (const image of document.querySelectorAll<HTMLImageElement>(
@@ -20,6 +59,7 @@ for (const image of document.querySelectorAll<HTMLImageElement>(
 
 for (const button of filters) {
   button.addEventListener("click", () => {
+    if (activeAbstractButton) setAbstractOpen(activeAbstractButton, false);
     const category = button.dataset.publicationFilter;
     for (const filter of filters)
       filter.setAttribute("aria-pressed", String(filter === button));

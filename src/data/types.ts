@@ -18,10 +18,17 @@ export interface Publication {
   role: string;
   award: string;
   summary: string;
+  abstract: string | null;
   links: { href: string; label: string }[];
   note: string;
   bibtex: string;
-  image: { src: string; alt: string; objectPosition?: string } | null;
+  image: {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+    objectPosition?: string;
+  } | null;
   imageLabel: string;
   imageCaption: string;
 }
