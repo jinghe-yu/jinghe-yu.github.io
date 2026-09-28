@@ -3,6 +3,18 @@ import { site } from "../../data/site";
 
 const experience = [
   {
+    time: "Jun 2026 — Present",
+    name: "Studio for Narrative Spaces",
+    place: "City University of Hong Kong · Hong Kong SAR, China",
+    role: "Research Intern · Human-Centered AI for Collaborative Creativity",
+    advisor: "Prof. RAY LC",
+    highlights: [
+      "Led the end-to-end design and full-stack development of LineSpace, a mobile-first social poetry platform that repurposes social-media affordances for feedback-driven revision and attributable, branching co-writing with author-controlled AI assistance.",
+      "Designed and conducted formative interviews and a mixed-methods user study with 33 participants; analyzed surveys, interviews, interaction logs, and multilingual poem artifacts using statistical, thematic, and computational methods, culminating in a co-first author full paper submitted to ACM CHI 2027.",
+    ],
+    relatedPaper: "posts-and-threads",
+  },
+  {
     time: "May 2025 — Present",
     name: "Human-Centered AI Lab",
     place: "South China University of Technology",
@@ -92,15 +104,37 @@ const awards = [
   </div>
   <div class="timeline">
     {
-      experience.map((item) => (
-        <article class="timeline-item">
-          <span class="timeline-time">{item.time}</span>
-          <div>
+      experience.map((item, index) => (
+        <article
+          class="timeline-item"
+          style={`--timeline-index: ${Math.min(index, 3)}`}
+        >
+          <div class="timeline-rail">
+            <span class="timeline-time">{item.time}</span>
+            {index === 0 && <span class="timeline-now">Current</span>}
+          </div>
+          <div class="timeline-body">
             <>
               <h3>{item.name}</h3>
               <p class="timeline-place">{item.place}</p>
               <p class="timeline-role">{item.role}</p>
-              <p class="timeline-detail">{item.detail}</p>
+              {item.advisor && (
+                <p class="timeline-advisor">Advisor: {item.advisor}</p>
+              )}
+              {item.highlights ? (
+                <ul class="timeline-highlights">
+                  {item.highlights.map((highlight) => (
+                    <li>{highlight}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p class="timeline-detail">{item.detail}</p>
+              )}
+              {item.relatedPaper && (
+                <a class="timeline-paper-link" href={`#${item.relatedPaper}`}>
+                  Explore the LineSpace paper <span aria-hidden="true">↗</span>
+                </a>
+              )}
             </>
           </div>
         </article>
@@ -123,7 +157,8 @@ const awards = [
     <div class="education-top">
       <span class="eyebrow">Sep 2023 — Jun 2027</span><span
         class="education-emblem"
-        aria-hidden="true">✳</span>
+        aria-hidden="true">✳</span
+      >
     </div>
     <h3>South China University of Technology</h3>
     <p>Undergraduate student in Artificial Intelligence · Guangzhou, China</p>

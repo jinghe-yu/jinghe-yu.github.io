@@ -66,4 +66,8 @@ if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     section.dataset.reveal = "";
     revealObserver.observe(section);
   }
+  for (const item of document.querySelectorAll<HTMLElement>(".timeline-item")) {
+    item.dataset.reveal = "";
+    revealObserver.observe(item);
+  }
 }
