@@ -70,4 +70,8 @@ if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     item.dataset.reveal = "";
     revealObserver.observe(item);
   }
+  for (const tile of document.querySelectorAll<HTMLElement>(".research-tile")) {
+    tile.dataset.reveal = "";
+    revealObserver.observe(tile);
+  }
 }

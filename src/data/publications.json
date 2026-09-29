@@ -2,13 +2,19 @@
   {
     "id": "icimh2025",
     "group": "published",
-    "categories": ["healthcare"],
+    "categories": ["health-wellbeing"],
+    "tags": [
+      "Ophthalmic Imaging",
+      "Ensemble Learning",
+      "Clinical Decision Support"
+    ],
     "title": "Glaucoma and Cataract Diagnosis from AS-OCT Images Using Ensemble Learning",
     "authors": [
       "Jiongning Zhao",
       "Yuetong Yang",
       "Jinghe Yu",
       "Yueqin Diao",
+      "Lei Wang",
       "Yanwu Xu"
     ],
     "venue": "ICIMH",
@@ -28,7 +34,7 @@
       }
     ],
     "note": "",
-    "bibtex": "@inproceedings{zhao2025glaucoma,\n  title={Glaucoma and Cataract Diagnosis from AS-OCT Images Using Ensemble Learning},\n  author={Zhao, Jiongning and Yang, Yuetong and Yu, Jinghe and Diao, Yueqin and Xu, Yanwu},\n  booktitle={Proceedings of the 2025 International Conference on Intelligent Medicine and Health (ICIMH 2025)},\n  year={2025},\n  publisher={ACM},\n  note={Best Paper Award}\n}",
+    "bibtex": "@inproceedings{zhao2025glaucoma,\n  title={Glaucoma and Cataract Diagnosis from AS-OCT Images Using Ensemble Learning},\n  author={Zhao, Jiongning and Yang, Yuetong and Yu, Jinghe and Diao, Yueqin and Wang, Lei and Xu, Yanwu},\n  booktitle={Proceedings of the 2025 International Conference on Intelligent Medicine and Health (ICIMH 2025)},\n  year={2025},\n  publisher={ACM},\n  note={Best Paper Award}\n}",
     "image": {
       "src": "/research/icimh2025/figure.png",
       "alt": "Overview of the AS-OCT diagnosis pipeline, ensemble learning methods, and evaluation.",
@@ -42,7 +48,8 @@
   {
     "id": "emomirror26",
     "group": "published",
-    "categories": ["affective"],
+    "categories": ["hci", "health-wellbeing", "affective"],
+    "tags": ["Affective Journaling", "Alexithymia", "Human-AI Reflection"],
     "title": "EmoMirror: Negotiable Affective Mirroring for Students with Elevated Alexithymia",
     "authors": [
       "Jinghe Yu*",
@@ -62,6 +69,10 @@
       {
         "href": "/research/emomirror26/paper.pdf",
         "label": "PDF"
+      },
+      {
+        "href": "https://youtu.be/Vwi1nJ7FU9A?si=NEFyHWKw4AUN_2S4",
+        "label": "Demo"
       }
     ],
     "note": "",
@@ -79,7 +90,8 @@
   {
     "id": "emotype26",
     "group": "published",
-    "categories": ["affective"],
+    "categories": ["hci", "affective"],
+    "tags": ["Emotion-Aware Typography", "Speech Emotion", "Co-Design"],
     "title": "EmoType-Zero: Adaptive Fonts to Render the Speech Emotion",
     "authors": [
       "Dong She*",
@@ -125,6 +137,11 @@
     "id": "touchsound26",
     "group": "published",
     "categories": ["hci"],
+    "tags": [
+      "Auditory Pseudo-Haptics",
+      "Wearable Interaction",
+      "Material Perception"
+    ],
     "title": "Touch Through Sound: Ring-Mounted Auditory Pseudo-Haptics for Material Perception",
     "authors": [
       "Zhengte Cai",
@@ -167,6 +184,11 @@
     "id": "aicabench26",
     "group": "published",
     "categories": ["affective"],
+    "tags": [
+      "Visual Emotion Analysis",
+      "Vision-Language Models",
+      "Affective Benchmarking"
+    ],
     "title": "AICA-Bench: Holistically Examining the Capabilities of VLMs in Affective Image Content Analysis",
     "authors": [
       "Dong She*",
@@ -207,7 +229,12 @@
   {
     "id": "scidata26",
     "group": "published",
-    "categories": ["healthcare"],
+    "categories": ["health-wellbeing"],
+    "tags": [
+      "Ophthalmic Imaging",
+      "Clinical AI Datasets",
+      "Anatomical Segmentation"
+    ],
     "title": "AS-OCT Dataset with Anatomical Structure Segmentation and Scleral Spur Localization in Cataract and Glaucoma",
     "authors": [
       "Jiongning Zhao*",
@@ -258,6 +285,11 @@
     "id": "liqo",
     "group": "submitted",
     "categories": ["hci"],
+    "tags": [
+      "Human-LLM Interaction",
+      "VR Sensemaking",
+      "Reversible Exploration"
+    ],
     "title": "Liqo: Reversible Commitment in LLM Exploration through Liquid–Solid Interaction in VR",
     "authors": [
       "Zhengte Cai*",
@@ -300,6 +332,11 @@
     "id": "posts-and-threads",
     "group": "submitted",
     "categories": ["hci"],
+    "tags": [
+      "Collaborative Writing",
+      "Human-AI Creativity",
+      "Creative Communities"
+    ],
     "title": "Writing in Posts and Threads: Collaborative Interactions for Poetry Writing",
     "authors": ["Zhihan Cao*", "Jinghe Yu*", "Lijia Li", "Ray LC"],
     "venue": "CHI 2027",
@@ -333,7 +370,12 @@
   {
     "id": "mental-health",
     "group": "submitted",
-    "categories": ["affective"],
+    "categories": ["health-wellbeing", "affective"],
+    "tags": [
+      "Mental Health Sensing",
+      "LLM Robustness",
+      "Counterfactual Evaluation"
+    ],
     "title": "Guessing or Understanding? Probing the Robustness of Large Language Models in Mental Health Sensing",
     "authors": [
       "Dong She*",
@@ -374,6 +416,11 @@
     "id": "sentiment-boundaries",
     "group": "submitted",
     "categories": ["affective"],
+    "tags": [
+      "Multimodal Sentiment",
+      "Fine-Grained Affect",
+      "Model Distillation"
+    ],
     "title": "Learning Latent Sentiment Boundaries for Fine-Grained Multimodal Sentiment Analysis",
     "authors": [
       "Dong She",
@@ -412,6 +459,11 @@
     "id": "ac-bench",
     "group": "submitted",
     "categories": ["affective"],
+    "tags": [
+      "Visual Emotion Analysis",
+      "Cross-Modal Conflict",
+      "Model Evaluation"
+    ],
     "title": "AC-Bench: Diagnosing Text-Induced Shifts in Visual Emotion Judgments",
     "authors": [
       "Nuo Chen*",

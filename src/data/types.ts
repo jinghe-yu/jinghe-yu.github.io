@@ -11,6 +11,7 @@ export interface Publication {
   id: string;
   group: "published" | "submitted";
   categories: string[];
+  tags: string[];
   title: string;
   authors: string[];
   venue: string;

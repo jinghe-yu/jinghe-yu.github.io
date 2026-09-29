@@ -84,6 +84,9 @@ const isAnimated = paper.image?.src.toLowerCase().endsWith(".gif") ?? false;
         ))
       }
     </p>
+    <ul class="publication-tags" aria-label="Research topics">
+      {paper.tags.map((tag) => <li>#{tag}</li>)}
+    </ul>
     <div class="publication-bottom">
       {paper.role && <span class="publication-role">{paper.role}</span>}
       {paper.award && <span class="publication-award">✦ {paper.award}</span>}

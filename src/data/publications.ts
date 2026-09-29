@@ -3,9 +3,9 @@ import type { Publication } from "./types";
 
 export const publicationFilters = [
   { id: "all", label: "All" },
-  { id: "affective", label: "Affective Computing" },
   { id: "hci", label: "Human-Computer Interaction" },
-  { id: "healthcare", label: "AI for Healthcare" },
+  { id: "health-wellbeing", label: "AI for Health and Well-Being" },
+  { id: "affective", label: "Affective Computing" },
 ];
 
 const ids = new Set<string>();
@@ -21,12 +21,21 @@ for (const publication of entries) {
   }
   if (
     !publication.categories.length ||
+    new Set(publication.categories).size !== publication.categories.length ||
     publication.categories.some(
       (category) =>
         !publicationFilters.slice(1).some((filter) => filter.id === category),
     )
   ) {
     throw new Error(`Invalid publication categories: ${publication.id}`);
+  }
+  if (
+    !Array.isArray(publication.tags) ||
+    publication.tags.length < 2 ||
+    publication.tags.some((tag) => typeof tag !== "string" || !tag.trim()) ||
+    new Set(publication.tags).size !== publication.tags.length
+  ) {
+    throw new Error(`Invalid publication tags: ${publication.id}`);
   }
   if (!publication.title || !publication.authors.length) {
     throw new Error(`Missing title or authors: ${publication.id}`);

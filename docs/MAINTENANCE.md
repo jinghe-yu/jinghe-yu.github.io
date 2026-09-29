@@ -2,9 +2,9 @@
 
 ## 更新内容
 
-- 论文：编辑 `src/data/publications.json`。`group` 用 `published` 或 `submitted`，`categories` 用 `hci`、`affective`、`healthcare`。每篇论文的 `id` 保持唯一且稳定。筛选器、分组数量和总数会自动计算。
+- 论文：编辑 `src/data/publications.json`。`group` 用 `published` 或 `submitted`，`categories` 可多选 `hci`、`health-wellbeing`、`affective`，分别对应 Human-Computer Interaction、AI for Health and Well-Being、Affective Computing。`tags` 填写从论文 PDF 内容核对出的 2–3 个具体研究主题或方法。每篇论文的 `id` 保持唯一且稳定。筛选器、分组数量和总数会自动计算。
 - 论文顺序：编辑 `src/components/sections/Publications.astro` 中的 `preferredOrder`。新增论文时也将新 `id` 加入这里。正式状态必须与最新 CV 一致；投稿、在审不能写成已接收。
-- 新闻、经历、教育、奖项：分别编辑 `src/components/sections/Updates.astro`、`Profile.astro`。新消息尽量给出具体月份和可核对的事实。
+- 新闻、经历、教育、奖项：分别编辑 `src/components/sections/Updates.astro`、`Profile.astro`。News 目前不在前端渲染；内容仍保留在 `Updates.astro`，待信息核实后可在 `src/pages/index.astro` 与 `src/components/SiteHeader.astro` 恢复。新消息尽量给出具体月份和可核对的事实。
 - 身份和联系方式：编辑 `src/data/site.ts`。左栏内容及 CV 按钮在 `src/components/ProfileSidebar.astro`。
 - 章节与导航：`src/pages/index.astro` 决定章节顺序，`src/components/SiteHeader.astro` 决定 Tab；两者的 `id` 必须一致。滚动高亮逻辑位于 `src/scripts/navigation.ts`。
 - 颜色和排版：改 `src/styles/global.css` 顶部的 CSS 变量；标题使用衬线字体，正文使用本地打包的 Inter，极小的标签使用 Space Mono。

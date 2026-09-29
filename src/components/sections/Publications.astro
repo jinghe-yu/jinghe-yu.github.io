@@ -40,7 +40,7 @@ const groups = [
   aria-labelledby="publications-title"
 >
   <div class="section-heading">
-    <span class="section-number">04</span><div>
+    <span class="section-number">03</span><div>
       <p class="eyebrow">Selected writing &amp; making</p><h2
         id="publications-title"
       >
@@ -50,8 +50,13 @@ const groups = [
   </div>
   <div class="publications-intro">
     <p class="section-lede">
-      Research across human–AI interaction, affective computing, and healthcare.
-      An asterisk indicates equal contribution.
+      Research across human–computer interaction, AI for health and well-being,
+      and affective computing. An asterisk indicates equal contribution.
+    </p>
+  </div>
+  <div class="publication-filter-bar">
+    <p class="publication-filter-label">
+      Explore by field <span>· Papers can span fields</span>
     </p>
     <div
       class="publication-filters"
@@ -66,8 +71,13 @@ const groups = [
             data-publication-filter={filter.id}
             aria-pressed={filter.id === "all"}
           >
-            {filter.label}
-            {filter.id === "all" ? ` (${papers.length})` : ""}
+            <span>{filter.label}</span>
+            <span class="pub-filter-count">
+              {filter.id === "all"
+                ? papers.length
+                : papers.filter((paper) => paper.categories.includes(filter.id))
+                    .length}
+            </span>
           </button>
         ))
       }

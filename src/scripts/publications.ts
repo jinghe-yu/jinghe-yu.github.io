@@ -79,6 +79,20 @@ for (const button of filters) {
   });
 }
 
+// A research link should always reveal its paper, even after a topic filter was used.
+const allPublicationsFilter = filters.find(
+  (button) => button.dataset.publicationFilter === "all",
+);
+for (const link of document.querySelectorAll<HTMLAnchorElement>(
+  'a[href^="#"]',
+)) {
+  const target = document.getElementById(link.hash.slice(1));
+  if (!target?.classList.contains("pub-card")) continue;
+  link.addEventListener("click", () => {
+    if (target.hidden) allPublicationsFilter?.click();
+  });
+}
+
 const toast = document.getElementById("copy-toast");
 let toastTimer: ReturnType<typeof setTimeout>;
 function notify(message: string) {

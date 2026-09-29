@@ -1,6 +1,7 @@
 ---
 import { site } from "../data/site";
 import { mediaUrl } from "../lib/media";
+import SidebarIcon from "./SidebarIcon.astro";
 ---
 
 <aside class="profile-sidebar" aria-label="Jinghe Yu profile">
@@ -21,15 +22,16 @@ import { mediaUrl } from "../lib/media";
       <p class="eyebrow">Human-centered AI researcher</p>
       <h2>Jinghe Yu <span lang="zh-Hans">余静荷</span></h2>
       <p class="sidebar-affiliation">
-        Undergraduate researcher · AI · SCUT<br />Guangzhou, China
+        <span>Undergraduate major in AI</span>
+        <strong>South China University of Technology (SCUT)</strong>
       </p>
     </div>
 
-    <div class="sidebar-topics" aria-label="Research interests">
-      <span>✳ Human–Computer Interaction</span>
-      <span>✳ Affective Computing</span>
-      <span>✳ AI for Healthcare</span>
-    </div>
+    <ul class="sidebar-topics" aria-label="Research interests">
+      <li><span aria-hidden="true">🧩</span> Human–Computer Interaction</li>
+      <li><span aria-hidden="true">🩺</span> AI for Health &amp; Well-Being</li>
+      <li><span aria-hidden="true">💗</span> Affective Computing</li>
+    </ul>
 
     <div class="sidebar-actions">
       <a
@@ -38,24 +40,93 @@ import { mediaUrl } from "../lib/media";
         target="_blank"
         rel="noopener noreferrer"
       >
-        View CV <span aria-hidden="true">↗</span>
+        <SidebarIcon name="cv" /> View CV
       </a>
       <a class="sidebar-button" href={`mailto:${site.email}`}>
-        Get in touch <span aria-hidden="true">↗</span>
+        <SidebarIcon name="email" /> Get in touch
       </a>
     </div>
 
-    <div class="sidebar-links" aria-label="Social links">
-      <a href={`mailto:${site.email}`} aria-label="Email"
-        >Email <span aria-hidden="true">↗</span></a
-      >
-      <a
-        href="https://github.com/jinghe-yu"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="GitHub profile">GitHub <span aria-hidden="true">↗</span></a
-      >
-    </div>
-    <p class="sidebar-footnote">Open to PhD opportunities · Fall 2027</p>
+    <section class="sidebar-contact" aria-label="Contact details">
+      <p class="sidebar-contact-heading">Contact</p>
+      <div class="sidebar-contact-primary">
+        <a class="sidebar-contact-row" href={`tel:${site.phoneHref}`}>
+          <span class="sidebar-contact-icon"><SidebarIcon name="phone" /></span>
+          <span class="sidebar-contact-text">
+            <span class="sidebar-contact-label">Phone</span>
+            <strong>{site.phone}</strong>
+          </span>
+        </a>
+        <a class="sidebar-contact-row" href={`mailto:${site.email}`}>
+          <span class="sidebar-contact-icon"><SidebarIcon name="email" /></span>
+          <span class="sidebar-contact-text">
+            <span class="sidebar-contact-label">Email</span>
+            <strong>{site.email}</strong>
+          </span>
+        </a>
+      </div>
+      <div class="sidebar-contact-secondary">
+        <button
+          type="button"
+          class="sidebar-contact-mini"
+          data-copy-wechat={site.wechat}
+          aria-label={`Copy WeChat ID ${site.wechat}`}
+        >
+          <span class="sidebar-contact-icon"><SidebarIcon name="wechat" /></span
+          >
+          <span class="sidebar-contact-text">
+            <span class="sidebar-contact-label">WeChat</span>
+            <strong>{site.wechat}</strong>
+          </span>
+          <span class="sidebar-contact-hint" data-copy-label>Copy</span>
+        </button>
+        <a
+          class="sidebar-contact-mini"
+          href={site.githubUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Open ${site.githubUsername} on GitHub in a new tab`}
+        >
+          <span class="sidebar-contact-icon"><SidebarIcon name="github" /></span
+          >
+          <span class="sidebar-contact-text">
+            <span class="sidebar-contact-label">GitHub</span>
+            <strong>{site.githubUsername}</strong>
+          </span>
+        </a>
+      </div>
+      <p class="sidebar-copy-status" role="status" aria-live="polite"></p>
+    </section>
+    <p class="sidebar-footnote">looking for PhD opportunities · Fall 2027</p>
   </div>
 </aside>
+
+<script>
+  const wechatButton =
+    document.querySelector<HTMLButtonElement>("[data-copy-wechat]");
+  const copyLabel =
+    wechatButton?.querySelector<HTMLElement>("[data-copy-label]");
+  const copyStatus = document.querySelector<HTMLElement>(
+    ".sidebar-copy-status",
+  );
+  let resetTimer: ReturnType<typeof setTimeout>;
+
+  wechatButton?.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(
+        wechatButton.dataset.copyWechat ?? "",
+      );
+      if (copyLabel) copyLabel.textContent = "Copied";
+      if (copyStatus) copyStatus.textContent = "WeChat ID copied to clipboard.";
+      clearTimeout(resetTimer);
+      resetTimer = setTimeout(() => {
+        if (copyLabel) copyLabel.textContent = "Copy";
+        if (copyStatus) copyStatus.textContent = "";
+      }, 3200);
+    } catch {
+      if (copyStatus)
+        copyStatus.textContent =
+          "Copy unavailable. Please use the WeChat ID shown above.";
+    }
+  });
+</script>

@@ -8,6 +8,9 @@ export const site = {
   email: "yujinghe2026@gmail.com",
   phone: "+86 13798160068",
   phoneHref: "+8613798160068",
+  wechat: "Y13798160068",
+  githubUsername: "jinghe-yu",
+  githubUrl: "https://github.com/jinghe-yu",
   location: "Guangzhou, China",
   portrait: {
     src: "/images/portrait/my-photo.jpg",

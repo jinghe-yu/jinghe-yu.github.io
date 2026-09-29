@@ -3,52 +3,82 @@ const interests = [
   {
     number: "01",
     title: "Human–Computer Interaction",
-    description:
-      "Interactive systems, user-centered studies, and thoughtful evaluation of how people make sense of AI in real contexts.",
-    tags: ["Interactive systems", "Empirical HCI"],
+    copy: [
+      "I design and study interactive AI and XR systems for expression, reflection, creative collaboration, and embodied experience. Through web and XR prototyping and user-centered, mixed-methods research, I focus on ",
+      "user agency and negotiable feedback",
+      ", multisensory interaction, and how people make sense of AI-generated interpretations.",
+    ],
+    tags: ["Interactive AI System", "XR & Embodied AI"],
+    symbol: "✳",
   },
   {
     number: "02",
-    title: "Affective Computing",
-    description:
-      "Emotion-aware interfaces and multimodal models that are attentive to ambiguity, individual differences, and human agency.",
-    tags: ["Affective AI", "Multimodal evaluation"],
+    title: "AI for Health & Well-Being",
+    copy: [
+      "I explore ",
+      "safe, inclusive, non-diagnostic",
+      " systems for mental well-being and critically evaluate LLM-based mental-health sensing. In healthcare, I work with multimodal health data and medical images—from curation and representation learning to segmentation, classification, and model evaluation.",
+    ],
+    tags: ["Mental Health", "Multimodal Healthcare Analysis"],
+    symbol: "✚",
   },
   {
     number: "03",
-    title: "AI for Healthcare",
-    description:
-      "Healthcare data and vision workflows, including AS-OCT image analysis, with careful attention to robust evaluation.",
-    tags: ["Medical imaging", "Vision ML"],
+    title: "Affective Computing",
+    copy: [
+      "I study how AI can represent and respond to affect without reducing emotion to a fixed label. Beyond recognition, I ask whether people can ",
+      "understand, question, revise, and personalize",
+      " the inferences an AI system makes about how they feel.",
+    ],
+    tags: ["Affective AI", "Negotiable feedback", "Personalization"],
+    symbol: "◌",
   },
 ];
 ---
 
 <section id="research" class="content-section" aria-labelledby="research-title">
-  <div class="section-heading">
-    <span class="section-number">03</span><div>
-      <p class="eyebrow">Questions I keep returning to</p><h2
-        id="research-title"
-      >
-        Research interests
-      </h2>
+  <div class="section-heading research-heading">
+    <span class="section-number">02</span><div>
+      <p class="eyebrow">From understanding people to designing with them</p>
+      <h2 id="research-title">Research interests</h2>
     </div>
   </div>
-  <p class="section-lede">
-    I am drawn to AI systems that are useful not only in benchmarks, but also in
-    the subtle, situated ways people think, feel, create, and care.
-  </p>
+  <div class="research-intro">
+    <span class="research-focus"
+      ><span aria-hidden="true">✳</span> Human-Centered AI</span
+    >
+    <p class="section-lede">
+      My research explores how <strong>human-centered AI</strong> can support{
+        " "
+      }
+      <strong>expression, reflection, and well-being</strong>. I build and study
+      interactive systems that make AI-generated interpretations{" "}
+      <strong
+        >useful, contestable, and sensitive to individual differences</strong
+      >.
+    </p>
+  </div>
   <div class="research-grid">
     {
-      interests.map((interest) => (
-        <article class="research-tile">
-          <span class="tile-number">{interest.number} / 03</span>
-          <span class="tile-symbol" aria-hidden="true">
-            ✳
-          </span>
-          <h3>{interest.title}</h3>
-          <p>{interest.description}</p>
-          <div class="research-tags">
+      interests.map((interest, index) => (
+        <article
+          class="research-tile"
+          style={`--research-index: ${index}`}
+          aria-labelledby={`research-interest-${interest.number}`}
+        >
+          <div class="research-tile-top">
+            <span class="tile-number">{interest.number} / 03</span>
+            <span class="tile-symbol" aria-hidden="true">
+              {interest.symbol}
+            </span>
+          </div>
+          <h3 id={`research-interest-${interest.number}`}>{interest.title}</h3>
+          <p>
+            {interest.copy[0]}
+            <strong>{interest.copy[1]}</strong>
+            {interest.copy[2]}
+          </p>
+          <div class="research-tags" aria-label="Research themes">
             {interest.tags.map((tag) => (
               <span>{tag}</span>
             ))}
@@ -56,11 +86,5 @@ const interests = [
         </article>
       ))
     }
-  </div>
-  <div class="method-line">
-    <span>Methods &amp; tools</span><p>
-      Empirical HCI · multimodal evaluation · Python / PyTorch · Unity / C# ·
-      TypeScript / React
-    </p>
   </div>
 </section>
