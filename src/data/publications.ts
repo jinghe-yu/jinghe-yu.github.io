@@ -1,12 +1,20 @@
 import entries from "./publications.json";
 import type { Publication } from "./types";
 
-export const publicationFilters = [
-  { id: "all", label: "All" },
+const publicationCategories = [
   { id: "hci", label: "Human-Computer Interaction" },
   { id: "health-wellbeing", label: "AI for Health and Well-Being" },
   { id: "affective", label: "Affective Computing" },
 ];
+
+export const publicationFilters = [
+  { id: "all", label: "All" },
+  ...publicationCategories,
+  { id: "first-author", label: "First Author" },
+];
+
+export const isFirstAuthorPaper = (paper: Pick<Publication, "role">) =>
+  paper.role === "First Author" || paper.role === "Co-First Author";
 
 const ids = new Set<string>();
 for (const publication of entries) {
@@ -24,7 +32,7 @@ for (const publication of entries) {
     new Set(publication.categories).size !== publication.categories.length ||
     publication.categories.some(
       (category) =>
-        !publicationFilters.slice(1).some((filter) => filter.id === category),
+        !publicationCategories.some((filter) => filter.id === category),
     )
   ) {
     throw new Error(`Invalid publication categories: ${publication.id}`);

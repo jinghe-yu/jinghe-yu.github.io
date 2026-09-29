@@ -1,5 +1,9 @@
 ---
-import { publications, publicationFilters } from "../../data/publications";
+import {
+  publications,
+  publicationFilters,
+  isFirstAuthorPaper,
+} from "../../data/publications";
 import PublicationCard from "../PublicationCard.astro";
 
 const preferredOrder = [
@@ -47,11 +51,11 @@ const groups = [
     <p class="section-lede">An asterisk* indicates equal contribution.</p>
   </div>
   <div class="publication-filter-bar">
-    <p class="publication-filter-label">Explore by field</p>
+    <p class="publication-filter-label">Filter publications</p>
     <div
       class="publication-filters"
       role="group"
-      aria-label="Filter publications by topic"
+      aria-label="Filter publications by topic or authorship"
     >
       {
         publicationFilters.map((filter) => (
@@ -65,8 +69,11 @@ const groups = [
             <span class="pub-filter-count">
               {filter.id === "all"
                 ? papers.length
-                : papers.filter((paper) => paper.categories.includes(filter.id))
-                    .length}
+                : filter.id === "first-author"
+                  ? papers.filter(isFirstAuthorPaper).length
+                  : papers.filter((paper) =>
+                      paper.categories.includes(filter.id),
+                    ).length}
             </span>
           </button>
         ))

@@ -65,8 +65,12 @@ for (const button of filters) {
       filter.setAttribute("aria-pressed", String(filter === button));
     for (const card of cards) {
       card.hidden =
-        category !== "all" &&
-        !(card.dataset.categories ?? "").split(" ").includes(category ?? "");
+        category === "first-author"
+          ? card.dataset.firstAuthor !== "true"
+          : category !== "all" &&
+            !(card.dataset.categories ?? "")
+              .split(" ")
+              .includes(category ?? "");
     }
     for (const group of groups) {
       const visible = group.querySelectorAll(".pub-card:not([hidden])").length;

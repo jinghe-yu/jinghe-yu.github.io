@@ -1,5 +1,6 @@
 ---
 import type { Publication } from "../data/types";
+import { isFirstAuthorPaper } from "../data/publications";
 import { site } from "../data/site";
 import { mediaUrl } from "../lib/media";
 
@@ -29,6 +30,7 @@ const isAnimated = paper.image?.src.toLowerCase().endsWith(".gif") ?? false;
   id={paper.id}
   class="pub-card"
   data-categories={paper.categories.join(" ")}
+  data-first-author={isFirstAuthorPaper(paper)}
   data-abstract-open="false"
 >
   <div class="publication-art" data-image-shape={imageShape}>
