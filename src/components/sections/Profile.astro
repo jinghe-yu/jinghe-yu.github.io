@@ -1,34 +1,74 @@
 ---
 import { site } from "../../data/site";
+import ExperiencePapers from "../ExperiencePapers.astro";
 
-const experience = [
+interface ExperienceItem {
+  time: string;
+  name: string;
+  place: string;
+  role: string;
+  advisor?: string;
+  advisorLabel?: string;
+  highlights?: string[];
+  detail?: string;
+  labUrl?: string;
+  labLabel?: string;
+  paperIds?: string[];
+}
+
+// Related paper IDs follow the lab advisors/coauthors named in the current CV.
+const experience: ExperienceItem[] = [
   {
     time: "Jun 2026 — Present",
     name: "Studio for Narrative Spaces",
     place: "City University of Hong Kong · Hong Kong SAR, China",
     role: "Research Intern · Human-Centered AI for Collaborative Creativity",
     advisor: "Prof. RAY LC",
+    labUrl: "https://recfro.github.io/",
+    labLabel: "Studio website",
     highlights: [
       "Led the end-to-end design and full-stack development of LineSpace, a mobile-first social poetry platform that repurposes social-media affordances for feedback-driven revision and attributable, branching co-writing with author-controlled AI assistance.",
       "Designed and conducted formative interviews and a mixed-methods user study with 33 participants; analyzed surveys, interviews, interaction logs, and multilingual poem artifacts using statistical, thematic, and computational methods, culminating in a co-first author full paper submitted to ACM CHI 2027.",
     ],
-    relatedPaper: "posts-and-threads",
+    paperIds: ["posts-and-threads"],
   },
   {
     time: "May 2025 — Present",
-    name: "Human-Centered AI Lab",
-    place: "South China University of Technology",
-    role: "Research Intern · Affective Computing & HCI",
-    detail:
-      "Research across data curation, model development, experimental evaluation, and user-centered studies. Advised by Prof. Zhanpeng Jin and Prof. Yang Gao.",
+    name: "Human-Centered AI Lab (HAI Lab)",
+    place: "South China University of Technology · Guangzhou, China",
+    role: "Research Intern · Affective Computing & Human–Computer Interaction",
+    advisor: "Prof. Zhanpeng Jin and Prof. Yang Gao",
+    advisorLabel: "Advisors",
+    labUrl: "https://scuthcc.top/",
+    labLabel: "Lab website",
+    highlights: [
+      "Conduct end-to-end affective computing and HCI research, from data curation and model development to reproducible experimental evaluation; build pipelines for preprocessing, annotation quality control, and consistent reporting.",
+      "Design and run user-centered studies—including protocols, tasks, and analysis—and translate findings into iterations of models and interactive prototypes.",
+    ],
+    paperIds: [
+      "emomirror26",
+      "emotype26",
+      "touchsound26",
+      "aicabench26",
+      "liqo",
+      "mental-health",
+      "sentiment-boundaries",
+      "ac-bench",
+    ],
   },
   {
     time: "May 2024 — Present",
     name: "Healthcare Data and Medical Intelligence Lab",
-    place: "South China University of Technology",
+    place: "South China University of Technology · Guangzhou, China",
     role: "Research Intern · Multimodal Healthcare Analytics",
-    detail:
-      "Work on multimodal health data and AS-OCT image analysis workflows. Advised by Prof. Yanwu Xu.",
+    advisor: "Prof. Yanwu Xu",
+    labUrl: "http://hdmilab.cn/",
+    labLabel: "Lab website",
+    highlights: [
+      "Research multimodal health data, including clinical records and imaging, for data-driven healthcare analytics and decision support.",
+      "Develop and evaluate AS-OCT image analysis workflows spanning preprocessing, feature and representation learning, prediction, segmentation, and classification.",
+    ],
+    paperIds: ["icimh2025", "scidata26"],
   },
   {
     time: "Aug 2024",
@@ -96,11 +136,8 @@ const awards = [
   aria-labelledby="experience-title"
 >
   <div class="section-heading">
-    <span class="section-number">04</span><div>
-      <p class="eyebrow">Where I work &amp; learn</p><h2 id="experience-title">
-        Experience
-      </h2>
-    </div>
+    <span class="section-number">04</span>
+    <h2 id="experience-title">Experience</h2>
   </div>
   <div class="timeline">
     {
@@ -115,11 +152,35 @@ const awards = [
           </div>
           <div class="timeline-body">
             <>
-              <h3>{item.name}</h3>
+              <div class="timeline-title-row">
+                <h3>{item.name}</h3>
+                {item.labUrl && (
+                  <a
+                    class="timeline-lab-link"
+                    href={item.labUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${item.labLabel} for ${item.name} (opens in a new tab)`}
+                  >
+                    <span>{item.labLabel}</span>
+                    <svg aria-hidden="true" viewBox="0 0 16 16" fill="none">
+                      <path
+                        d="M6 3H3.5A1.5 1.5 0 0 0 2 4.5v8A1.5 1.5 0 0 0 3.5 14h8a1.5 1.5 0 0 0 1.5-1.5V10M8 2h6v6M14 2 7.5 8.5"
+                        stroke="currentColor"
+                        stroke-width="1.3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                )}
+              </div>
               <p class="timeline-place">{item.place}</p>
               <p class="timeline-role">{item.role}</p>
               {item.advisor && (
-                <p class="timeline-advisor">Advisor: {item.advisor}</p>
+                <p class="timeline-advisor">
+                  {item.advisorLabel ?? "Advisor"}: {item.advisor}
+                </p>
               )}
               {item.highlights ? (
                 <ul class="timeline-highlights">
@@ -130,11 +191,7 @@ const awards = [
               ) : (
                 <p class="timeline-detail">{item.detail}</p>
               )}
-              {item.relatedPaper && (
-                <a class="timeline-paper-link" href={`#${item.relatedPaper}`}>
-                  Explore the LineSpace paper <span aria-hidden="true">↗</span>
-                </a>
-              )}
+              {item.paperIds && <ExperiencePapers ids={item.paperIds} />}
             </>
           </div>
         </article>
@@ -149,9 +206,8 @@ const awards = [
   aria-labelledby="education-title"
 >
   <div class="section-heading">
-    <span class="section-number">05</span><div>
-      <p class="eyebrow">Foundation</p><h2 id="education-title">Education</h2>
-    </div>
+    <span class="section-number">05</span>
+    <h2 id="education-title">Education</h2>
   </div>
   <div class="education-card">
     <div class="education-top">
@@ -182,13 +238,8 @@ const awards = [
 
 <section id="awards" class="content-section" aria-labelledby="awards-title">
   <div class="section-heading">
-    <span class="section-number">06</span><div>
-      <p class="eyebrow">Little milestones, shared efforts</p><h2
-        id="awards-title"
-      >
-        Selected honors
-      </h2>
-    </div>
+    <span class="section-number">06</span>
+    <h2 id="awards-title">Selected honors</h2>
   </div>
   <div class="awards-list">
     {

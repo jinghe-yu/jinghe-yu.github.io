@@ -1,0 +1,54 @@
+---
+import { publications } from "../data/publications";
+
+interface Props {
+  ids: string[];
+}
+
+const { ids } = Astro.props;
+const papersById = new Map(publications.map((paper) => [paper.id, paper]));
+const papers = ids.map((id) => {
+  const paper = papersById.get(id);
+  if (!paper) throw new Error(`Experience links to unknown paper: ${id}`);
+  return paper;
+});
+const label = papers.length === 1 ? "Related paper" : "Related papers";
+---
+
+{
+  papers.length > 2 ? (
+    <details class="timeline-papers timeline-papers-collapsible">
+      <summary>
+        <span>{label}</span>
+        <span class="timeline-paper-count">{papers.length}</span>
+        <span class="timeline-paper-toggle" aria-hidden="true">
+          +
+        </span>
+      </summary>
+      <ul class="timeline-paper-list">
+        {papers.map((paper) => (
+          <li>
+            <a href={`#${paper.id}`}>
+              <span>{paper.title}</span>
+              <span class="timeline-paper-venue">{paper.venue}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </details>
+  ) : (
+    <div class="timeline-papers">
+      <p class="timeline-paper-label">{label}</p>
+      <ul class="timeline-paper-list">
+        {papers.map((paper) => (
+          <li>
+            <a href={`#${paper.id}`}>
+              <span>{paper.title}</span>
+              <span class="timeline-paper-venue">{paper.venue}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
